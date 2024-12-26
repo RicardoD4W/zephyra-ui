@@ -1,0 +1,20 @@
+{
+    "name": "docs",
+    "version": "0.0.0",
+    "description": "Documentation for Zephyra UI components",
+    "main": "src/index.ts",
+    "scripts": {
+        "dev": "storybook dev -p 6006",
+        "build": "storybook build",
+        "preview": "storybook preview",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "dependencies": {
+        "@storybook/web-components": "^8.4.7",
+        "@storybook/addon-essentials": "^8.4.7",
+        "@storybook/addon-links": "^8.4.7",
+        "@storybook/builder-vite": "^8.4.7"
+    },
+    "private": true
+}
