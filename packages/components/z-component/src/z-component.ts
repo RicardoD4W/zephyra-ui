@@ -1,4 +1,4 @@
-import { CSSResultGroup, CSSResultOrNative, html } from 'lit';
+import { CSSResultGroup, CSSResultOrNative } from 'lit';
 import { ZComponentTheme } from './css/z-component.theme.css';
 import { ZComponentViewModel } from './z-component.viewmodel';
 
