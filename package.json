@@ -17,7 +17,7 @@
     "dev-c": "npm run dev --workspace=packages/components",
     "dev-d": "npm run dev --workspace=packages/docs",
     "dev-p": "npm run dev --workspace=packages/demo-web",
-    "build-all": "powershell -Command \"Get-ChildItem -Path ./packages/components -Directory | ForEach-Object {cd $_.FullName; npm run build; cd ../..}\"",
+    "build-all": "powershell -Command \"Get-ChildItem -Path ./packages/components -Directory | ForEach-Object {cd $_.FullName; npm i; npm run build; cd ../..}\"",
     "dev-web": "npm run build-all && npm run dev-p"
   },
   "dependencies": {
