@@ -8,5 +8,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@zephyra-ui/z-button": "0.0.0"
+  }
 }

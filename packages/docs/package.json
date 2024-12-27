@@ -11,10 +11,11 @@
         "build-storybook": "storybook build"
     },
     "dependencies": {
-        "@storybook/web-components": "^8.4.7",
         "@storybook/addon-essentials": "^8.4.7",
         "@storybook/addon-links": "^8.4.7",
-        "@storybook/builder-vite": "^8.4.7"
+        "@storybook/builder-vite": "^8.4.7",
+        "@storybook/web-components": "^8.4.7",
+        "@zephyra-ui/z-button": "0.0.0"
     },
     "private": true
 }
