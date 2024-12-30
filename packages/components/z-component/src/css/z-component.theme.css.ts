@@ -8,20 +8,6 @@ export class ZComponentTheme {
       /* COLORS */
       color-scheme: light dark;
 
-      --z-color-primary: #66b3ff;
-      --z-color-secondary: #a1b0b7;
-      --z-color-danger: #f8d7da;
-      --z-color-warning: #fff3cd;
-      --z-color-success: #d4edda;
-      --z-color-info: #d1ecf1;
-      --z-color-light: #ffffff;
-      --z-color-dark: #495057;
-      --z-color-gray: #868e96;
-      --z-color-muted: #adb5bd;
-      --z-color-background: #ffffff;
-      --z-color-border: #f1f3f5;
-      --z-color-hover: rgba(0, 0, 0, 0.05);
-
       /* TYPOGRAPHY */
       --z-font: 'Noto Sans', serif;
 
@@ -100,6 +86,24 @@ export class ZComponentTheme {
         --z-color-background: #f8f9fa;
         --z-color-border: #dee2e6;
         --z-color-hover: rgba(0, 0, 0, 0.125);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :host {
+        --z-color-primary: #66b3ff;
+        --z-color-secondary: #a1b0b7;
+        --z-color-danger: #f8d7da;
+        --z-color-warning: #fff3cd;
+        --z-color-success: #d4edda;
+        --z-color-info: #d1ecf1;
+        --z-color-light: #ffffff;
+        --z-color-dark: #495057;
+        --z-color-gray: #868e96;
+        --z-color-muted: #adb5bd;
+        --z-color-background: #ffffff;
+        --z-color-border: #f1f3f5;
+        --z-color-hover: rgba(0, 0, 0, 0.05);
       }
     }
   `;
