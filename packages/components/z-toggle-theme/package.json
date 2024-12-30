@@ -1,0 +1,15 @@
+{
+    "name": "@zephyra-ui/z-toggle-theme",
+    "version": "0.0.0",
+    "main": "dist/z-toggle-theme.umd.cjs",
+    "module": "dist/z-toggle-theme.js",
+    "type": "module",
+    "scripts": {
+        "build": "vite build"
+    },
+    "dependencies": {
+        "lit": "3.2.1",
+        "@zephyra-ui/z-component": "0.0.0"
+    },
+    "private": true
+}
