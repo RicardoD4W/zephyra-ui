@@ -69,6 +69,12 @@ export class ZComponentTheme {
       --z-index-max: 999;
 
       /* OTHERS */
+      transition: background-color var(--z-transition-medium)
+          var(--z-transition-in-out),
+        color var(--z-transition-medium) var(--z-transition-in-out),
+        box-shadow var(--z-transition-medium) var(--z-transition-in-out),
+        border-color var(--z-transition-medium) var(--z-transition-in-out),
+        border-radius var(--z-transition-medium) var(--z-transition-in-out);
     }
 
     :host([color-scheme='dark']) {
