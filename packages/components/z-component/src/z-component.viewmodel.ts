@@ -45,6 +45,7 @@ export class ZComponentViewModel extends LitElement {
 
   private _applyTheme() {
     this.setAttribute('color-scheme', this.colorScheme);
+    document.documentElement.setAttribute('color-scheme', this.colorScheme);
   }
 
   protected dispatchThemeChangedEvent(detail: ThemeChangedModel) {
