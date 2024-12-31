@@ -55,9 +55,11 @@ export class ZComponentTheme {
       --z-transition-fast: 150ms;
       --z-transition-medium: 300ms;
       --z-transition-slow: 500ms;
-      --z-transition-in: cubic-bezier(0.4, 0, 1, 1);
-      --z-transition-out: cubic-bezier(0, 0, 0.2, 1);
-      --z-transition-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+      --z-transition-linear: linear;
+      --z-transition: ease;
+      --z-transition-in: ease-in;
+      --z-transition-out: ease-out;
+      --z-transition-in-out: ease-in-out;
 
       /* Z-INDEX */
       --z-index-auto: auto;
@@ -69,12 +71,11 @@ export class ZComponentTheme {
       --z-index-max: 999;
 
       /* OTHERS */
-      transition: background-color var(--z-transition-medium)
-          var(--z-transition-in-out),
-        color var(--z-transition-medium) var(--z-transition-in-out),
-        box-shadow var(--z-transition-medium) var(--z-transition-in-out),
-        border-color var(--z-transition-medium) var(--z-transition-in-out),
-        border-radius var(--z-transition-medium) var(--z-transition-in-out);
+      transition: background-color var(--z-transition-fast) var(--z-transition),
+        color var(--z-transition-fast) var(--z-transition),
+        box-shadow var(--z-transition-fast) var(--z-transition),
+        border-color var(--z-transition-fast) var(--z-transition),
+        border-radius var(--z-transition-fast) var(--z-transition);
     }
 
     :host([color-scheme='dark']) {

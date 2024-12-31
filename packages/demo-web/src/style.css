@@ -12,16 +12,17 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
+  transition: all 150ms ease;
 }
 
-[color-scheme="dark"] {
+[color-scheme='dark'] {
   --color-text: #fff;
   --color-background: #242424;
 }
 
-[color-scheme="light"] {
+[color-scheme='light'] {
   --color-text: #000;
-  --color-background: #FFF;
+  --color-background: #fff;
 }
 
 main {
@@ -31,4 +32,3 @@ main {
   justify-content: center;
   align-items: center;
 }
-
