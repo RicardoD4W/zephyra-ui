@@ -1,4 +1,4 @@
-import { CSSResultGroup, CSSResultOrNative, TemplateResult, html } from 'lit';
+import { CSSResultGroup, CSSResultOrNative, html } from 'lit';
 import { ZToggleThemeTheme } from './css/z-toggle-theme.theme.css';
 import { ZToggleThemeViewModel } from './z-toggle-theme.viewmodel';
 
@@ -9,16 +9,11 @@ export class ZToggleThemeView extends ZToggleThemeViewModel {
     return [...super.finalizeStyles(styles), ZToggleThemeTheme.cssBase];
   }
 
-  private toggleTheme() {
-    this.isLightTheme = !this.isLightTheme;
-    this.updateColorScheme();
-  }
-
   render() {
     return html`
       <svg
         viewBox="0 0 100 100"
-        @click="${this.toggleTheme}"
+        @click="${this.updateColorScheme}"
         class="${this.isLightTheme ? 'night' : 'day'}"
       >
         <circle class="sun" cx="50" cy="50" r="25" />
