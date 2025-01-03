@@ -3,7 +3,10 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 export class ZToggleThemeTheme {
   static cssBase: CSSResult = css`
     :host {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       cursor: pointer;
     }
 
