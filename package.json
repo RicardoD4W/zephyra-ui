@@ -15,10 +15,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "dev-c": "npm run dev --workspace=packages/components",
-    "dev-d": "npm run dev --workspace=packages/docs",
-    "dev-p": "npm run dev --workspace=packages/demo-web",
+    "dev-d": "npm run dev --workspace=packages/demo-web",
     "build-all": "powershell -Command \"Get-ChildItem -Path ./packages/components -Directory | ForEach-Object {cd $_.FullName; npm i; npm run build; cd ../..}\"",
-    "dev-web": "npm run build-all && npm run dev-p"
+    "dev-web": "npm run build-all && npm run dev-d"
   },
   "dependencies": {
     "lit": "3.2.1"
