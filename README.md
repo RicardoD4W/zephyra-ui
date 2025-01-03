@@ -17,7 +17,6 @@ Este repositorio está organizado como un monorepo utilizando **npm workspaces**
   - **`/packages`**
     1. **`/components`**: Contiene los componentes reutilizables.
     2. **`/demo-web`**: Sirve para probar la integración de los componentes en diferentes frameworks y como demo.
-    3. **`/docs`**: Usa Storybook para documentar y visualizar los componentes.
 
 ---
 
