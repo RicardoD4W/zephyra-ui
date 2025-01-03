@@ -6,7 +6,7 @@ export class ZToggleThemeViewModel extends ZComponent {
 
   protected updateColorScheme() {
     this.isLightTheme = !this.isLightTheme;
-    const colorScheme = this.isLightTheme ? 'light' : 'dark';
-    this.dispatchThemeChangedEvent({ colorScheme });
+    const dataTheme = this.isLightTheme ? 'light' : 'dark';
+    this.dispatchThemeChangedEvent({ dataTheme });
   }
 }

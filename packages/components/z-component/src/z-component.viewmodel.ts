@@ -7,7 +7,7 @@ import {
 import { ThemeChangedModel } from './model/theme-changed.model';
 
 export class ZComponentViewModel extends LitElement {
-  @state() colorScheme: 'light' | 'dark' = 'light';
+  @state() dataTheme: 'light' | 'dark' = 'light';
 
   constructor() {
     super();
@@ -31,7 +31,7 @@ export class ZComponentViewModel extends LitElement {
   }
 
   private _onThemeChanged = (event: ThemeChangedEvent) => {
-    this.colorScheme = event.detail.colorScheme;
+    this.dataTheme = event.detail.dataTheme;
     this._applyTheme();
   };
 
@@ -39,13 +39,13 @@ export class ZComponentViewModel extends LitElement {
     const prefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches;
-    this.colorScheme = prefersDark ? 'dark' : 'light';
+    this.dataTheme = prefersDark ? 'dark' : 'light';
     this._applyTheme();
   }
 
   private _applyTheme() {
-    this.setAttribute('color-scheme', this.colorScheme);
-    document.documentElement.setAttribute('color-scheme', this.colorScheme);
+    this.setAttribute('data-theme', this.dataTheme);
+    document.documentElement.setAttribute('data-theme', this.dataTheme);
   }
 
   protected dispatchThemeChangedEvent(detail: ThemeChangedModel) {

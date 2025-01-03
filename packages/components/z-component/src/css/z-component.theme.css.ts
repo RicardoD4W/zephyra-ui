@@ -78,7 +78,7 @@ export class ZComponentTheme {
         border-radius var(--z-transition-fast) var(--z-transition);
     }
 
-    :host([color-scheme='dark']) {
+    :host([data-theme='dark']) {
       --z-color-primary: #0056b3;
       --z-color-secondary: #3d5a5b;
       --z-color-danger: #721c24;
@@ -94,7 +94,7 @@ export class ZComponentTheme {
       --z-color-hover: rgba(0, 0, 0, 0.125);
     }
 
-    :host([color-scheme='light']) {
+    :host([data-theme='light']) {
       --z-color-primary: #66b3ff;
       --z-color-secondary: #a1b0b7;
       --z-color-danger: #f8d7da;

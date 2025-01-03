@@ -1,3 +1,3 @@
 export interface ThemeChangedModel {
-  colorScheme: 'light' | 'dark';
+  dataTheme: 'light' | 'dark';
 }
