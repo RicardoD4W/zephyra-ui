@@ -1,0 +1,109 @@
+<aside>
+  <details>
+    <summary>Componentes</summary>
+    <nav>
+      <ul>
+        <li>
+          <a href='#z-button'>z-button</a>
+        </li>
+        <li>
+          <a href='#Theme'>Theme</a>
+        </li>
+      </ul>
+    </nav>
+  </details>
+
+  <details>
+    <summary>CSS Custom</summary>
+    <nav>
+      <ul>
+        <li>
+          <a href='#typography'>Typography</a>
+        </li>
+        <li>
+          <a href='#color'>Color</a>
+        </li>
+        <li>
+          <a href='#spacing'>Spacing</a>
+        </li>
+        <li>
+          <a href='#elevation'>Elevation</a>
+        </li>
+        <li>
+          <a href='#border-radius'>Border Radius</a>
+        </li>
+      </ul>
+    </nav>
+  </details>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function highlight(element: HTMLAnchorElement) {
+      const links = document.querySelectorAll('a');
+      links.forEach((link) => link.classList.remove('selected'));
+
+      element.classList.add('selected');
+    }
+
+    const links = document.querySelectorAll('a');
+    links.forEach((link) => {
+      link.addEventListener('click', function () {
+        highlight(this);
+      });
+    });
+  });
+</script>
+
+<style>
+  aside {
+    border-radius: 8px;
+    max-width: 300px;
+    margin-inline: 15px;
+    margin-top: 25px;
+  }
+
+  details {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 5px;
+  }
+
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  nav {
+    padding-left: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin: 0.25rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--hover-color);
+  }
+
+  a.selected {
+    color: var(--hover-color);
+    font-weight: bold;
+    padding: 0.25rem;
+    border-radius: 5px;
+  }
+</style>

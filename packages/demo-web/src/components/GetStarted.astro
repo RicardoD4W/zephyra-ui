@@ -1,0 +1,67 @@
+<section>
+  <picture>
+    <img
+      src='/images/z.webp'
+      alt='z-ui logo'
+      class='z-logo'
+    />
+    <img
+      src='/images/z.webp'
+      alt='z-ui logo background'
+      class='img-background'
+    />
+  </picture>
+  <p>
+    Zephyra UI is a modern and accessible reusable web component library
+    designed to make it easy to develop user interfaces with high-performance
+    components. Built with Lit, TypeScript, and Vite, Zephyra UI offers a set of
+    ready-to-use components that can be easily integrated into any web
+    application. Its modular and lightweight design allows developers to
+    customize and extend each component to their needs.
+  </p>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+  }
+
+  p {
+    text-align: center;
+    font-size: larger;
+    text-wrap: balance;
+    max-width: 80%;
+    margin-top: 50px;
+    color: var(--text-s-color);
+  }
+
+  img {
+    aspect-ratio: 1/1;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .z-logo {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+  }
+
+  .img-background {
+    position: absolute;
+    z-index: 0;
+
+    filter: blur(35px);
+  }
+</style>

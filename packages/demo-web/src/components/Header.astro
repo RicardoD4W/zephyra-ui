@@ -1,0 +1,72 @@
+<div class='container'>
+  <a href='/'>
+    <h1>ZEPHYRA UI</h1>
+  </a>
+  <nav>
+    <ul class='nav-links'>
+      <li><a href='#features'>Features</a></li>
+      <li><a href='#docs'>Docs</a></li>
+      <li><a href='#about'>About</a></li>
+      <li><a href='#contact'>Contact</a></li>
+    </ul>
+    <section class='theme-toggle'>
+      <script>
+        import '@zephyra-ui/z-toggle-theme';
+      </script>
+      <z-toggle-theme></z-toggle-theme>
+    </section>
+  </nav>
+</div>
+
+<style>
+  .container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 25px;
+    max-height: 100%;
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+
+  .theme-toggle,
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--hover-color);
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+  }
+</style>

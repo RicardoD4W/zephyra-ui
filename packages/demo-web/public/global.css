@@ -1,0 +1,46 @@
+html{
+  transition: color 150ms ease, background-color 150ms ease;
+  --hover-color:  #5cd4ac;
+}
+
+html[data-theme='light'] {
+  --header-bg: #f5f5f5;
+  --aside-bg: #eaeaea;
+  --main-bg: #ffffff;
+  --footer-bg: #f5f5f5;
+  --text-color: #000000;
+  --text-s-color:#4b4b4b;
+  --code-bg-color: #f5f5f5;
+  background-color: #ffffff;
+}
+
+html[data-theme='dark'] {
+  --header-bg: #1e1e1e;
+  --aside-bg: #2a2a2a;
+  --main-bg: #121212;
+  --footer-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --text-s-color:#c2c2c2;
+  --code-bg-color: #363636;
+  background-color: #000000;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+aside {
+  background-color: var(--aside-bg);
+  color: var(--text-color);
+}
+
+main {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+}

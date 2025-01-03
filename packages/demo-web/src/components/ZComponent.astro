@@ -1,0 +1,132 @@
+---
+const { title, description, args } = Astro.props;
+---
+
+<article>
+  <section>
+    <h3
+      id={title}
+      class='title'
+    >
+      {title}
+    </h3>
+    <p>{description}</p>
+  </section>
+
+  <section>
+    <h3>How to install</h3>
+    <code>npm install @zephyra-ui/{title}</code>
+  </section>
+
+  <section>
+    <h3>How to use</h3>
+
+    <code>
+      &nbsp;&lt;script&gt;import '@zephyra-ui/{title}'&lt;/script&gt;&nbsp;
+      <br />
+      &nbsp;&lt;{title}&gt;&lt;/{title}&gt;&nbsp;
+    </code>
+  </section>
+
+  <section>
+
+    {Object.keys(args).map(key => <p>{key}</p>)}
+
+    <table>
+      <thead>
+        <tr>
+          <th>Prop name</th>
+          <th>Type</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {
+            args.props.map(
+              ({
+                propName,
+                propType,
+                propValue
+              }: {
+                propName: string;
+                propType: string;
+                propValue: string;
+              }) => (
+                <tr>
+                  <td>
+                    <code>{propName}</code>
+                  </td>
+                  <td>{propType}</td>
+                  <td>
+                    <code>{propName}="Click me"</code>
+                  </td>
+                  <td><{title} {propName}="{propValue}"></{title}></td>
+                </tr>
+              )
+            )
+          }
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Eventos de Componentes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>evento1</td>
+          <td>Description del primer evento.</td>
+          <td>aaa</td>
+        </tr>
+        <tr>
+          <td>evento2</td>
+          <td>Description del segundo evento.</td>
+          <td>aaaa</td>
+        </tr>
+        <tr>
+          <td>evento3</td>
+          <td>Description del tercer evento.</td>
+          <td>aaa</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <script>
+      import '@zephyra-ui/z-button';
+    </script>
+    <z-button></z-button>
+  </section>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .title{
+    padding-top: 80px;
+  }
+
+  code {
+    background-color: var(--code-bg-color);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  td {
+    padding: 5px;
+  }
+</style>

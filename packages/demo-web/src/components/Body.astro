@@ -1,0 +1,48 @@
+---
+import GetStarted from '../components/GetStarted.astro';
+import ZComponent from '../components/ZComponent.astro';
+
+const componentList = [
+  {
+    title: 'z-button',
+    description:
+      'A button component that can be customized with different utilities',
+    args: {
+      props: [
+        {
+          propName: 'label',
+          propType: 'String, default is "Button"',
+          propValue: 'Click me!',
+        },
+        {
+          propName: 'label',
+          propType: 'String, default is "Button"',
+          propValue: 'Click me!',
+        },
+        {
+          propName: 'label',
+          propType: 'String, default is "Button"',
+          propValue: 'Click me!',
+        },
+      ],
+      events: [],
+    },
+  },
+];
+---
+
+<GetStarted />
+
+<h2>Components</h2>
+
+{
+  componentList.map(({ title, description, args }) => (
+    <ZComponent
+      title={title}
+      description={description}
+      args={args}
+    />
+  ))
+}
+
+<style></style>
