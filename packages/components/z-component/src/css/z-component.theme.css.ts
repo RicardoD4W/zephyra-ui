@@ -7,6 +7,20 @@ export class ZComponentTheme {
 
       /* COLORS */
       color-scheme: light dark;
+      --z-color-hover: 110%;
+      --z-color-active: 90%;
+      --z-color-zephyra: #00a36d;
+
+      /* OPACITY */
+      --z-opacity-0: 0;
+      --z-opacity-2: 0.25;
+      --z-opacity-disabled: 0.25;
+      --z-opacity-5: 0.5;
+      --z-opacity-7: 0.75;
+      --z-opacity-10: 1;
+
+      /* FILTER */
+      --z-grayscale-disabled: 0.8;
 
       /* TYPOGRAPHY */
       --z-font: 'Noto Sans', serif;
@@ -91,11 +105,10 @@ export class ZComponentTheme {
       --z-color-muted: #495057;
       --z-color-background: #f8f9fa;
       --z-color-border: #dee2e6;
-      --z-color-hover: rgba(0, 0, 0, 0.125);
     }
 
     :host([data-theme='light']) {
-      --z-color-primary: #66b3ff;
+      --z-color-primary: #93c9ff;
       --z-color-secondary: #a1b0b7;
       --z-color-danger: #f8d7da;
       --z-color-warning: #fff3cd;
@@ -107,7 +120,6 @@ export class ZComponentTheme {
       --z-color-muted: #adb5bd;
       --z-color-background: #ffffff;
       --z-color-border: #f1f3f5;
-      --z-color-hover: rgba(0, 0, 0, 0.05);
     }
   `;
 
