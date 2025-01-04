@@ -12,6 +12,7 @@
     "astro": "5.1.2",
     "@zephyra-ui/z-component": "0.0.0",
     "@zephyra-ui/z-button": "0.0.0",
-    "@zephyra-ui/z-toggle-theme": "0.0.0"
+    "@zephyra-ui/z-toggle-theme": "0.0.0",
+    "@zephyra-ui/z-color": "0.0.0"
   }
 }

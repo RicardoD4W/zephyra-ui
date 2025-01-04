@@ -1,48 +1,63 @@
 ---
 import GetStarted from '../components/GetStarted.astro';
 import ZComponent from '../components/ZComponent.astro';
+import CSSCustom from '../components/CSSCustom.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
 
-const componentList = [
-  {
-    title: 'z-button',
-    description:
-      'A button component that can be customized with different utilities',
-    args: {
-      props: [
-        {
-          propName: 'label',
-          propType: 'String, default is "Button"',
-          propValue: 'Click me!',
-        },
-        {
-          propName: 'label',
-          propType: 'String, default is "Button"',
-          propValue: 'Click me!',
-        },
-        {
-          propName: 'label',
-          propType: 'String, default is "Button"',
-          propValue: 'Click me!',
-        },
-      ],
-      events: [],
-    },
-  },
-];
+import componentList from '../data/componentList.json';
+import cssCustomList from '../data/cssCustomList.json';
 ---
 
-<GetStarted />
+<ContentLayout>
+  <GetStarted />
 
-<h2>Components</h2>
+  <section>
+    <article class='section'>
+      <h2
+        class='title'
+        id='components'
+      >
+        Components
+      </h2>
 
-{
-  componentList.map(({ title, description, args }) => (
-    <ZComponent
-      title={title}
-      description={description}
-      args={args}
-    />
-  ))
-}
+      {
+        componentList.map(({ title, description, args }) => (
+          <ZComponent
+            title={title}
+            description={description}
+            args={args}
+          />
+        ))
+      }
+      <hr />
+    </article>
 
-<style></style>
+    <article>
+      <h2
+        class='title'
+        id='css-custom'
+      >
+        CSS Custom Properties
+      </h2>
+      <CSSCustom cssCustomList={cssCustomList} />
+      <hr />
+    </article>
+  </section>
+</ContentLayout>
+
+<style>
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  article {
+    margin-bottom: 80px;
+  }
+
+  .title {
+    padding-top: 80px;
+  }
+</style>

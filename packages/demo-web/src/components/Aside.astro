@@ -1,37 +1,41 @@
+---
+import componentList from '../data/componentList.json';
+import cssCustomList from '../data/cssCustomList.json';
+---
+
 <aside>
-  <details>
-    <summary>Componentes</summary>
+  <details open>
+    <summary>
+      <a href='#get-started'> Get Started</a>
+    </summary>
+  </details>
+
+  <details open>
+    <summary><a href='#components'>Components</a> </summary>
     <nav>
       <ul>
-        <li>
-          <a href='#z-button'>z-button</a>
-        </li>
-        <li>
-          <a href='#Theme'>Theme</a>
-        </li>
+        {
+          componentList.map(({ title }) => (
+            <li>
+              <a href={`#${title}`}>{title}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </details>
 
-  <details>
-    <summary>CSS Custom</summary>
+  <details open>
+    <summary> <a href='#css-custom'>CSS Custom</a></summary>
     <nav>
       <ul>
-        <li>
-          <a href='#typography'>Typography</a>
-        </li>
-        <li>
-          <a href='#color'>Color</a>
-        </li>
-        <li>
-          <a href='#spacing'>Spacing</a>
-        </li>
-        <li>
-          <a href='#elevation'>Elevation</a>
-        </li>
-        <li>
-          <a href='#border-radius'>Border Radius</a>
-        </li>
+        {
+          cssCustomList.map(({ title }) => (
+            <li>
+              <a href={`#${title}`}>{title}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </details>

@@ -3,6 +3,11 @@ const { title, description, args } = Astro.props;
 ---
 
 <article>
+  <script>
+    import '@zephyra-ui/z-button';
+    import '@zephyra-ui/z-toggle-theme';
+  </script>
+
   <section>
     <h3
       id={title}
@@ -30,9 +35,9 @@ const { title, description, args } = Astro.props;
 
   <section>
 
-    {Object.keys(args).map(key => <p>{key}</p>)}
-
-    <table>
+    {args.props.length > 0 &&  (
+      <h2>Properties</h2>
+      <table>
       <thead>
         <tr>
           <th>Prop name</th>
@@ -42,7 +47,6 @@ const { title, description, args } = Astro.props;
         </tr>
       </thead>
       <tbody>
-        <tr>
           {
             args.props.map(
               ({
@@ -60,51 +64,64 @@ const { title, description, args } = Astro.props;
                   </td>
                   <td>{propType}</td>
                   <td>
-                    <code>{propName}="Click me"</code>
+                    <code>&nbsp;&lt;{title}{propName}{propValue}&gt;&lt;/{title}&gt;&nbsp; </code>
                   </td>
-                  <td><{title} {propName}="{propValue}"></{title}></td>
+                  <td><{title} {propName}{propValue.replace('"','').replace('"','')}></td>
                 </tr>
               )
             )
           }
-        </tr>
       </tbody>
     </table>
+    )}
 
-    <h2>Eventos de Componentes</h2>
+    
+
+    {args.events.length > 0 && (
+    <h2>Events</h2>
     <table>
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Description</th>
-          <th>Example</th>
+          <th>Event name</th>
+          <th>Dispach</th>
+          <th>Payload</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>evento1</td>
-          <td>Description del primer evento.</td>
-          <td>aaa</td>
-        </tr>
-        <tr>
-          <td>evento2</td>
-          <td>Description del segundo evento.</td>
-          <td>aaaa</td>
-        </tr>
-        <tr>
-          <td>evento3</td>
-          <td>Description del tercer evento.</td>
-          <td>aaa</td>
-        </tr>
+          {
+            args.events.map(
+              ({
+                eventName,
+                eventDispach,
+                eventPayload
+              }: {
+                eventName: string;
+                eventDispach: string;
+                eventPayload: string;
+              }) => (
+                <tr>
+                  <td>
+                    <code>{eventName}</code>
+                  </td>
+                  <td>{eventDispach}</td>
+                  <td>
+                    <code>
+                    {eventPayload}
+                    </code>
+                  </td>
+                </tr>
+              )
+            )
+          }
       </tbody>
     </table>
+  )}
+
+    
   </section>
 
   <section>
-    <script>
-      import '@zephyra-ui/z-button';
-    </script>
-    <z-button></z-button>
+
   </section>
 </article>
 
@@ -128,5 +145,10 @@ const { title, description, args } = Astro.props;
 
   td {
     padding: 5px;
+  }
+
+  p {
+    color: var(--text-s-color);
+    text-wrap: pretty;
   }
 </style>

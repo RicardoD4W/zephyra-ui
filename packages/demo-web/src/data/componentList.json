@@ -1,0 +1,41 @@
+[
+  {
+    "title": "z-button",
+    "description": "A button component that can be customized with different utilities",
+    "args": {
+      "props": [
+        {
+          "propName": "label",
+          "propType": "String, default is 'Button'",
+          "propValue": "='Click'"
+        },
+        {
+          "propName": "disabled",
+          "propType": "Boolean, default is 'false'",
+          "propValue": ""
+        }
+      ],
+      "events": []
+    }
+  },
+  {
+    "title": "z-toggle-theme",
+    "description": "A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme'",
+    "args": {
+      "props": [
+        {
+          "propName": "",
+          "propType": "",
+          "propValue": ""
+        }
+      ],
+      "events": [
+        {
+          "eventName": "theme:changed",
+          "eventDispach": "Fires when clicking the SVG",
+          "eventPayload": "detail : { dataTheme: 'light' | 'dark' }"
+        }
+      ]
+    }
+  }
+]

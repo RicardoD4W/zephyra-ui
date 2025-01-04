@@ -1,0 +1,93 @@
+---
+const { cssCustomList } = Astro.props;
+---
+
+<article>
+  <script>
+    import '@zephyra-ui/z-color';
+  </script>
+  {
+    cssCustomList.map(
+      ({
+        title,
+        content,
+        description,
+      }: {
+        title: string;
+        content: { key: string; value: string }[];
+        description: string;
+      }) => (
+        <section>
+          <h3
+            class='title'
+            id={title}
+          >
+            {title}
+          </h3>
+
+          <p>{description}</p>
+
+          <ul>
+            {content.map(({ key, value }) => (
+              <li>
+                <span>
+                  <code>{key}</code>
+                </span>
+                <span>
+                  <code>{value}</code>
+                </span>
+
+                {key.startsWith('--z-color') && (
+                  <span>
+                    <z-color
+                      size='45'
+                      color={`var(${key},red)`}
+                    />
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    )
+  }
+</article>
+
+<style>
+  span {
+    width: 33%;
+  }
+  article {
+    margin: 0 auto;
+  }
+
+  .title {
+    padding-top: 80px;
+  }
+
+  code {
+    background-color: var(--code-bg-color);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  ul,
+  li {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--text-s-color);
+    text-wrap: pretty;
+  }
+</style>
