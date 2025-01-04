@@ -1,6 +1,7 @@
 import { CSSResultGroup, CSSResultOrNative, TemplateResult, html } from 'lit';
 import { ZButtonTheme } from './css/z-button.theme.css';
 import { ZButtonViewModel } from './z-button.viewmodel';
+import { when } from 'lit/directives/when.js';
 
 export class ZButtonView extends ZButtonViewModel {
   protected static finalizeStyles(
@@ -12,7 +13,19 @@ export class ZButtonView extends ZButtonViewModel {
   public render(): TemplateResult {
     return html`
       <button class="button ${this.variant}" ?disabled=${this.disabled}>
-        ${this.label}
+        ${when(
+          this.isLoading,
+          () => html` <div class="loading-container">
+            <div class="hidden">${this.label}</div>
+            <div class="loading-wave">
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+            </div>
+          </div>`,
+          () => html`${this.label}`
+        )}
       </button>
     `;
   }
