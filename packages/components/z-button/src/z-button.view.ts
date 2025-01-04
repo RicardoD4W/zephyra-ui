@@ -11,7 +11,9 @@ export class ZButtonView extends ZButtonViewModel {
 
   public render(): TemplateResult {
     return html`
-      <button class="button" ?disabled=${this.disabled}>${this.label}</button>
+      <button class="button ${this.variant}" ?disabled=${this.disabled}>
+        ${this.label}
+      </button>
     `;
   }
 }

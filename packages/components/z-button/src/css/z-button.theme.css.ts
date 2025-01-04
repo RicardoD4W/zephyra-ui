@@ -3,42 +3,74 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 export class ZButtonTheme {
   static cssBase: CSSResult = css`
     .button {
-      padding: var(--z-spacing-sm) var(--z-spacing-md);
-      background-color: var(--z-color-primary);
       color: var(--z-color-text);
+
+      padding: var(--z-spacing-xs) var(--z-spacing-sm);
+
       font-size: var(--z-font-md);
       font-weight: var(--z-font-regular);
       font-family: var(--z-font);
-      border: 1px solid var(--z-color-border);
-      border-radius: var(--z-radius-md);
+
+      transition: background-color var(--z-transition-fast) var(--z-transition),
+        color var(--z-transition-fast) var(--z-transition),
+        filter var(--z-transition-fast) var(--z-transition);
+
       cursor: pointer;
-      transition: background-color var(--z-transition-fast),
-        border-color var(--z-transition-fast);
       outline: none;
       text-decoration: none;
       user-select: none;
+      border: none;
+
+      border-radius: var(--z-radius-md);
+      box-shadow: var(--z-shadow-sm);
     }
 
-    .button:focus {
-      border-color: var(--z-color-primary);
-      box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+    .button.outline:focus {
+      box-shadow: none;
     }
 
     .button:disabled {
-      background-color: var(--z-color-border);
-      color: var(--z-color-text-muted);
+      opacity: var(--z-opacity-disabled);
+      filter: grayscale(var(--z-grayscale-disabled));
       cursor: not-allowed;
-      border-color: var(--z-color-border);
     }
 
     .button:not([disabled]):hover {
-      background-color: var(--z-color-primary-dark);
-      border-color: var(--z-color-border-hover);
+      filter: brightness(var(--z-color-hover));
     }
 
     .button:not([disabled]):active {
-      background-color: var(--z-color-primary-darkest);
-      border-color: var(--z-color-border-hover);
+      filter: brightness(var(--z-color-active));
+    }
+
+    .button.primary {
+      background-color: var(--z-color-primary);
+    }
+
+    .button.success {
+      background-color: var(--z-color-success);
+    }
+
+    .button.warning {
+      background-color: var(--z-color-warning);
+    }
+
+    .button.danger {
+      background-color: var(--z-color-danger);
+    }
+
+    .button.info {
+      background-color: var(--z-color-info);
+    }
+
+    .button.outline {
+      box-shadow: none;
+      background-color: transparent;
+      color: var(--z-color-primary);
+    }
+
+    .button.zephyra {
+      background-color: var(--z-color-zephyra);
     }
   `;
 
