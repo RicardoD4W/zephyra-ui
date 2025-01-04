@@ -3,7 +3,8 @@
     "title": "Colors",
     "description": "CSS variables available in each component, keep in mind that you can override them and that with the themes (light and dark) their values ​​will change, this can also be overridden by CSS taking into account that we use the [data-theme=\"light\"] or [data-theme=\"dark\"] attribute.",
     "content": [
-      { "key": "--z-color-primary", "value": "#66b3ff / #0056b3" },
+      { "key": "--z-color-zephyra", "value": "#00a36d" },
+      { "key": "--z-color-primary", "value": "#93c9ff / #0056b3" },
       { "key": "--z-color-secondary", "value": "#a1b0b7 / #3d5a5b" },
       { "key": "--z-color-danger", "value": "#f8d7da / #721c24" },
       { "key": "--z-color-warning", "value": "#fff3cd / #856404" },
@@ -13,12 +14,12 @@
       { "key": "--z-color-dark", "value": "#495057 / #212529" },
       { "key": "--z-color-gray", "value": "#868e96 / #6c757d" },
       { "key": "--z-color-muted", "value": "#adb5bd / #495057" },
-      { "key": "--z-color-background", "value": "#ffffff / #f8f9fa" },
+      { "key": "--z-color-background", "value": "#ebebeb / #f8f9fa" },
       { "key": "--z-color-border", "value": "#f1f3f5 / #dee2e6" },
-      {
-        "key": "--z-color-hover",
-        "value": "rgba(0, 0, 0, 0.05) / rgba(0, 0, 0, 0.125)"
-      }
+      { "key": "--z-color-text", "value": "#000 / #FFF" },
+      { "key": "--z-color-transparent", "value": "transparent" },
+      { "key": "--z-color-hover", "value": "110%" },
+      { "key": "--z-color-active", "value": "90%" }
     ]
   },
   {
@@ -49,6 +50,33 @@
       { "key": "--z-spacing-lg", "value": "1.5rem" },
       { "key": "--z-spacing-xl", "value": "2rem" },
       { "key": "--z-spacing-xxl", "value": "3rem" }
+    ]
+  },
+  {
+    "title": "Size",
+    "description": "CSS variables for size, useful for width and heigth.",
+    "content": [
+      { "key": "--z-w-auto", "value": "auto" },
+      { "key": "--z-w-xs", "value": "4rem" },
+      { "key": "--z-w-sm", "value": "8rem" },
+      { "key": "--z-w-md", "value": "16rem" },
+      { "key": "--z-w-lg", "value": "32rem" },
+      { "key": "--z-w-xl", "value": "64rem" },
+      { "key": "--z-w-xxl", "value": "128rem" },
+      { "key": "--z-w-full", "value": "100%" },
+      { "key": "--z-w-min", "value": "min-content" },
+      { "key": "--z-w-max", "value": "max-content" },
+
+      { "key": "--z-h-auto", "value": "auto" },
+      { "key": "--z-h-xs", "value": "2rem" },
+      { "key": "--z-h-sm", "value": "4rem" },
+      { "key": "--z-h-md", "value": "8rem" },
+      { "key": "--z-h-lg", "value": "16rem" },
+      { "key": "--z-h-xl", "value": "32rem" },
+      { "key": "--z-h-xxl", "value": "64rem" },
+      { "key": "--z-h-full", "value": "100%" },
+      { "key": "--z-h-min", "value": "min-content" },
+      { "key": "--z-h-max", "value": "max-content" }
     ]
   },
   {
@@ -83,7 +111,7 @@
       { "key": "--z-radius-md", "value": "0.25rem" },
       { "key": "--z-radius-lg", "value": "0.5rem" },
       { "key": "--z-radius-xl", "value": "1rem" },
-      { "key": "--z-radius-full", "value": "999999999px" }
+      { "key": "--z-radius-full", "value": "9999px" }
     ]
   },
   {
@@ -93,6 +121,7 @@
       { "key": "--z-transition-fast", "value": "150ms" },
       { "key": "--z-transition-medium", "value": "300ms" },
       { "key": "--z-transition-slow", "value": "500ms" },
+      { "key": "--z-transition-slower", "value": "1000ms" },
       { "key": "--z-transition-linear", "value": "linear" },
       { "key": "--z-transition", "value": "ease" },
       { "key": "--z-transition-in", "value": "ease-in" },
@@ -112,5 +141,27 @@
       { "key": "--z-index-tooltip", "value": "20" },
       { "key": "--z-index-max", "value": "999" }
     ]
+  },
+  {
+    "title": "Opacity",
+    "description": "CSS variables for opcity",
+    "content": [
+      { "key": "--z-opacity-0", "value": "0" },
+      { "key": "--z-opacity-2", "value": "0.25" },
+      { "key": "--z-opacity-disabled", "value": "0.25" },
+      { "key": "--z-opacity-5", "value": "0.5" },
+      { "key": "--z-opacity-7", "value": "0.75" },
+      { "key": "--z-opacity-10", "value": "1" }
+    ]
+  },
+  {
+    "title": "Filters",
+    "description": "CSS variables for filters",
+    "content": [{ "key": "--z-grayscale-disabled", "value": "0.8" }]
+  },
+  {
+    "title": "Others",
+    "description": "",
+    "content": [{ "key": "--z-none", "value": "none" }]
   }
 ]

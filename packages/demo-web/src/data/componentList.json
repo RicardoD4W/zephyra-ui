@@ -15,6 +15,11 @@
           "propValue": ""
         },
         {
+          "propName": "isLoading",
+          "propType": "Boolean, default is 'false'",
+          "propValue": ""
+        },
+        {
           "propName": "variant",
           "propType": "success",
           "propValue": "=\"success\""
