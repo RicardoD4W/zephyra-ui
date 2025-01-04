@@ -10,6 +10,30 @@ export class ZComponentTheme {
       --z-color-hover: 110%;
       --z-color-active: 90%;
       --z-color-zephyra: #00a36d;
+      --z-color-transparent: transparent;
+
+      /* SIZE */
+      --z-w-auto: auto;
+      --z-w-xs: 4rem;
+      --z-w-sm: 8rem;
+      --z-w-md: 16rem;
+      --z-w-lg: 32rem;
+      --z-w-xl: 64rem;
+      --z-w-xxl: 128rem;
+      --z-w-full: 100%;
+      --z-w-min: min-content;
+      --z-w-max: ;
+
+      --z-h-auto: auto;
+      --z-h-xs: 2rem;
+      --z-h-sm: 4rem;
+      --z-h-md: 8rem;
+      --z-h-lg: 16rem;
+      --z-h-xl: 32rem;
+      --z-h-xxl: 64rem;
+      --z-h-full: 100%;
+      --z-h-min: min-content;
+      --z-h-max: max-content;
 
       /* OPACITY */
       --z-opacity-0: 0;
@@ -63,12 +87,13 @@ export class ZComponentTheme {
       --z-radius-md: 0.25rem;
       --z-radius-lg: 0.5rem;
       --z-radius-xl: 1rem;
-      --z-radius-full: 999999999px;
+      --z-radius-full: 9999px;
 
       /* TRANSITIONS */
       --z-transition-fast: 150ms;
       --z-transition-medium: 300ms;
       --z-transition-slow: 500ms;
+      --z-transition-slower: 1000ms;
       --z-transition-linear: linear;
       --z-transition: ease;
       --z-transition-in: ease-in;
@@ -85,6 +110,8 @@ export class ZComponentTheme {
       --z-index-max: 999;
 
       /* OTHERS */
+      --z-none: none;
+
       transition: background-color var(--z-transition-fast) var(--z-transition),
         color var(--z-transition-fast) var(--z-transition),
         box-shadow var(--z-transition-fast) var(--z-transition),
@@ -105,6 +132,7 @@ export class ZComponentTheme {
       --z-color-muted: #495057;
       --z-color-background: #f8f9fa;
       --z-color-border: #dee2e6;
+      --z-color-text: #fff;
     }
 
     :host([data-theme='light']) {
@@ -118,8 +146,9 @@ export class ZComponentTheme {
       --z-color-dark: #495057;
       --z-color-gray: #868e96;
       --z-color-muted: #adb5bd;
-      --z-color-background: #ffffff;
+      --z-color-background: #ebebeb;
       --z-color-border: #f1f3f5;
+      --z-color-text: #000;
     }
   `;
 
