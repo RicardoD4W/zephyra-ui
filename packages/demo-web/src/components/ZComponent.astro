@@ -64,7 +64,7 @@ const { title, description, args } = Astro.props;
                   </td>
                   <td>{propType}</td>
                   <td>
-                    <code>&nbsp;&lt;{title}{propName}{propValue}&gt;&lt;/{title}&gt;&nbsp; </code>
+                    <code>&nbsp;&lt;{title}{propName && ' '+ propName}{propValue}&gt;&lt;/{title}&gt;&nbsp; </code>
                   </td>
                   <td><{title} {propName}{propValue.replace('"','').replace('"','')}></td>
                 </tr>
@@ -130,6 +130,7 @@ const { title, description, args } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
   }
   
   .title{

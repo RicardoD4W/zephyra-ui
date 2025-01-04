@@ -7,7 +7,7 @@
         {
           "propName": "label",
           "propType": "String, default is 'Button'",
-          "propValue": "='Click'"
+          "propValue": "=\"Click\""
         },
         {
           "propName": "disabled",
