@@ -28,7 +28,9 @@ export class ZAlertView extends ZAlertViewModel {
   }
 }
 
-window.customElements.define('z-alert', ZAlertView);
+if (!customElements.get('z-alert')) {
+  window.customElements.define('z-alert', ZAlertView);
+}
 
 declare global {
   interface HTMLElementTagNameMap {

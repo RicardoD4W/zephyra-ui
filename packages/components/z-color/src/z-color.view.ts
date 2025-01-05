@@ -19,7 +19,9 @@ export class ZColorView extends ZColorViewModel {
   }
 }
 
-window.customElements.define('z-color', ZColorView);
+if (!customElements.get('z-color')) {
+  window.customElements.define('z-color', ZColorView);
+}
 
 declare global {
   interface HTMLElementTagNameMap {

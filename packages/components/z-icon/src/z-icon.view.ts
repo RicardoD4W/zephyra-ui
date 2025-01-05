@@ -91,7 +91,9 @@ export class ZIconView extends ZIconViewModel {
   }
 }
 
-window.customElements.define('z-icon', ZIconView);
+if (!customElements.get('z-icon')) {
+  window.customElements.define('z-icon', ZIconView);
+}
 
 declare global {
   interface HTMLElementTagNameMap {

@@ -27,7 +27,9 @@ export class ZToggleThemeView extends ZToggleThemeViewModel {
   }
 }
 
-window.customElements.define('z-toggle-theme', ZToggleThemeView);
+if (!customElements.get('z-toggle-theme')) {
+  window.customElements.define('z-toggle-theme', ZToggleThemeView);
+}
 
 declare global {
   interface HTMLElementTagNameMap {

@@ -31,7 +31,9 @@ export class ZButtonView extends ZButtonViewModel {
   }
 }
 
-window.customElements.define('z-button', ZButtonView);
+if (!customElements.get('z-button')) {
+  window.customElements.define('z-button', ZButtonView);
+}
 
 declare global {
   interface HTMLElementTagNameMap {
