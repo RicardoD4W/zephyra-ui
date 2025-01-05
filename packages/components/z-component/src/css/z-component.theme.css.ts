@@ -22,7 +22,7 @@ export class ZComponentTheme {
       --z-w-xxl: 128rem;
       --z-w-full: 100%;
       --z-w-min: min-content;
-      --z-w-max: ;
+      --z-w-max: max-content;
 
       --z-h-auto: auto;
       --z-h-xs: 2rem;
@@ -34,6 +34,14 @@ export class ZComponentTheme {
       --z-h-full: 100%;
       --z-h-min: min-content;
       --z-h-max: max-content;
+
+      --z-icon-xxs: 0.25rem;
+      --z-icon-xs: 0.5rem;
+      --z-icon-sm: 1rem;
+      --z-icon-md: 1.5rem;
+      --z-icon-lg: 2rem;
+      --z-icon-xl: 2.5rem;
+      --z-icon-xxl: 3rem;
 
       /* OPACITY */
       --z-opacity-0: 0;
@@ -122,10 +130,14 @@ export class ZComponentTheme {
     :host([data-theme='dark']) {
       --z-color-primary: #0056b3;
       --z-color-secondary: #3d5a5b;
-      --z-color-danger: #721c24;
-      --z-color-warning: #856404;
-      --z-color-success: #155724;
       --z-color-info: #0c5460;
+      --z-color-success: #155724;
+      --z-color-warning: #856404;
+      --z-color-danger: #721c24;
+      --z-color-info-darkest: #0095af;
+      --z-color-success-darkest: #009222;
+      --z-color-warning-darkest: #d39e00;
+      --z-color-danger-darkest: #a70011;
       --z-color-light: #343a40;
       --z-color-dark: #212529;
       --z-color-gray: #6c757d;
@@ -138,10 +150,14 @@ export class ZComponentTheme {
     :host([data-theme='light']) {
       --z-color-primary: #93c9ff;
       --z-color-secondary: #a1b0b7;
-      --z-color-danger: #f8d7da;
-      --z-color-warning: #fff3cd;
-      --z-color-success: #d4edda;
       --z-color-info: #d1ecf1;
+      --z-color-success: #d4edda;
+      --z-color-warning: #fff3cd;
+      --z-color-danger: #f8d7da;
+      --z-color-info-darkest: #81c3cf;
+      --z-color-success-darkest: #8fcf9e;
+      --z-color-warning-darkest: #d3c083;
+      --z-color-danger-darkest: #c28086;
       --z-color-light: #ffffff;
       --z-color-dark: #495057;
       --z-color-gray: #868e96;
