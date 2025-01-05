@@ -6,6 +6,8 @@ const { title, description, args } = Astro.props;
   <script>
     import '@zephyra-ui/z-button';
     import '@zephyra-ui/z-toggle-theme';
+    import '@zephyra-ui/z-icon';
+    import '@zephyra-ui/z-alert';
   </script>
 
   <section>
@@ -68,10 +70,12 @@ const { title, description, args } = Astro.props;
                   ? <td><code>&nbsp;&lt;{title}&gt;{propValue}&lt;/{title}&gt;&nbsp; </code></td> 
                   : <td><code>&nbsp;&lt;{title}{propName && ' '+ propName}{propValue}&gt;&lt;/{title}&gt;&nbsp; </code></td>}
                   
+                  
                   {propName === 'slot' 
-                  ? <td><{title}> {propValue}</td> 
+                  ? title === 'z-alert' 
+                    ? <td><z-alert set:html={propValue}></z-alert></td> 
+                    : <td><{title}> {propValue}</td> 
                   : <td><{title} {propName}{propValue.replace('"','').replace('"','')}></td>}
-                 
                 </tr>
               )
             )

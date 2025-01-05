@@ -4,12 +4,20 @@
     "description": "CSS variables available in each component, keep in mind that you can override them and that with the themes (light and dark) their values ​​will change, this can also be overridden by CSS taking into account that we use the [data-theme=\"light\"] or [data-theme=\"dark\"] attribute.",
     "content": [
       { "key": "--z-color-zephyra", "value": "#00a36d" },
+
       { "key": "--z-color-primary", "value": "#93c9ff / #0056b3" },
       { "key": "--z-color-secondary", "value": "#a1b0b7 / #3d5a5b" },
-      { "key": "--z-color-danger", "value": "#f8d7da / #721c24" },
-      { "key": "--z-color-warning", "value": "#fff3cd / #856404" },
-      { "key": "--z-color-success", "value": "#d4edda / #155724" },
+
       { "key": "--z-color-info", "value": "#d1ecf1 / #0c5460" },
+      { "key": "--z-color-success", "value": "#d4edda / #155724" },
+      { "key": "--z-color-warning", "value": "#fff3cd / #856404" },
+      { "key": "--z-color-danger", "value": "#f8d7da / #721c24" },
+
+      { "key": "--z-color-info-darkest", "value": "#0095af / #81c3cf" },
+      { "key": "--z-color-success-darkest", "value": "#009222 / #8fcf9e" },
+      { "key": "--z-color-warning-darkest", "value": "#d39e00 / #d3c083" },
+      { "key": "--z-color-danger-darkest", "value": "#a70011 / #c28086" },
+
       { "key": "--z-color-light", "value": "#ffffff / #343a40" },
       { "key": "--z-color-dark", "value": "#495057 / #212529" },
       { "key": "--z-color-gray", "value": "#868e96 / #6c757d" },
@@ -65,7 +73,7 @@
       { "key": "--z-w-xxl", "value": "128rem" },
       { "key": "--z-w-full", "value": "100%" },
       { "key": "--z-w-min", "value": "min-content" },
-      { "key": "--z-w-max", "value": "max-content" },
+      { "key": "--z-w-max", "value": "1rem" },
 
       { "key": "--z-h-auto", "value": "auto" },
       { "key": "--z-h-xs", "value": "2rem" },
@@ -76,7 +84,15 @@
       { "key": "--z-h-xxl", "value": "64rem" },
       { "key": "--z-h-full", "value": "100%" },
       { "key": "--z-h-min", "value": "min-content" },
-      { "key": "--z-h-max", "value": "max-content" }
+      { "key": "--z-h-max", "value": "max-content" },
+
+      { "key": "--z-icon-xxs", "value": "0.25rem" },
+      { "key": "--z-icon-xs", "value": "0.5rem" },
+      { "key": "--z-icon-sm", "value": "1rem" },
+      { "key": "--z-icon-md", "value": "1.5rem" },
+      { "key": "--z-icon-lg", "value": "2rem" },
+      { "key": "--z-icon-xl", "value": "2.5rem" },
+      { "key": "--z-icon-xxl", "value": "3rem" }
     ]
   },
   {
