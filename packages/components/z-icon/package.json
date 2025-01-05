@@ -1,0 +1,14 @@
+{
+    "name": "@zephyra-ui/z-icon",
+    "version": "0.0.0",
+    "main": "dist/z-icon.umd.cjs",
+    "module": "dist/z-icon.js",
+    "type": "module",
+    "scripts": {
+        "build": "vite build"
+    },
+    "dependencies": {
+        "lit": "3.2.1"
+    },
+    "private": true
+}
