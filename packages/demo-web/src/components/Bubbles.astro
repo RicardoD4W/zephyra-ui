@@ -1,0 +1,118 @@
+<div class='bubble-container'></div>
+
+<script>
+  const bubbleCount = 20;
+  const spanCount = 5;
+  const bubbleContainer = document.querySelector('.bubble-container');
+
+  for (let i = 0; i < bubbleCount; i++) {
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+
+    const randomLeft = Math.random() * 60;
+    const randomTop = Math.random() * 60;
+    const zoomFactor = Math.random() + 0.25;
+    const delay = -i + 's';
+
+    bubble.style.position = 'absolute';
+    bubble.style.width = '200px';
+    bubble.style.height = '200px';
+    bubble.style.borderRadius = '50%';
+    bubble.style.animation = `jiggle 8s ease-in-out infinite`;
+    bubble.style.left = `${randomLeft}%`;
+    bubble.style.top = `${randomTop}%`;
+    bubble.style.zoom = '' + zoomFactor;
+    bubble.style.animationDelay = delay;
+
+    const before = document.createElement('div');
+    before.className = 'before';
+    before.style.position = 'absolute';
+    before.style.top = '50px';
+    before.style.left = '45px';
+    before.style.width = '30px';
+    before.style.height = '30px';
+    before.style.borderRadius = '50%';
+    before.style.background = 'var(--bubbles-5)';
+    before.style.zIndex = '10';
+    before.style.filter = 'blur(2px)';
+    bubble.appendChild(before);
+
+    const after = document.createElement('div');
+    after.className = 'after';
+    after.style.position = 'absolute';
+    after.style.top = '80px';
+    after.style.left = '80px';
+    after.style.width = '20px';
+    after.style.height = '20px';
+    after.style.borderRadius = '50%';
+    after.style.background = 'var(--bubbles-5)';
+    after.style.zIndex = '10';
+    after.style.filter = 'blur(2px)';
+    bubble.appendChild(after);
+
+    for (let j = 0; j < spanCount; j++) {
+      const span = document.createElement('span');
+      span.style.position = 'absolute';
+      span.style.borderRadius = '50%';
+
+      switch (j) {
+        case 0:
+          span.style.inset = '10px';
+          span.style.borderLeft = `7px solid var(--bubbles-${j + 1})`;
+          span.style.filter = `blur(8px)`;
+          break;
+        case 1:
+          span.style.inset = '10px';
+          span.style.borderRight = `7px solid var(--bubbles-${j + 1})`;
+          span.style.filter = `blur(8px)`;
+          break;
+        case 2:
+          span.style.inset = '10px';
+          span.style.borderTop = `7px solid var(--bubbles-${j + 1})`;
+          span.style.filter = `blur(8px)`;
+          break;
+        case 3:
+          span.style.inset = '30px';
+          span.style.borderLeft = `7px solid var(--bubbles-${j + 1})`;
+          span.style.filter = `blur(12px)`;
+          break;
+        case 4:
+          span.style.inset = '10px';
+          span.style.borderBottom = `5px solid var(--bubbles-${j + 1})`;
+          span.style.filter = `blur(8px)`;
+          span.style.transform = `rotate(330deg)`;
+          break;
+
+        default:
+          break;
+      }
+
+      bubble.appendChild(span);
+    }
+
+    bubbleContainer?.appendChild(bubble);
+  }
+
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = `
+    @keyframes jiggle {
+      0%, 100% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+    }
+  `;
+  document.head.appendChild(styleSheet);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
+<style>
+  .bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+  }
+</style>
