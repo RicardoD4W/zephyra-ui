@@ -5,9 +5,9 @@
     "args": {
       "props": [
         {
-          "propName": "label",
-          "propType": "String, default is 'Button'",
-          "propValue": "=\"Click\""
+          "propName": "slot",
+          "propType": "HTML, default is 'Button'",
+          "propValue": "Click me!"
         },
         {
           "propName": "disabled",
