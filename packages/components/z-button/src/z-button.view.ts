@@ -16,7 +16,7 @@ export class ZButtonView extends ZButtonViewModel {
         ${when(
           this.isLoading,
           () => html` <div class="loading-container">
-            <div class="hidden">${this.label}</div>
+            <div class="hidden"><slot>Button</slot></div>
             <div class="loading-wave">
               <div class="loading-bar"></div>
               <div class="loading-bar"></div>
@@ -24,7 +24,7 @@ export class ZButtonView extends ZButtonViewModel {
               <div class="loading-bar"></div>
             </div>
           </div>`,
-          () => html`${this.label}`
+          () => html`<slot>Button</slot>`
         )}
       </button>
     `;
