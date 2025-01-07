@@ -1,3 +1,25 @@
+<script>
+  const $bubblesContainer = document.querySelector('.bubble-container');
+  const keyframes = [
+    { transform: 'scale(1)', opacity: 1 },
+    { transform: 'scale(2.5)', opacity: 0 },
+  ];
+
+  $bubblesContainer?.addEventListener('click', (e) => {
+    const bubbleContainer = e.target as HTMLElement;
+    const bubble = bubbleContainer.closest('.bubble');
+    const pop = new Audio('/audio/bubblepop.mp3');
+
+    pop.volume = 0.5;
+
+    if (bubble) {
+      const animation = bubble.animate(keyframes, 150);
+      pop.play();
+      animation.finished.then(() => bubble.remove());
+    }
+  });
+</script>
+
 <div class='bubble-container'></div>
 
 <script>
@@ -9,8 +31,8 @@
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
 
-    const randomLeft = Math.random() * 60;
-    const randomTop = Math.random() * 60;
+    const randomLeft = Math.random() * 80;
+    const randomTop = Math.random() * 80;
     const zoomFactor = Math.random() + 0.25;
     const delay = -i + 's';
 
@@ -93,18 +115,6 @@
     bubbleContainer?.appendChild(bubble);
   }
 
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = `
-    @keyframes jiggle {
-      0%, 100% {
-        transform: translateY(-20px);
-      }
-      50% {
-        transform: translateY(20px);
-      }
-    }
-  `;
-  document.head.appendChild(styleSheet);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 </script>
 
@@ -114,5 +124,28 @@
     width: 100%;
     height: 100dvh;
     overflow: hidden;
+    user-select: none;
+  }
+
+  .bubble {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    user-select: none;
+    z-index: 2;
+  }
+
+  .bubble.explode {
+    animation: explode 0.5s ease-out forwards;
+  }
+
+  @keyframes jiggle {
+    0%,
+    100% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
   }
 </style>

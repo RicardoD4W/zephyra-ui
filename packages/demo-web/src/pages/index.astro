@@ -16,9 +16,6 @@ import Aside from '../components/Aside.astro';
   <main>
     <Body />
   </main>
-  <footer>
-    <Footer />
-  </footer>
 </Layout>
 
 <style>
@@ -28,9 +25,8 @@ import Aside from '../components/Aside.astro';
     grid-template-areas:
       'header header header'
       'aside main main'
-      'aside main main'
-      'footer footer footer';
-    grid-template-rows: 60px 1fr 1fr 40px;
+      'aside main main';
+    grid-template-rows: 60px 1fr 1fr;
     grid-template-columns: 200px 1fr 1fr;
     min-height: 100vh;
   }
@@ -59,6 +55,8 @@ import Aside from '../components/Aside.astro';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: 100dvh;
+    overflow: hidden;
   }
 
   footer {

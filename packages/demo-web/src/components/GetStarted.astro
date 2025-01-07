@@ -24,6 +24,12 @@ import Bubbles from './Bubbles.astro';
     application. Its modular and lightweight design allows developers to
     customize and extend each component to their needs.
   </p>
+
+  <a
+    class='get-started'
+    href='/'
+    >Get Started</a
+  >
 </section>
 
 <style>
@@ -32,7 +38,8 @@ import Bubbles from './Bubbles.astro';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 100%;
+    width: 100%;
 
     position: relative;
   }
@@ -65,14 +72,25 @@ import Bubbles from './Bubbles.astro';
 
   .z-logo {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     width: 150px;
   }
 
   .img-background {
     position: absolute;
-    z-index: 0;
+    z-index: 1;
 
     filter: blur(35px);
+  }
+
+  .get-started {
+    z-index: 3;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(var(--call-to-action), 0.25);
+    padding: 8px 14px;
+    backdrop-filter: blur(12px);
   }
 </style>

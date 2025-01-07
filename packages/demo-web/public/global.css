@@ -4,6 +4,7 @@ html{
 }
 
 html[data-theme='light'] {
+  --call-to-action: 67, 137, 177;
   --header-bg: #e0e0e0;
   --aside-bg: #eaeaea;
   --main-bg: #f3f3f3;
@@ -20,6 +21,7 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
+  --call-to-action: 46, 80, 100;
   --header-bg: #1e1e1e;
   --aside-bg: #2a2a2a;
   --main-bg: #121212;

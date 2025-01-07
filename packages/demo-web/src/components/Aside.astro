@@ -6,18 +6,18 @@ import cssCustomList from '../data/cssCustomList.json';
 <aside>
   <details open>
     <summary>
-      <a href='#get-started'> Get Started</a>
+      <a href='/'> Get Started</a>
     </summary>
   </details>
 
   <details open>
-    <summary><a href='#components'>Components</a> </summary>
+    <summary>Components</summary>
     <nav>
       <ul>
         {
           componentList.map(({ title }) => (
             <li>
-              <a href={`#${title}`}>{title}</a>
+              <a href={`${title}`}>{title}</a>
             </li>
           ))
         }
@@ -26,13 +26,13 @@ import cssCustomList from '../data/cssCustomList.json';
   </details>
 
   <details open>
-    <summary> <a href='#css-custom'>CSS Custom</a></summary>
+    <summary>CSS Custom</summary>
     <nav>
       <ul>
         {
           cssCustomList.map(({ title }) => (
             <li>
-              <a href={`#${title}`}>{title}</a>
+              <a href={`${title}`}>{title}</a>
             </li>
           ))
         }
