@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Aside from '../components/Aside.astro';
+---
+
+<script>
+  const $header = document.querySelector('.header');
+  const $aside = document.querySelector('.aside');
+
+  $header?.addEventListener('open-menu', (e) => {
+    const isOpen = e.detail.isOpen;
+
+    if (isOpen) {
+      $aside.style.transform = 'translateX(0%)';
+    } else {
+      $aside.style.transform = 'translateX(-100%)';
+    }
+  });
+</script>
+
+<Layout>
+  <header class='header'>
+    <Header />
+  </header>
+  <aside class='aside'>
+    <Aside />
+  </aside>
+  <main>
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+      'header header header'
+      'aside main main'
+      'aside main main';
+    grid-template-rows: 60px 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .aside {
+    transition: transform 300ms ease;
+    transform: translateX(0%);
+    grid-area: aside;
+    z-index: 0;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 9;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      grid-template-areas:
+        'header'
+        'main';
+      grid-template-rows: 60px 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .aside {
+      transform: translateX(-100%);
+    }
+  }
+</style>

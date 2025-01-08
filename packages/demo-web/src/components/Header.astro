@@ -1,3 +1,23 @@
+<script>
+  const $button = document.querySelector('#menu-toggle');
+  let isOpen = false;
+
+  $button?.addEventListener('click', () => {
+    isOpen = !isOpen;
+    isOpen
+      ? $button.classList.add('menu-open')
+      : $button.classList.remove('menu-open');
+
+    $button?.dispatchEvent(
+      new CustomEvent('open-menu', {
+        bubbles: true,
+        composed: true,
+        detail: { isOpen },
+      })
+    );
+  });
+</script>
+
 <div class='container'>
   <a href='/'>
     <h1>ZEPHYRA UI</h1>
@@ -14,11 +34,16 @@
         import '@zephyra-ui/z-toggle-theme';
       </script>
       <z-toggle-theme></z-toggle-theme>
+      <button id='menu-toggle'> ☰ </button>
     </section>
   </nav>
 </div>
 
 <style>
+  #menu-toggle {
+    display: none;
+  }
+
   .container {
     margin: 0 auto;
     display: flex;
@@ -65,7 +90,11 @@
   }
 
   @media (max-width: 768px) {
-    nav {
+    #menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
       display: none;
     }
   }

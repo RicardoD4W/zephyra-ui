@@ -1,0 +1,216 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { Code } from 'astro-expressive-code/components';
+---
+
+<MainLayout>
+  <ContentLayout>
+    <h2>z-button</h2>
+
+    <div class='info'>
+      <article class='info-content'>
+        <h3>Properties:</h3>
+        <section class='prop'>
+          <details>
+            <summary>variant</summary>
+            <p>
+              The <code>variant</code> property is used to define the visual style
+              of the component by applying predefined themes, each tailored to specific
+              contexts or meanings. The available values for variant represent distinct
+              styles, each associated with a particular purpose or message:
+              <ul>
+                <li>
+                  <code>success</code>: Indicates a successfully completed
+                  action or a positive state
+                </li>
+                <li>
+                  <code>warning</code>: Highlights a warning or a situation that
+                  requires attention.
+                </li>
+
+                <li>
+                  <code>danger</code>: Signifies an error or a critical action.
+                </li>
+                <li>
+                  <code>info</code>: Provides neutral or informational content.
+                </li>
+                <li>
+                  <code>outline</code>: Applies a minimalist, border-based style
+                  for subtle emphasis.
+                </li>
+                <li>
+                  <code>zephyra</code>: Defines a custom or unique style for the
+                  design.
+                </li>
+
+                <li>
+                  <script>
+                    import '@zephyra-ui/z-button';
+                  </script>
+                  <div class='highlight'>
+                    <Code
+                      code='<z-button>Default</z-button>\n<z-button variant="success">1</z-button>\n<z-button variant="warning">2</z-button>\n<z-button variant="danger">3</z-button>\n<z-button variant="info">4</z-button>\n<z-button variant="outline">5</z-button>\n<z-button variant="zephyra">6</z-button>'
+                      lang='js'
+                    />
+
+                    <div class='wc'>
+                      <z-button>Default</z-button>
+                      <z-button variant='success'>1</z-button>
+                      <z-button variant='warning'>2</z-button>
+                      <z-button variant='danger'>3</z-button>
+                      <z-button variant='info'>4</z-button>
+                      <z-button variant='outline'>5</z-button>
+                      <z-button variant='zephyra'>6</z-button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </section>
+        <section class='prop'>
+          <details>
+            <summary>disabled</summary>
+            <p>
+              The <code>disabled</code> property makes the component unresponsive
+              to user interactions and applies predefined styles, such as reduced
+              opacity, to indicate that it is inactive. By default, it is set to
+              false. When true, the component appears visually disabled and cannot
+              be interacted with.
+
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      code='<z-button disabled></z-button>'
+                      lang='js'
+                    />
+
+                    <div class='wc'>
+                      <z-button disabled></z-button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </section>
+        <section class='prop'>
+          <details>
+            <summary>isLoading</summary>
+            <p>
+              The <code>isLoading</code> property indicates that the component is
+              in a loading state. When set to true,makes an animation, signaling
+              to the user that an action is in progress. By default, it is set to
+              false.
+
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      code='<z-button isLoading></z-button>'
+                      lang='js'
+                    />
+
+                    <div class='wc'>
+                      <z-button isLoading></z-button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </p>
+          </details>
+        </section>
+      </article>
+
+      <hr />
+
+      <article class='info-content'>
+        <h3>Custom Events:</h3>
+        <section class='prop'>none</section>
+      </article>
+    </div>
+  </ContentLayout>
+
+  <style>
+    .info {
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+    }
+    .info-content {
+      width: 50%;
+    }
+
+    hr {
+      height: 70dvh;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      margin-top: 20px;
+      max-width: max-content;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .wc {
+      display: flex;
+      gap: 5px;
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: medium;
+      text-decoration: underline;
+    }
+
+    p {
+      text-wrap: balance;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 1em;
+      word-spacing: 0.05em;
+    }
+
+    li {
+      text-wrap: balance;
+      list-style: none;
+    }
+
+    section.prop {
+      margin-top: 50px;
+    }
+
+    code {
+      padding: 5px;
+      margin: 5px;
+      background-color: var(--code-bg-color);
+      border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+      }
+
+      .info {
+        flex-direction: column;
+      }
+
+      hr {
+        display: none;
+      }
+      .info-content {
+        margin-bottom: 15%;
+        width: 100%;
+      }
+    }
+  </style>
+</MainLayout>
