@@ -12,7 +12,7 @@ import { Code } from 'astro-expressive-code/components';
       <article class='info-content'>
         <h3>Properties:</h3>
         <section class='prop'>
-          <details>
+          <details open>
             <summary>variant</summary>
             <p>
               The <code>variant</code> property is used to define the visual style
@@ -70,7 +70,7 @@ import { Code } from 'astro-expressive-code/components';
           </details>
         </section>
         <section class='prop'>
-          <details>
+          <details open>
             <summary>disabled</summary>
             <p>
               The <code>disabled</code> property makes the component unresponsive
@@ -97,7 +97,7 @@ import { Code } from 'astro-expressive-code/components';
           </details>
         </section>
         <section class='prop'>
-          <details>
+          <details open>
             <summary>isLoading</summary>
             <p>
               The <code>isLoading</code> property indicates that the component is
@@ -124,8 +124,6 @@ import { Code } from 'astro-expressive-code/components';
         </section>
       </article>
 
-      <hr />
-
       <article class='info-content'>
         <h3>Custom Events:</h3>
         <section class='prop'>none</section>
@@ -137,20 +135,21 @@ import { Code } from 'astro-expressive-code/components';
     .info {
       display: flex;
       justify-content: center;
+      height: 100%;
       gap: 5%;
     }
     .info-content {
       width: 50%;
-    }
-
-    hr {
-      height: 70dvh;
+      height: 100%;
+      background-color: var(--aside-bg);
+      border-radius: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
     }
 
     h2 {
       text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
     }
 
     .highlight {
