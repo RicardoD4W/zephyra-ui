@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Aside from '../components/Aside.astro';
+import Pagination from '../components/Pagination.astro';
 ---
 
 <script>
@@ -29,6 +30,9 @@ import Aside from '../components/Aside.astro';
   <main>
     <slot />
   </main>
+  <footer>
+    <Pagination />
+  </footer>
 </Layout>
 
 <style>
@@ -38,8 +42,9 @@ import Aside from '../components/Aside.astro';
     grid-template-areas:
       'header header header'
       'aside main main'
-      'aside main main';
-    grid-template-rows: 60px 1fr 1fr;
+      'aside main main'
+      'footer footer footer';
+    grid-template-rows: 60px 1fr 1fr 80px;
     grid-template-columns: 200px 1fr 1fr;
     min-height: 100vh;
   }
@@ -70,15 +75,16 @@ import Aside from '../components/Aside.astro';
 
   footer {
     grid-area: footer;
-    text-align: center;
+    z-index: 10;
   }
 
   @media (max-width: 768px) {
     body {
       grid-template-areas:
         'header'
-        'main';
-      grid-template-rows: 60px 1fr;
+        'main'
+        'footer';
+      grid-template-rows: 60px 1fr 50px;
       grid-template-columns: 1fr;
     }
 
