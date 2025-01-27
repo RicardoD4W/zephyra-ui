@@ -1,1 +1,6 @@
-export type StateModel = 'info' | 'success' | 'warning' | 'error';
+export const enum IconModel {
+  INFO = 'info',
+  SUCCESS = 'success',
+  WARNING = 'warning',
+  ERROR = 'error',
+}

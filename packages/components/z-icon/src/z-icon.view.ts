@@ -2,6 +2,7 @@ import { CSSResultGroup, CSSResultOrNative, TemplateResult, html } from 'lit';
 import { ZIconTheme } from './css/z-icon.theme.css';
 import { ZIconViewModel } from './z-icon.viewmodel';
 import { choose } from 'lit/directives/choose.js';
+import { IconModel } from './model/z-icon.model';
 
 export class ZIconView extends ZIconViewModel {
   protected static finalizeStyles(
@@ -13,12 +14,12 @@ export class ZIconView extends ZIconViewModel {
   public render(): TemplateResult {
     return html`
       ${choose(
-        this.state,
+        this.icon,
         [
-          ['info', this._renderInfo],
-          ['success', this._renderSuccess],
-          ['warning', this._renderWarning],
-          ['error', this._renderError],
+          [IconModel.INFO, this._renderInfo],
+          [IconModel.SUCCESS, this._renderSuccess],
+          [IconModel.WARNING, this._renderWarning],
+          [IconModel.ERROR, this._renderError],
         ],
         () => html`<span>unknow icon</span>`
       )}
