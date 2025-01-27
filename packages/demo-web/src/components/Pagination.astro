@@ -1,5 +1,12 @@
 ---
-import pagination from '../data/pagination.json';
+import customElements from '../data/componentList.json';
+import customCSS from '../data/cssCustomList.json';
+
+const pagination = ['/', '/usage'].concat(
+  customElements
+    .map((component) => `/components/${component.title}`)
+    .concat(customCSS.map((component) => `/css-custom/${component.title}`))
+);
 
 const url = new URL(Astro.request.url);
 const actualPage = url.pathname;
