@@ -6,33 +6,55 @@ import { Code } from 'astro-expressive-code/components';
 
 <MainLayout>
   <ContentLayout>
-    <h2>z-toggle-theme</h2>
+    <h2>z-icon</h2>
 
     <div class='info'>
       <article class='info-content'>
         <h3>Properties:</h3>
         <section class='prop'>
           <details open>
-            <summary>isLightTheme</summary>
+            <summary>icon</summary>
             <p>
-              The <code>isLightTheme</code> is a internal state who determines the
-              current theme of the component, Default is system. When set to <code
-                >true</code
-              >, the light theme is active, and the component displays a
-              sun-like appearance. When set to <code>false</code>, the dark
-              theme is active, and the component displays a moon-like
-              appearance.
+              The <code>icon</code> property determines the current icon, Default
+              is "info"
             </p>
             <ul>
               <li>
                 <div class='highlight'>
                   <Code
-                    code='<z-toggle-theme></z-toggle-theme>'
+                    code='<z-icon icon="info"></z-icon>\n<z-icon icon="warning"></z-icon>\n<z-icon icon="success"></z-icon>\n<z-icon icon="error"></z-icon>'
                     lang='html'
                   />
 
                   <div class='wc'>
-                    <z-toggle-theme></z-toggle-theme>
+                    <z-icon icon='info'></z-icon>
+                    <z-icon icon='warning'></z-icon>
+                    <z-icon icon='success'></z-icon>
+                    <z-icon icon='error'></z-icon>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <p>
+              You can use too with the model if you are in <code>js</code>, <code
+                >jsx</code
+              >,
+              <code>ts</code> or
+              <code>tsx</code>.
+            </p>
+            <ul>
+              <li>
+                <div class='highlight'>
+                  <Code
+                    code='import { IconModel } from "@zephyra-ui/z-icon";\n\ndocument.body.innerHTML+=`\n<z-icon icon=${IconModel.INFO}></z-icon>\n<z-icon icon=${IconModel.WARNING}></z-icon>\n<z-icon icon=${IconModel.SUCCESS}></z-icon>\n<z-icon icon=${IconModel.ERROR}></z-icon>`'
+                    lang='js'
+                  />
+
+                  <div class='wc'>
+                    <z-icon icon='info'></z-icon>
+                    <z-icon icon='warning'></z-icon>
+                    <z-icon icon='success'></z-icon>
+                    <z-icon icon='error'></z-icon>
                   </div>
                 </div>
               </li>
@@ -43,23 +65,7 @@ import { Code } from 'astro-expressive-code/components';
 
       <article class='info-content'>
         <h3>Custom Events:</h3>
-        <section class='prop'>
-          <details open>
-            <summary>theme:changed</summary>
-            <p>
-              The <code>theme:changed</code> custom event is triggered whenever the
-              click the component. It passes an event detail with the new theme value
-              through the <code>dataTheme</code> property:
-              <ul>
-                <li>
-                  payload: <code
-                    >detail : &#123;dataTheme : "light" || "dark"&#125;
-                  </code>
-                </li>
-              </ul>
-            </p>
-          </details>
-        </section>
+        <section class='prop'>none</section>
       </article>
     </div>
   </ContentLayout>
@@ -114,6 +120,7 @@ import { Code } from 'astro-expressive-code/components';
     li {
       text-wrap: balance;
       list-style: none;
+      margin-bottom: 50px;
     }
 
     section.prop {

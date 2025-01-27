@@ -1,0 +1,124 @@
+---
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import cssCustomList from '../../data/cssCustomList.json';
+
+const { id } = Astro.params;
+const {
+  title,
+  description,
+  content,
+}: {
+  title: string;
+  description: string;
+  content: Array<{ key: string; value: string }>;
+} = cssCustomList.find((css) => css.title === id) ?? {
+  title: '',
+  description: '',
+  content: [],
+};
+
+export async function getStaticPaths() {
+  return cssCustomList.map(({ title }) => ({ params: { id: title } }));
+}
+---
+
+<MainLayout>
+  <ContentLayout>
+    <h2>{title}</h2>
+    <div class='info'>
+      <article class='info-content'>
+        <p>{description}</p>
+
+        <ul>
+          {
+            content.map(({ key, value }) => (
+              <li>
+                <span>
+                  <code>{key}</code>
+                </span>
+                <span>
+                  <code>{value}</code>
+                </span>
+
+                {key.startsWith('--z-color') && (
+                  <span>
+                    <z-color
+                      size='45'
+                      color={`var(${key},red)`}
+                    />
+                  </span>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </article>
+    </div>
+  </ContentLayout>
+</MainLayout>
+
+<style>
+  .info {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 5%;
+  }
+  .info-content {
+    width: 80%;
+    height: 100%;
+
+    padding-inline: 20px;
+
+    border-radius: 5px;
+
+    background-color: var(--aside-bg);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  span {
+    width: 33%;
+    text-align: center;
+  }
+  article {
+    margin: 0 auto;
+  }
+
+  code {
+    background-color: var(--code-bg-color);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul,
+  li {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: var(--text-s-color);
+    text-wrap: pretty;
+  }
+</style>

@@ -7,17 +7,20 @@ import Pagination from '../components/Pagination.astro';
 
 <script>
   const $header = document.querySelector('.header');
-  const $aside = document.querySelector('.aside');
+  const $aside = document.querySelector('.aside') as HTMLElement;
 
-  $header?.addEventListener('open-menu', (e) => {
-    const isOpen = e.detail.isOpen;
+  $header?.addEventListener(
+    'open-menu',
+    (e: CustomEvent<{ isOpen: boolean }>) => {
+      const isOpen = e.detail.isOpen as unknown as boolean;
 
-    if (isOpen) {
-      $aside.style.transform = 'translateX(0%)';
-    } else {
-      $aside.style.transform = 'translateX(-100%)';
+      if (isOpen) {
+        $aside.style.transform = 'translateX(0%)';
+      } else {
+        $aside.style.transform = 'translateX(-100%)';
+      }
     }
-  });
+  );
 </script>
 
 <Layout>
@@ -44,7 +47,7 @@ import Pagination from '../components/Pagination.astro';
       'aside main main'
       'aside main main'
       'footer footer footer';
-    grid-template-rows: 60px 1fr 1fr 80px;
+    grid-template-rows: 60px 1fr 1fr 50px;
     grid-template-columns: 200px 1fr 1fr;
     min-height: 100vh;
   }
