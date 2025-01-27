@@ -15,7 +15,7 @@
     "@zephyra-ui/z-component": "0.0.0",
     "@zephyra-ui/z-icon": "0.0.0",
     "@zephyra-ui/z-toggle-theme": "0.0.0",
-    "astro": "5.1.2",
+    "astro": "^5.1.10",
     "astro-expressive-code": "^0.38.3"
   }
 }
