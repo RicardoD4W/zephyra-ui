@@ -1,6 +1,9 @@
 ---
 import componentList from '../data/componentList.json';
 import cssCustomList from '../data/cssCustomList.json';
+
+const url = new URL(Astro.request.url);
+const refHighlight = url.pathname.split('/').at(-1);
 ---
 
 <aside>
@@ -18,7 +21,12 @@ import cssCustomList from '../data/cssCustomList.json';
         {
           componentList.map(({ title }) => (
             <li>
-              <a href={`/components/${title}`}>{title}</a>
+              <a
+                class={refHighlight === title ? 'selected' : ''}
+                href={`/components/${title}`}
+              >
+                {title}
+              </a>
             </li>
           ))
         }
@@ -33,7 +41,12 @@ import cssCustomList from '../data/cssCustomList.json';
         {
           cssCustomList.map(({ title }) => (
             <li>
-              <a href={`/css-custom/${title}`}>{title}</a>
+              <a
+                class={refHighlight === title ? 'selected' : ''}
+                href={`/css-custom/${title}`}
+              >
+                {title}
+              </a>
             </li>
           ))
         }
@@ -41,24 +54,6 @@ import cssCustomList from '../data/cssCustomList.json';
     </nav>
   </details>
 </aside>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    function highlight(element: HTMLAnchorElement) {
-      const links = document.querySelectorAll('a');
-      links.forEach((link) => link.classList.remove('selected'));
-
-      element.classList.add('selected');
-    }
-
-    const links = document.querySelectorAll('a');
-    links.forEach((link) => {
-      link.addEventListener('click', function () {
-        highlight(this);
-      });
-    });
-  });
-</script>
 
 <style>
   aside {
