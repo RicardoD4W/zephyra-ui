@@ -1,7 +1,7 @@
 import { ZComponent } from '@zephyra-ui/z-component';
 import { property } from 'lit/decorators.js';
-import { StateModel } from './model/state.model';
+import { AlertModel } from './model/z-alert.model';
 
 export class ZAlertViewModel extends ZComponent {
-  @property({ type: String }) state: StateModel = 'info';
+  @property({ type: String }) state: AlertModel = AlertModel.INFO;
 }
