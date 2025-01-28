@@ -16,10 +16,13 @@ import MainLayout from '../layouts/MainLayout.astro';
       components.
     </p>
 
-    <Code
-      code='<!-- This is a basic Html file -->\n<script>import "@zephyra-ui/your-component";</script>\n<your-component></your-component>'
-      lang='html'
-    />
+    <div id='code'>
+      <Code
+        wrap
+        code='<!-- This is a basic Html file -->\n<script>import "@zephyra-ui/your-component";</script>\n<your-component></your-component>'
+        lang='html'
+      />
+    </div>
   </div>
 </MainLayout>
 
@@ -40,5 +43,22 @@ import MainLayout from '../layouts/MainLayout.astro';
     line-height: 1.6;
     margin-bottom: 1em;
     word-spacing: 0.05em;
+  }
+
+  #code {
+    height: fit-content;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: large;
+      width: 80%;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      font-size: small;
+    }
   }
 </style>

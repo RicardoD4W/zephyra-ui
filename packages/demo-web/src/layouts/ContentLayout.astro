@@ -9,10 +9,31 @@
   <slot />
 </div>
 
+<script>
+  window.addEventListener('z-theme:changed', (e: CustomEvent) => {
+    const theme = e.detail.dataTheme as string;
+
+    localStorage.setItem('theme', theme);
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme') || 'light';
+    window.dispatchEvent(
+      new CustomEvent('z-theme:changed', { detail: { dataTheme: theme } })
+    );
+
+    document.documentElement.setAttribute('data-theme', theme);
+  });
+</script>
+
 <style>
   div {
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
+
+    overflow: hidden;
   }
 </style>

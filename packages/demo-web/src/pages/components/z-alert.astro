@@ -22,6 +22,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code='<z-alert state="info"></z-alert>\n<z-alert state="warning"></z-alert>\n<z-alert state="success"></z-alert>\n<z-alert state="error"></z-alert>'
                     lang='html'
                   />
@@ -46,6 +47,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code='import { AlertModel } from "@zephyra-ui/z-alert";\n\ndocument.body.innerHTML+=`\n<z-alert state=${AlertModel.INFO}></z-alert>\n<z-alert state=${AlertModel.WARNING}></z-alert>\n<z-alert state=${AlertModel.SUCCESS}></z-alert>\n<z-alert state=${AlertModel.ERROR}></z-alert>`'
                     lang='js'
                   />
@@ -65,6 +67,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code=`
 <z-alert>this is a rare alert 
 <ul>
@@ -93,6 +96,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code=`
 <z-alert state='error'>
   <img 
@@ -144,6 +148,17 @@ import { Code } from 'astro-expressive-code/components';
       padding-bottom: 20px;
     }
 
+    @media (max-width: 768px) {
+      .info-content {
+        padding: 0;
+        padding-left: 7px;
+      }
+
+      img {
+        width: 150px;
+      }
+    }
+
     h2 {
       text-align: center;
     }
@@ -192,7 +207,7 @@ import { Code } from 'astro-expressive-code/components';
     }
     @media (max-width: 768px) {
       p {
-        font-size: 18px;
+        font-size: 25px;
         line-height: 1.8;
       }
 

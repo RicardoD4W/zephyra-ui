@@ -27,6 +27,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code='<z-toggle-theme></z-toggle-theme>'
                     lang='html'
                   />
@@ -45,11 +46,11 @@ import { Code } from 'astro-expressive-code/components';
         <h3>Custom Events:</h3>
         <section class='prop'>
           <details open>
-            <summary>theme:changed</summary>
+            <summary>z-theme:changed</summary>
             <p>
-              The <code>theme:changed</code> custom event is triggered whenever the
-              click the component. It passes an event detail with the new theme value
-              through the <code>dataTheme</code> property:
+              The <code>z-theme:changed</code> custom event is triggered whenever
+              the click the component. It passes an event detail with the new theme
+              value through the <code>dataTheme</code> property:
               <ul>
                 <li>
                   payload: <code
@@ -81,6 +82,13 @@ import { Code } from 'astro-expressive-code/components';
       padding-bottom: 20px;
     }
 
+    @media (max-width: 768px) {
+      .info-content {
+        padding: 0;
+        padding-left: 7px;
+      }
+    }
+
     h2 {
       text-align: center;
     }
@@ -94,6 +102,7 @@ import { Code } from 'astro-expressive-code/components';
     }
     .wc {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
     }
 

@@ -65,7 +65,7 @@
       ],
       "events": [
         {
-          "eventName": "theme:changed",
+          "eventName": "z-theme:changed",
           "eventDispach": "Fires when clicking the SVG",
           "eventPayload": "detail : { dataTheme: 'light' | 'dark' }"
         }

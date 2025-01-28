@@ -47,6 +47,7 @@ import { Code } from 'astro-expressive-code/components';
                 <li>
                   <div class='highlight'>
                     <Code
+                      wrap
                       code='<z-button>Default</z-button>\n<z-button variant="success">1</z-button>\n<z-button variant="warning">2</z-button>\n<z-button variant="danger">3</z-button>\n<z-button variant="info">4</z-button>\n<z-button variant="outline">5</z-button>\n<z-button variant="zephyra">6</z-button>'
                       lang='html'
                     />
@@ -80,6 +81,7 @@ import { Code } from 'astro-expressive-code/components';
                 <li>
                   <div class='highlight'>
                     <Code
+                      wrap
                       code='<z-button disabled></z-button>'
                       lang='html'
                     />
@@ -106,6 +108,7 @@ import { Code } from 'astro-expressive-code/components';
                 <li>
                   <div class='highlight'>
                     <Code
+                      wrap
                       code='<z-button isLoading></z-button>'
                       lang='html'
                     />
@@ -145,6 +148,13 @@ import { Code } from 'astro-expressive-code/components';
       padding-bottom: 20px;
     }
 
+    @media (max-width: 768px) {
+      .info-content {
+        padding: 0;
+        padding-left: 7px;
+      }
+    }
+
     h2 {
       text-align: center;
     }
@@ -158,6 +168,7 @@ import { Code } from 'astro-expressive-code/components';
     }
     .wc {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
     }
 

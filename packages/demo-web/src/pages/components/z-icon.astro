@@ -22,6 +22,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code='<z-icon icon="info"></z-icon>\n<z-icon icon="warning"></z-icon>\n<z-icon icon="success"></z-icon>\n<z-icon icon="error"></z-icon>'
                     lang='html'
                   />
@@ -46,6 +47,7 @@ import { Code } from 'astro-expressive-code/components';
               <li>
                 <div class='highlight'>
                   <Code
+                    wrap
                     code='import { IconModel } from "@zephyra-ui/z-icon";\n\ndocument.body.innerHTML+=`\n<z-icon icon=${IconModel.INFO}></z-icon>\n<z-icon icon=${IconModel.WARNING}></z-icon>\n<z-icon icon=${IconModel.SUCCESS}></z-icon>\n<z-icon icon=${IconModel.ERROR}></z-icon>`'
                     lang='js'
                   />
@@ -87,6 +89,13 @@ import { Code } from 'astro-expressive-code/components';
       padding-bottom: 20px;
     }
 
+    @media (max-width: 768px) {
+      .info-content {
+        padding: 0;
+        padding-left: 7px;
+      }
+    }
+
     h2 {
       text-align: center;
     }
@@ -100,6 +109,7 @@ import { Code } from 'astro-expressive-code/components';
     }
     .wc {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
     }
 

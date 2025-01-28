@@ -6,12 +6,12 @@ import Bubbles from './Bubbles.astro';
   <Bubbles />
   <picture>
     <img
-      src='/images/z.webp'
+      src='/images/z-logo.webp'
       alt='z-ui logo'
       class='z-logo'
     />
     <img
-      src='/images/z.webp'
+      src='/images/z-logo.webp'
       alt='z-ui logo background'
       class='img-background'
     />
@@ -43,14 +43,13 @@ import Bubbles from './Bubbles.astro';
   }
 
   section {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-
-    position: relative;
   }
 
   p {
@@ -64,6 +63,17 @@ import Bubbles from './Bubbles.astro';
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.05);
     color: var(--text-s-color);
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: large;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      font-size: small;
+    }
   }
 
   img {
