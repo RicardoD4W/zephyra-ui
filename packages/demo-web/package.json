@@ -1,7 +1,7 @@
 {
   "name": "zephyra-ui-web",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,13 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@zephyra-ui/z-alert": "0.0.0",
-    "@zephyra-ui/z-button": "0.0.0",
-    "@zephyra-ui/z-color": "0.0.0",
-    "@zephyra-ui/z-component": "0.0.0",
-    "@zephyra-ui/z-icon": "0.0.0",
-    "@zephyra-ui/z-toggle-theme": "0.0.0",
-    "astro": "^5.1.10",
+    "@zephyra-ui/z-alert": "1.0.0",
+    "@zephyra-ui/z-button": "1.0.0",
+    "@zephyra-ui/z-color": "1.0.0",
+    "@zephyra-ui/z-component": "1.0.0",
+    "@zephyra-ui/z-icon": "1.0.0",
+    "@zephyra-ui/z-toggle-theme": "1.0.0",
+    "astro": "5.1.10",
     "astro-expressive-code": "^0.38.3"
-  }
+  },
+  "private": true
 }

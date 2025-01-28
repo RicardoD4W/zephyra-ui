@@ -1,15 +1,30 @@
 {
-    "name": "@zephyra-ui/z-button",
-    "version": "0.0.0",
-    "main": "dist/z-button.umd.cjs",
-    "module": "dist/z-button.js",
-    "type": "module",
-    "scripts": {
-        "build": "vite build"
-    },
-    "dependencies": {
-        "lit": "3.2.1",
-        "@zephyra-ui/z-component": "0.0.0"
-    },
-    "private": true
+  "name": "@zephyra-ui/z-button",
+  "version": "1.0.0",
+  "main": "dist/z-button.umd.cjs",
+  "module": "dist/z-button.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zephyra-ui",
+    "ui",
+    "zephyra",
+    "z-button",
+    "button",
+    "component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lit": "3.2.1",
+    "@zephyra-ui/z-component": "1.0.0"
+  }
 }
+

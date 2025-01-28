@@ -1,7 +1,7 @@
 {
   "name": "@zephyra-ui",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "workspaces": [
     "packages/*",
@@ -17,7 +17,8 @@
     "dev-c": "npm run dev --workspace=packages/components",
     "dev-d": "npm run dev --workspace=packages/demo-web",
     "build-all": "powershell -Command \"Get-ChildItem -Path ./packages/components -Directory | ForEach-Object {cd $_.FullName; npm i; npm run build; cd ../..}\"",
-    "dev-web": "npm run build-all && npm run dev-d"
+    "dev-web": "npm run build-all && npm run dev-d",
+    "publish-npm": "node ./scripts/publish-components.js"
   },
   "dependencies": {
     "lit": "3.2.1"

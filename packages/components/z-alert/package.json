@@ -1,16 +1,30 @@
 {
-    "name": "@zephyra-ui/z-alert",
-    "version": "0.0.0",
-    "main": "dist/z-alert.umd.cjs",
-    "module": "dist/z-alert.js",
-    "type": "module",
-    "scripts": {
-        "build": "vite build"
-    },
-    "dependencies": {
-        "lit": "3.2.1",
-        "@zephyra-ui/z-component": "0.0.0",
-        "@zephyra-ui/z-icon": "0.0.0"
-    },
-    "private": true
+  "name": "@zephyra-ui/z-alert",
+  "version": "1.0.0",
+  "main": "dist/z-alert.umd.cjs",
+  "module": "dist/z-alert.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zephyra-ui",
+    "ui",
+    "zephyra",
+    "z-alert",
+    "alert",
+    "component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lit": "3.2.1",
+    "@zephyra-ui/z-component": "1.0.0",
+    "@zephyra-ui/z-icon": "1.0.0"
+  }
 }

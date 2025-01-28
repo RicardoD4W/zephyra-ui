@@ -1,14 +1,27 @@
 {
-    "name": "@zephyra-ui/z-component",
-    "version": "0.0.0",
-    "main": "dist/z-component.umd.cjs",
-    "module": "dist/z-component.js",
-    "type": "module",
-    "scripts": {
-        "build": "vite build"
-    },
-    "dependencies": {
-        "lit": "3.2.1"
-    },
-    "private": true
+  "name": "@zephyra-ui/z-component",
+  "version": "1.0.0",
+  "main": "dist/z-component.umd.cjs",
+  "module": "dist/z-component.js",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zephyra-ui",
+    "ui",
+    "zephyra",
+    "z-component",
+    "component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lit": "3.2.1"
+  }
 }
