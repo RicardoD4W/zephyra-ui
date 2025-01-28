@@ -1,8 +1,8 @@
 import { ZComponent } from '@zephyra-ui/z-component';
-import { state } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 
 export class ZToggleThemeViewModel extends ZComponent {
-  @state() isLightTheme: boolean = false;
+  @property() isLightTheme: boolean = false;
 
   protected updateColorScheme() {
     this.isLightTheme = !this.isLightTheme;
