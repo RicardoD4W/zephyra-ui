@@ -1,9 +1,9 @@
 import { LitElement } from 'lit';
 import { state } from 'lit/decorators.js';
 import {
-  ThemeChangedEvent,
+  ZThemeChangedEvent,
   THEME_CHANGED_EVENT_NAME,
-} from './event/theme-changed.event';
+} from './event/z-theme-changed.event';
 import { ThemeChangedModel } from './model/theme-changed.model';
 
 export class ZComponentViewModel extends LitElement {
@@ -30,7 +30,7 @@ export class ZComponentViewModel extends LitElement {
     );
   }
 
-  private _onThemeChanged = (event: ThemeChangedEvent) => {
+  private _onThemeChanged = (event: ZThemeChangedEvent) => {
     this.dataTheme = event.detail.dataTheme;
     this._applyTheme();
   };
@@ -49,6 +49,6 @@ export class ZComponentViewModel extends LitElement {
   }
 
   protected dispatchThemeChangedEvent(detail: ThemeChangedModel) {
-    this.dispatchEvent(new ThemeChangedEvent(detail));
+    this.dispatchEvent(new ZThemeChangedEvent(detail));
   }
 }
