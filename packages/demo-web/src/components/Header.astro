@@ -32,6 +32,14 @@
     <section class='theme-toggle'>
       <script>
         import '@zephyra-ui/z-toggle-theme';
+
+        document
+          .querySelectorAll('z-toggle-theme')
+          .forEach(
+            (toggle) =>
+              (toggle.isLightTheme =
+                (localStorage.getItem('theme') || 'light') === 'light')
+          );
       </script>
       <z-toggle-theme></z-toggle-theme>
       <button id='menu-toggle'> ☰ </button>

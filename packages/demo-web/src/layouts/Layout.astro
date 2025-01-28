@@ -26,6 +26,18 @@
   </body>
 </html>
 
+<script>
+  function applyTheme() {
+    const storedTheme = localStorage.getItem('theme');
+    document.documentElement.setAttribute(
+      'data-theme',
+      storedTheme === 'light' ? 'light' : 'dark'
+    );
+  }
+
+  applyTheme();
+</script>
+
 <style>
   :root {
     box-sizing: border-box;
