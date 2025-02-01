@@ -1,33 +1,16 @@
-<script>
-  const $button = document.querySelector('#menu-toggle');
-  let isOpen = false;
-
-  $button?.addEventListener('click', () => {
-    isOpen = !isOpen;
-    isOpen
-      ? $button.classList.add('menu-open')
-      : $button.classList.remove('menu-open');
-
-    $button?.dispatchEvent(
-      new CustomEvent('open-menu', {
-        bubbles: true,
-        composed: true,
-        detail: { isOpen },
-      })
-    );
-  });
-</script>
-
 <div class='container'>
-  <a href='/'>
+  <a
+    href='/'
+    class='title'
+  >
     <h1>ZEPHYRA UI</h1>
   </a>
-  <nav>
+  <nav class='nav'>
     <ul class='nav-links'>
-      <li><a href='#features'>Features</a></li>
-      <li><a href='#docs'>Docs</a></li>
-      <li><a href='#about'>About</a></li>
-      <li><a href='#contact'>Contact</a></li>
+      <li><a href='/Integrations'>Integrations</a></li>
+      <li><a href='https://github.com/RicardoD4W/zephyra-ui'>GitHub</a></li>
+      <!-- <li><a href='#about'>About</a></li>
+      <li><a href='#contact'>Contact</a></li> -->
     </ul>
     <section class='theme-toggle'>
       <script>
@@ -42,48 +25,43 @@
           );
       </script>
       <z-toggle-theme></z-toggle-theme>
-      <button id='menu-toggle'> ☰ </button>
     </section>
   </nav>
 </div>
 
 <style>
-  #menu-toggle {
-    display: none;
+  @media (max-width: 768px) {
+    .container {
+      font-size: x-small;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 5px;
+    }
   }
 
   .container {
-    margin: 0 auto;
+    height: 100%;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-inline: 25px;
-    max-height: 100%;
-  }
-
-  .logo {
-    height: 50px;
-    width: auto;
-  }
-
-  .theme-toggle,
-  li {
-    display: flex;
     align-items: center;
-    justify-content: center;
-  }
+    flex-wrap: wrap;
+    padding-inline: 15px;
 
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
+    & .nav {
+      display: flex;
+      align-items: center;
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+      & .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
   }
 
   a {
@@ -92,18 +70,12 @@
     font-weight: 500;
     transition: color 0.3s ease;
   }
-
   a:hover {
     color: var(--hover-color);
   }
 
-  @media (max-width: 768px) {
-    #menu-toggle {
-      display: block;
-    }
-
-    .nav-links {
-      display: none;
-    }
+  ul,
+  li {
+    list-style: none;
   }
 </style>

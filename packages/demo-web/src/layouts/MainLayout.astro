@@ -47,9 +47,11 @@ import Pagination from '../components/Pagination.astro';
       'aside main main'
       'aside main main'
       'footer footer footer';
-    grid-template-rows: 60px 1fr 1fr 50px;
-    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 7% 1fr 1fr 6%;
+    grid-template-columns: 15% 1fr 1fr;
+
     min-height: 100vh;
+    max-height: 100vh;
   }
 
   header {
@@ -60,20 +62,58 @@ import Pagination from '../components/Pagination.astro';
   }
 
   .aside {
-    transition: transform 300ms ease;
-    transform: translateX(0%);
     grid-area: aside;
-    z-index: 0;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 200px;
-    height: 100%;
+
     z-index: 9;
+
+    max-width: 100%;
+    height: 100%;
+
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+  }
+  .aside::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: var(--aside-bg);
+  }
+
+  .aside::-webkit-scrollbar {
+    width: 1px;
+    background-color: var(--aside-bg);
+  }
+
+  .aside::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--text-s-color);
   }
 
   main {
     grid-area: main;
+
+    width: 100%;
+    height: 100%;
+
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+  }
+
+  main::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: var(--main-bg);
+  }
+
+  main::-webkit-scrollbar {
+    width: 1px;
+    background-color: var(--main-bg);
+  }
+
+  main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--text-s-color);
   }
 
   footer {
@@ -87,12 +127,39 @@ import Pagination from '../components/Pagination.astro';
         'header'
         'main'
         'footer';
-      grid-template-rows: 60px 1fr 50px;
+      grid-template-rows: 7% 1fr 6%;
       grid-template-columns: 1fr;
     }
 
+    header {
+    }
+    main {
+    }
+    footer {
+    }
     .aside {
-      transform: translateX(-100%);
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    body {
+      grid-template-areas:
+        'header'
+        'main'
+        'footer';
+      grid-template-rows: 7% 1fr 6%;
+      grid-template-columns: 1fr;
+    }
+
+    header {
+    }
+    main {
+    }
+    footer {
+    }
+    .aside {
+      display: none;
     }
   }
 </style>

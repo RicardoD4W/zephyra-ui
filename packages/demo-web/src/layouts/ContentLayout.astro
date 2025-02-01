@@ -6,7 +6,9 @@
     import '@zephyra-ui/z-toggle-theme';
     import '@zephyra-ui/z-color';
   </script>
-  <slot />
+  <div class='slot'>
+    <slot />
+  </div>
 </div>
 
 <script>
@@ -29,10 +31,11 @@
 </script>
 
 <style>
-  div {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 5%;
+  .slot {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
 
     overflow: hidden;
   }

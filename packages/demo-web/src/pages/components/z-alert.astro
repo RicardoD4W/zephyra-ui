@@ -14,61 +14,67 @@ import { Code } from 'astro-expressive-code/components';
         <section class='prop'>
           <details open>
             <summary>state</summary>
-            <p>
-              The <code>state</code> property determines the current state, Default
-              is "info"
-            </p>
-            <ul>
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code='<z-alert state="info"></z-alert>\n<z-alert state="warning"></z-alert>\n<z-alert state="success"></z-alert>\n<z-alert state="error"></z-alert>'
-                    lang='html'
-                  />
+            <div class='prop-info'>
+              <p>
+                The <code>state</code> property determines the current state, Default
+                is "info"
+              </p>
 
-                  <div class='wc'>
-                    <z-alert state='info'></z-alert>
-                    <z-alert state='warning'></z-alert>
-                    <z-alert state='success'></z-alert>
-                    <z-alert state='error'></z-alert>
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code='<z-alert state="info"></z-alert>\n<z-alert state="warning"></z-alert>\n<z-alert state="success"></z-alert>\n<z-alert state="error"></z-alert>'
+                      lang='html'
+                    />
+
+                    <div class='wc'>
+                      <z-alert state='info'></z-alert>
+                      <z-alert state='warning'></z-alert>
+                      <z-alert state='success'></z-alert>
+                      <z-alert state='error'></z-alert>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
-            <p>
-              You can use too with the model if you are in <code>js</code>, <code
-                >jsx</code
-              >,
-              <code>ts</code> or
-              <code>tsx</code>.
-            </p>
-            <ul>
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code='import { AlertModel } from "@zephyra-ui/z-alert";\n\ndocument.body.innerHTML+=`\n<z-alert state=${AlertModel.INFO}></z-alert>\n<z-alert state=${AlertModel.WARNING}></z-alert>\n<z-alert state=${AlertModel.SUCCESS}></z-alert>\n<z-alert state=${AlertModel.ERROR}></z-alert>`'
-                    lang='js'
-                  />
+                </li>
+              </ul>
+            </div>
+            <div class='prop-info'>
+              <p>
+                You can use too with the model if you are in <code>js</code>, <code
+                  >jsx</code
+                >,
+                <code>ts</code> or
+                <code>tsx</code>.
+              </p>
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code='import { AlertModel } from "@zephyra-ui/z-alert";\n\ndocument.body.innerHTML+=`\n<z-alert state=${AlertModel.INFO}></z-alert>\n<z-alert state=${AlertModel.WARNING}></z-alert>\n<z-alert state=${AlertModel.SUCCESS}></z-alert>\n<z-alert state=${AlertModel.ERROR}></z-alert>`'
+                      lang='js'
+                    />
 
-                  <div class='wc'>
-                    <z-alert state='info'></z-alert>
-                    <z-alert state='warning'></z-alert>
-                    <z-alert state='success'></z-alert>
-                    <z-alert state='error'></z-alert>
+                    <div class='wc'>
+                      <z-alert state='info'></z-alert>
+                      <z-alert state='warning'></z-alert>
+                      <z-alert state='success'></z-alert>
+                      <z-alert state='error'></z-alert>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
 
-            <p>Or put any html content inside</p>
-            <ul>
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code=`
+            <div class='prop-info'>
+              <p>Or put any html content inside</p>
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code=`
 <z-alert>this is a rare alert 
 <ul>
   <li>as</li>
@@ -77,27 +83,27 @@ import { Code } from 'astro-expressive-code/components';
   <li>see</li>
 </ul>
 </z-alert>`
-                    lang='js'
-                  />
+                      lang='js'
+                    />
 
-                  <div class='wc'>
-                    <z-alert
-                      >this is a rare alert <ul>
-                        <li>as</li>
-                        <li>you</li>
-                        <li>can</li>
-                        <li>see</li>
-                      </ul>
-                    </z-alert>
+                    <div class='wc'>
+                      <z-alert
+                        >this is a rare alert <ul>
+                          <li>as</li>
+                          <li>you</li>
+                          <li>can</li>
+                          <li>see</li>
+                        </ul>
+                      </z-alert>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code=`
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code=`
 <z-alert state='error'>
   <img 
     width='350px' 
@@ -105,21 +111,22 @@ import { Code } from 'astro-expressive-code/components';
     alt='cat code 401'>
 </z-alert>
 `
-                    lang='js'
-                  />
+                      lang='js'
+                    />
 
-                  <div class='wc'>
-                    <z-alert state='error'>
-                      <img
-                        width='350px'
-                        src='https://http.cat/401'
-                        alt='cat code 401'
-                      /></z-alert
-                    >
+                    <div class='wc'>
+                      <z-alert state='error'>
+                        <img
+                          width='350px'
+                          src='https://http.cat/401'
+                          alt='cat code 401'
+                        /></z-alert
+                      >
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </details>
         </section>
       </article>
@@ -132,44 +139,37 @@ import { Code } from 'astro-expressive-code/components';
   </ContentLayout>
 
   <style>
-    .info {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      gap: 5%;
-    }
-    .info-content {
-      width: 50%;
-      height: 100%;
-      background-color: var(--aside-bg);
-      border-radius: 5px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .info-content {
-        padding: 0;
-        padding-left: 7px;
-      }
-
-      img {
-        width: 150px;
-      }
-    }
-
     h2 {
+      margin-bottom: 15px;
       text-align: center;
     }
 
+    img {
+      width: 30vw;
+    }
+
+    .info {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .info-content {
+      background-color: var(--aside-bg);
+      border-radius: 5px;
+      padding: 20px;
+    }
+
     .highlight {
-      margin-top: 20px;
+      margin: 10px;
       max-width: max-content;
       gap: 20px;
       display: flex;
       flex-direction: column;
     }
+
     .wc {
       display: flex;
       flex-wrap: wrap;
@@ -186,17 +186,21 @@ import { Code } from 'astro-expressive-code/components';
       text-wrap: balance;
       font-size: 16px;
       line-height: 1.6;
-      margin-bottom: 1em;
       word-spacing: 0.05em;
     }
 
     li {
       text-wrap: balance;
       list-style: none;
+      margin-block: 10px;
     }
 
     section.prop {
-      margin-top: 50px;
+      margin-top: 15px;
+    }
+
+    .prop-info {
+      margin-block: 25px;
     }
 
     code {
@@ -204,24 +208,6 @@ import { Code } from 'astro-expressive-code/components';
       margin: 5px;
       background-color: var(--code-bg-color);
       border-radius: 5px;
-    }
-    @media (max-width: 768px) {
-      p {
-        font-size: 25px;
-        line-height: 1.8;
-      }
-
-      .info {
-        flex-direction: column;
-      }
-
-      hr {
-        display: none;
-      }
-      .info-content {
-        margin-bottom: 15%;
-        width: 100%;
-      }
     }
   </style>
 </MainLayout>

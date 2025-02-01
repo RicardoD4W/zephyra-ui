@@ -14,53 +14,58 @@ import { Code } from 'astro-expressive-code/components';
         <section class='prop'>
           <details open>
             <summary>icon</summary>
-            <p>
-              The <code>icon</code> property determines the current icon, Default
-              is "info"
-            </p>
-            <ul>
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code='<z-icon icon="info"></z-icon>\n<z-icon icon="warning"></z-icon>\n<z-icon icon="success"></z-icon>\n<z-icon icon="error"></z-icon>'
-                    lang='html'
-                  />
+            <div class='prop-info'>
+              <p>
+                The <code>icon</code> property determines the current icon, Default
+                is "info"
+              </p>
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code='<z-icon icon="info"></z-icon>\n<z-icon icon="warning"></z-icon>\n<z-icon icon="success"></z-icon>\n<z-icon icon="error"></z-icon>'
+                      lang='html'
+                    />
 
-                  <div class='wc'>
-                    <z-icon icon='info'></z-icon>
-                    <z-icon icon='warning'></z-icon>
-                    <z-icon icon='success'></z-icon>
-                    <z-icon icon='error'></z-icon>
+                    <div class='wc'>
+                      <z-icon icon='info'></z-icon>
+                      <z-icon icon='warning'></z-icon>
+                      <z-icon icon='success'></z-icon>
+                      <z-icon icon='error'></z-icon>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
-            <p>
-              You can use too with the model if you are in <code>js</code>, <code
-                >jsx</code
-              >,
-              <code>ts</code> or
-              <code>tsx</code>.
-            </p>
-            <ul>
-              <li>
-                <div class='highlight'>
-                  <Code
-                    wrap
-                    code='import { IconModel } from "@zephyra-ui/z-icon";\n\ndocument.body.innerHTML+=`\n<z-icon icon=${IconModel.INFO}></z-icon>\n<z-icon icon=${IconModel.WARNING}></z-icon>\n<z-icon icon=${IconModel.SUCCESS}></z-icon>\n<z-icon icon=${IconModel.ERROR}></z-icon>`'
-                    lang='js'
-                  />
+                </li>
+              </ul>
+            </div>
 
-                  <div class='wc'>
-                    <z-icon icon='info'></z-icon>
-                    <z-icon icon='warning'></z-icon>
-                    <z-icon icon='success'></z-icon>
-                    <z-icon icon='error'></z-icon>
+            <div class='prop-info'>
+              <p>
+                You can use too with the model if you are in <code>js</code>, <code
+                  >jsx</code
+                >,
+                <code>ts</code> or
+                <code>tsx</code>.
+              </p>
+              <ul>
+                <li>
+                  <div class='highlight'>
+                    <Code
+                      wrap
+                      code='import { IconModel } from "@zephyra-ui/z-icon";\n\ndocument.body.innerHTML+=`\n<z-icon icon=${IconModel.INFO}></z-icon>\n<z-icon icon=${IconModel.WARNING}></z-icon>\n<z-icon icon=${IconModel.SUCCESS}></z-icon>\n<z-icon icon=${IconModel.ERROR}></z-icon>`'
+                      lang='js'
+                    />
+
+                    <div class='wc'>
+                      <z-icon icon='info'></z-icon>
+                      <z-icon icon='warning'></z-icon>
+                      <z-icon icon='success'></z-icon>
+                      <z-icon icon='error'></z-icon>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </details>
         </section>
       </article>
@@ -73,40 +78,33 @@ import { Code } from 'astro-expressive-code/components';
   </ContentLayout>
 
   <style>
-    .info {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      gap: 5%;
-    }
-    .info-content {
-      width: 50%;
-      height: 100%;
-      background-color: var(--aside-bg);
-      border-radius: 5px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .info-content {
-        padding: 0;
-        padding-left: 7px;
-      }
-    }
-
     h2 {
+      margin-bottom: 15px;
       text-align: center;
     }
 
+    .info {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .info-content {
+      background-color: var(--aside-bg);
+      border-radius: 5px;
+      padding: 20px;
+    }
+
     .highlight {
-      margin-top: 20px;
+      margin: 10px;
       max-width: max-content;
       gap: 20px;
       display: flex;
       flex-direction: column;
     }
+
     .wc {
       display: flex;
       flex-wrap: wrap;
@@ -123,18 +121,21 @@ import { Code } from 'astro-expressive-code/components';
       text-wrap: balance;
       font-size: 16px;
       line-height: 1.6;
-      margin-bottom: 1em;
       word-spacing: 0.05em;
     }
 
     li {
       text-wrap: balance;
       list-style: none;
-      margin-bottom: 50px;
+      margin-block: 10px;
     }
 
     section.prop {
-      margin-top: 50px;
+      margin-top: 15px;
+    }
+
+    .prop-info {
+      margin-block: 25px;
     }
 
     code {
@@ -142,24 +143,6 @@ import { Code } from 'astro-expressive-code/components';
       margin: 5px;
       background-color: var(--code-bg-color);
       border-radius: 5px;
-    }
-    @media (max-width: 768px) {
-      p {
-        font-size: 18px;
-        line-height: 1.8;
-      }
-
-      .info {
-        flex-direction: column;
-      }
-
-      hr {
-        display: none;
-      }
-      .info-content {
-        margin-bottom: 15%;
-        width: 100%;
-      }
     }
   </style>
 </MainLayout>
