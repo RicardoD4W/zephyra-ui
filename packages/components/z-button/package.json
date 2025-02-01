@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "dist/z-button.umd.cjs",
   "module": "dist/z-button.js",
+  "exports": {
+    "import": "./dist/z-button.js",
+    "require": "./dist/z-button.umd.cjs"
+  },
   "type": "module",
   "scripts": {
     "build": "vite build"
@@ -27,4 +31,3 @@
     "@zephyra-ui/z-component": "1.0.0"
   }
 }
-

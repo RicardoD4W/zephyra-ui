@@ -4,6 +4,10 @@
   "main": "dist/z-alert.umd.cjs",
   "module": "dist/z-alert.js",
   "type": "module",
+  "exports": {
+    "import": "./dist/z-alert.js",
+    "require": "./dist/z-alert.umd.cjs"
+  },
   "scripts": {
     "build": "vite build"
   },

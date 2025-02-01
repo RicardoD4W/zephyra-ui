@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "dist/z-component.umd.cjs",
   "module": "dist/z-component.js",
+  "exports": {
+    "import": "./dist/z-component.js",
+    "require": "./dist/z-component.umd.cjs"
+  },
   "type": "module",
   "scripts": {
     "build": "vite build"
