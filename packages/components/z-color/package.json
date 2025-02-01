@@ -1,11 +1,9 @@
 {
   "name": "@zephyra-ui/z-color",
   "version": "1.0.0",
-  "main": "dist/z-color.umd.cjs",
-  "module": "dist/z-color.js",
+  "main": "dist/z-color.js",
   "exports": {
-    "import": "./dist/z-color.js",
-    "require": "./dist/z-color.umd.cjs"
+    "import": "./dist/z-color.js"
   },
   "type": "module",
   "scripts": {

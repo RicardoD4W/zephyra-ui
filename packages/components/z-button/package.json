@@ -1,11 +1,9 @@
 {
   "name": "@zephyra-ui/z-button",
   "version": "1.0.0",
-  "main": "dist/z-button.umd.cjs",
-  "module": "dist/z-button.js",
+  "main": "dist/z-button.js",
   "exports": {
-    "import": "./dist/z-button.js",
-    "require": "./dist/z-button.umd.cjs"
+    "import": "./dist/z-button.js"
   },
   "type": "module",
   "scripts": {

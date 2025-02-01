@@ -1,11 +1,9 @@
 {
   "name": "@zephyra-ui/z-toggle-theme",
   "version": "1.0.0",
-  "main": "dist/z-toggle-theme.umd.cjs",
-  "module": "dist/z-toggle-theme.js",
+  "main": "dist/z-toggle-theme.js",
   "exports": {
-    "import": "./dist/z-toggle-theme.js",
-    "require": "./dist/z-toggle-theme.umd.cjs"
+    "import": "./dist/z-toggle-theme.js"
   },
   "type": "module",
   "scripts": {

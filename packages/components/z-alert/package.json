@@ -1,12 +1,10 @@
 {
   "name": "@zephyra-ui/z-alert",
   "version": "1.0.0",
-  "main": "dist/z-alert.umd.cjs",
-  "module": "dist/z-alert.js",
+  "main": "dist/z-alert.js",
   "type": "module",
   "exports": {
-    "import": "./dist/z-alert.js",
-    "require": "./dist/z-alert.umd.cjs"
+    "import": "./dist/z-alert.js"
   },
   "scripts": {
     "build": "vite build"

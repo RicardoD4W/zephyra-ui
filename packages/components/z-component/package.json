@@ -1,11 +1,9 @@
 {
   "name": "@zephyra-ui/z-component",
   "version": "1.0.0",
-  "main": "dist/z-component.umd.cjs",
-  "module": "dist/z-component.js",
+  "main": "dist/z-component.js",
   "exports": {
-    "import": "./dist/z-component.js",
-    "require": "./dist/z-component.umd.cjs"
+    "import": "./dist/z-component.js"
   },
   "type": "module",
   "scripts": {

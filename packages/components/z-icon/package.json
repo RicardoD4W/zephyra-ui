@@ -1,11 +1,9 @@
 {
   "name": "@zephyra-ui/z-icon",
   "version": "1.0.0",
-  "main": "dist/z-icon.umd.cjs",
-  "module": "dist/z-icon.js",
+  "main": "dist/z-icon.js",
   "exports": {
-    "import": "./dist/z-icon.js",
-    "require": "./dist/z-icon.umd.cjs"
+    "import": "./dist/z-icon.js"
   },
   "type": "module",
   "scripts": {
