@@ -15,6 +15,15 @@ const nextPage =
   pagination[pagination.findIndex((item) => item === actualPage) + 1];
 const pastPage =
   pagination[pagination.findIndex((item) => item === actualPage) - 1];
+
+console.log(
+  customElements,
+  customCSS,
+  pagination,
+  actualPage,
+  nextPage,
+  pastPage
+);
 ---
 
 <div class='pagination'>
