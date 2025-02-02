@@ -3,7 +3,11 @@ import componentList from '../data/componentList.json';
 import cssCustomList from '../data/cssCustomList.json';
 
 const url = new URL(Astro.request.url);
-const refHighlight = url.pathname.split('/').at(-1);
+let refHighlight = url.pathname.split('/').at(-1);
+
+if (refHighlight === '') {
+  refHighlight = url.pathname.split('/').at(-2);
+}
 ---
 
 <aside>
