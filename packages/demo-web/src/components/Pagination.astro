@@ -9,7 +9,8 @@ const pagination = ['/', '/usage'].concat(
 );
 
 const url = new URL(Astro.request.url);
-const actualPage = url.pathname;
+let actualPage = url.pathname;
+actualPage.at(-1) === '/' ? (actualPage = actualPage.slice(0, -1)) : actualPage;
 
 const nextPage =
   pagination[pagination.findIndex((item) => item === actualPage) + 1];
