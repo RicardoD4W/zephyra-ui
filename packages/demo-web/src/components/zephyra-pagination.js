@@ -8,6 +8,13 @@ export class ZephyraPagination extends HTMLElement {
     this.nextPage = this.getAttribute('nextPage');
     this.pastPage = this.getAttribute('pastPage');
 
+    console.table({
+      pagination: this.pagination,
+      actualPage: this.actualPage,
+      nextPage: this.nextPage,
+      pastPage: this.pastPage,
+    });
+
     this.shadowRoot.innerHTML = `
         <style>${this.getStyles()}</style>
         ${this.render()}
