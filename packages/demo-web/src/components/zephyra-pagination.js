@@ -3,17 +3,9 @@ export class ZephyraPagination extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
 
-    this.pagination = this.getAttribute('pagination');
     this.actualPage = this.getAttribute('actualPage');
     this.nextPage = this.getAttribute('nextPage');
     this.pastPage = this.getAttribute('pastPage');
-
-    console.table({
-      pagination: this.pagination,
-      actualPage: this.actualPage,
-      nextPage: this.nextPage,
-      pastPage: this.pastPage,
-    });
 
     this.shadowRoot.innerHTML = `
         <style>${this.getStyles()}</style>
