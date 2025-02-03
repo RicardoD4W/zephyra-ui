@@ -3,8 +3,6 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 export class ZComponentTheme {
   static cssBase: CSSResult = css`
     :host {
-      display: inline-block;
-
       /* COLORS */
       color-scheme: light dark;
       --z-color-hover: 110%;
@@ -55,7 +53,7 @@ export class ZComponentTheme {
       --z-grayscale-disabled: 0.8;
 
       /* TYPOGRAPHY */
-      --z-font: 'Noto Sans', serif;
+      --z-font: 'Noto Sans', system-ui;
 
       --z-font-xs: 0.75rem;
       --z-font-sm: 0.875rem;
@@ -120,6 +118,9 @@ export class ZComponentTheme {
       /* OTHERS */
       --z-none: none;
 
+      /* DEFAULT */
+      display: inline-block;
+      font-family: var(--z-font);
       transition: background-color var(--z-transition-fast) var(--z-transition),
         color var(--z-transition-fast) var(--z-transition),
         box-shadow var(--z-transition-fast) var(--z-transition),
