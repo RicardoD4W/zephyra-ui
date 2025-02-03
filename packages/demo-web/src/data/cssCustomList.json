@@ -95,7 +95,7 @@
     "content": [
       {
         "key": "--z-font",
-        "value": "'Noto Sans', serif"
+        "value": "'Noto Sans', system-ui"
       },
       {
         "key": "--z-font-xs",
