@@ -20,18 +20,18 @@ Este repositorio está organizado como un monorepo utilizando **npm workspaces**
 
 ---
 
-## Instalación y uso (próximamente)
+## Instalación y uso
 
 ```bash
-npm install "@zephyra-ui/componente-elegido"
+npm install "@zephyra-ui/z-button"
 ```
 
 ```html
 <script type="module">
-  import '@zephyra-ui/componente-elegido';
+  import '@zephyra-ui/z-button';
 </script>
 
 <div>
-  <componente-elegido></componente-elegido>
+  <z-button></z-button>
 </div>
 ```
