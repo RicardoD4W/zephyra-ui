@@ -1,0 +1,472 @@
+[
+  {
+    "title": "Colors",
+    "description": "CSS variables available in each component, keep in mind that you can override them and that with the themes (light and dark) their values ​​will change, this can also be overridden by CSS taking into account that we use the [data-theme=\"light\"] or [data-theme=\"dark\"] attribute.",
+    "content": [
+      {
+        "key": "--z-color-zephyra",
+        "value": "#00a36d"
+      },
+      {
+        "key": "--z-color-primary",
+        "value": "#93c9ff / #0056b3"
+      },
+      {
+        "key": "--z-color-secondary",
+        "value": "#a1b0b7 / #3d5a5b"
+      },
+      {
+        "key": "--z-color-info",
+        "value": "#d1ecf1 / #0c5460"
+      },
+      {
+        "key": "--z-color-success",
+        "value": "#d4edda / #155724"
+      },
+      {
+        "key": "--z-color-warning",
+        "value": "#fff3cd / #856404"
+      },
+      {
+        "key": "--z-color-danger",
+        "value": "#f8d7da / #721c24"
+      },
+      {
+        "key": "--z-color-info-darkest",
+        "value": "#0095af / #81c3cf"
+      },
+      {
+        "key": "--z-color-success-darkest",
+        "value": "#009222 / #8fcf9e"
+      },
+      {
+        "key": "--z-color-warning-darkest",
+        "value": "#d39e00 / #d3c083"
+      },
+      {
+        "key": "--z-color-danger-darkest",
+        "value": "#a70011 / #c28086"
+      },
+      {
+        "key": "--z-color-light",
+        "value": "#ffffff / #343a40"
+      },
+      {
+        "key": "--z-color-dark",
+        "value": "#495057 / #212529"
+      },
+      {
+        "key": "--z-color-gray",
+        "value": "#868e96 / #6c757d"
+      },
+      {
+        "key": "--z-color-muted",
+        "value": "#adb5bd / #495057"
+      },
+      {
+        "key": "--z-color-background",
+        "value": "#ebebeb / #f8f9fa"
+      },
+      {
+        "key": "--z-color-border",
+        "value": "#f1f3f5 / #dee2e6"
+      },
+      {
+        "key": "--z-color-text",
+        "value": "#000 / #FFF"
+      },
+      {
+        "key": "--z-color-transparent",
+        "value": "transparent"
+      },
+      {
+        "key": "--z-color-hover",
+        "value": "110%"
+      },
+      {
+        "key": "--z-color-active",
+        "value": "90%"
+      }
+    ]
+  },
+  {
+    "title": "Typography",
+    "description": "Typography-related CSS variables like fonts, sizes, and weights that can be customized.",
+    "content": [
+      {
+        "key": "--z-font",
+        "value": "'Noto Sans', system-ui"
+      },
+      {
+        "key": "--z-font-xs",
+        "value": "0.75rem"
+      },
+      {
+        "key": "--z-font-sm",
+        "value": "0.875rem"
+      },
+      {
+        "key": "--z-font-md",
+        "value": "1rem"
+      },
+      {
+        "key": "--z-font-lg",
+        "value": "1.25rem"
+      },
+      {
+        "key": "--z-font-xl",
+        "value": "1.5rem"
+      },
+      {
+        "key": "--z-font-xxl",
+        "value": "2rem"
+      },
+      {
+        "key": "--z-font-light",
+        "value": "300"
+      },
+      {
+        "key": "--z-font-regular",
+        "value": "400"
+      },
+      {
+        "key": "--z-font-medium",
+        "value": "500"
+      },
+      {
+        "key": "--z-font-bold",
+        "value": "700"
+      }
+    ]
+  },
+  {
+    "title": "Spacing",
+    "description": "CSS variables for spacing, useful for margins and paddings.",
+    "content": [
+      {
+        "key": "--z-spacing-xxs",
+        "value": "0.25rem"
+      },
+      {
+        "key": "--z-spacing-xs",
+        "value": "0.5rem"
+      },
+      {
+        "key": "--z-spacing-sm",
+        "value": "0.75rem"
+      },
+      {
+        "key": "--z-spacing-md",
+        "value": "1rem"
+      },
+      {
+        "key": "--z-spacing-lg",
+        "value": "1.5rem"
+      },
+      {
+        "key": "--z-spacing-xl",
+        "value": "2rem"
+      },
+      {
+        "key": "--z-spacing-xxl",
+        "value": "3rem"
+      }
+    ]
+  },
+  {
+    "title": "Size",
+    "description": "CSS variables for size, useful for width and heigth.",
+    "content": [
+      {
+        "key": "--z-w-auto",
+        "value": "auto"
+      },
+      {
+        "key": "--z-w-xs",
+        "value": "4rem"
+      },
+      {
+        "key": "--z-w-sm",
+        "value": "8rem"
+      },
+      {
+        "key": "--z-w-md",
+        "value": "16rem"
+      },
+      {
+        "key": "--z-w-lg",
+        "value": "32rem"
+      },
+      {
+        "key": "--z-w-xl",
+        "value": "64rem"
+      },
+      {
+        "key": "--z-w-xxl",
+        "value": "128rem"
+      },
+      {
+        "key": "--z-w-full",
+        "value": "100%"
+      },
+      {
+        "key": "--z-w-min",
+        "value": "min-content"
+      },
+      {
+        "key": "--z-w-max",
+        "value": "1rem"
+      },
+      {
+        "key": "--z-h-auto",
+        "value": "auto"
+      },
+      {
+        "key": "--z-h-xs",
+        "value": "2rem"
+      },
+      {
+        "key": "--z-h-sm",
+        "value": "4rem"
+      },
+      {
+        "key": "--z-h-md",
+        "value": "8rem"
+      },
+      {
+        "key": "--z-h-lg",
+        "value": "16rem"
+      },
+      {
+        "key": "--z-h-xl",
+        "value": "32rem"
+      },
+      {
+        "key": "--z-h-xxl",
+        "value": "64rem"
+      },
+      {
+        "key": "--z-h-full",
+        "value": "100%"
+      },
+      {
+        "key": "--z-h-min",
+        "value": "min-content"
+      },
+      {
+        "key": "--z-h-max",
+        "value": "max-content"
+      },
+      {
+        "key": "--z-icon-xxs",
+        "value": "0.25rem"
+      },
+      {
+        "key": "--z-icon-xs",
+        "value": "0.5rem"
+      },
+      {
+        "key": "--z-icon-sm",
+        "value": "1rem"
+      },
+      {
+        "key": "--z-icon-md",
+        "value": "1.5rem"
+      },
+      {
+        "key": "--z-icon-lg",
+        "value": "2rem"
+      },
+      {
+        "key": "--z-icon-xl",
+        "value": "2.5rem"
+      },
+      {
+        "key": "--z-icon-xxl",
+        "value": "3rem"
+      }
+    ]
+  },
+  {
+    "title": "Elevation",
+    "description": "CSS variables for shadows, used to define elevation for different components.",
+    "content": [
+      {
+        "key": "--z-shadow-none",
+        "value": "none"
+      },
+      {
+        "key": "--z-shadow-sm",
+        "value": "0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24)"
+      },
+      {
+        "key": "--z-shadow-md",
+        "value": "0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1)"
+      },
+      {
+        "key": "--z-shadow-lg",
+        "value": "0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1)"
+      },
+      {
+        "key": "--z-shadow-xl",
+        "value": "0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1)"
+      }
+    ]
+  },
+  {
+    "title": "Radius",
+    "description": "CSS variables for border-radius, useful for rounded corners in components.",
+    "content": [
+      {
+        "key": "--z-radius-none",
+        "value": "0"
+      },
+      {
+        "key": "--z-radius-sm",
+        "value": "0.125rem"
+      },
+      {
+        "key": "--z-radius-md",
+        "value": "0.25rem"
+      },
+      {
+        "key": "--z-radius-lg",
+        "value": "0.5rem"
+      },
+      {
+        "key": "--z-radius-xl",
+        "value": "1rem"
+      },
+      {
+        "key": "--z-radius-full",
+        "value": "9999px"
+      }
+    ]
+  },
+  {
+    "title": "Transitions",
+    "description": "CSS variables for transitions, useful for animations and smooth effects.",
+    "content": [
+      {
+        "key": "--z-transition-fast",
+        "value": "150ms"
+      },
+      {
+        "key": "--z-transition-medium",
+        "value": "300ms"
+      },
+      {
+        "key": "--z-transition-slow",
+        "value": "500ms"
+      },
+      {
+        "key": "--z-transition-slower",
+        "value": "1000ms"
+      },
+      {
+        "key": "--z-transition-linear",
+        "value": "linear"
+      },
+      {
+        "key": "--z-transition",
+        "value": "ease"
+      },
+      {
+        "key": "--z-transition-in",
+        "value": "ease-in"
+      },
+      {
+        "key": "--z-transition-out",
+        "value": "ease-out"
+      },
+      {
+        "key": "--z-transition-in-out",
+        "value": "ease-in-out"
+      }
+    ]
+  },
+  {
+    "title": "Z-Index",
+    "description": "CSS variables for z-index, useful for layering components.",
+    "content": [
+      {
+        "key": "--z-index-auto",
+        "value": "auto"
+      },
+      {
+        "key": "--z-index-0",
+        "value": "0"
+      },
+      {
+        "key": "--z-index-dropdown",
+        "value": "5"
+      },
+      {
+        "key": "--z-index-modal",
+        "value": "10"
+      },
+      {
+        "key": "--z-index-popover",
+        "value": "15"
+      },
+      {
+        "key": "--z-index-tooltip",
+        "value": "20"
+      },
+      {
+        "key": "--z-index-max",
+        "value": "999"
+      }
+    ]
+  },
+  {
+    "title": "Opacity",
+    "description": "CSS variables for opcity",
+    "content": [
+      {
+        "key": "--z-opacity-0",
+        "value": "0"
+      },
+      {
+        "key": "--z-opacity-2",
+        "value": "0.25"
+      },
+      {
+        "key": "--z-opacity-disabled",
+        "value": "0.25"
+      },
+      {
+        "key": "--z-opacity-5",
+        "value": "0.5"
+      },
+      {
+        "key": "--z-opacity-7",
+        "value": "0.75"
+      },
+      {
+        "key": "--z-opacity-10",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "title": "Filters",
+    "description": "CSS variables for filters",
+    "content": [
+      {
+        "key": "--z-grayscale-disabled",
+        "value": "0.8"
+      }
+    ]
+  },
+  {
+    "title": "Others",
+    "description": "",
+    "content": [
+      {
+        "key": "--z-none",
+        "value": "none"
+      }
+    ]
+  }
+]

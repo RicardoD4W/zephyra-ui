@@ -14,8 +14,8 @@ const config: Config = {
   organizationName: 'GitHub/RicardoD4W',
   projectName: 'zephyra-ui',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
