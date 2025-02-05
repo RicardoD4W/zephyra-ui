@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import styles from './feature.module.css';
 import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {
@@ -53,7 +53,7 @@ function Feature({ title, description }: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): ReactNode {
+export default function Features(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
