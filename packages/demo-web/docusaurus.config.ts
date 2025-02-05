@@ -88,7 +88,10 @@ const config: Config = {
         },
       ],
     },
-    colorMode: {
+    footer: {
+      copyright: `Made with 💙 by RicardoD4W`,
+    },
+    rMode: {
       defaultMode: 'dark',
     },
     prism: {

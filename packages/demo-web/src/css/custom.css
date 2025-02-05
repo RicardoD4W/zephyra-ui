@@ -1,6 +1,19 @@
 :root {
-  --text: #000;
-  --ifm-color-primary: #00B378;
+  --zephyra-color: #5689A3;
+  --banner-color: #80b4ce;
+  --bg-content-color: #e6e6e6;
+  --bg-content-box-color: #F5F5F5;
+  --text-color: #000;
+  --text-alt-color: #FFF;
+  --text-s-color:#4b4b4b;
+  --bg-glass:#0000000d;
+  --bubbles-1: #7ebfff;
+  --bubbles-2: #85a9b9;
+  --bubbles-3: #d1ecf1;
+  --bubbles-4: #d4edda;
+  --bubbles-5: #ffffff65;
+
+  --ifm-color-primary: var(--zephyra-color);
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -9,19 +22,42 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-padding-vertical : 1rem;
+  --ifm-footer-background-color: #FFF;
+  --ifm-footer-color: var(--text-color);
 }
 
 [data-theme='dark'] {
-  --text: #FFF;
-  --ifm-color-primary: #058f61;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --zephyra-color: #5689A3;
+  --banner-color: #5689A3;
+  --bg-content-color: #1E1E1E;
+  --bg-content-box-color: #2A2A2A;
+  --text-color: #FFF;
+  --text-alt-color: #000;
+  --text-s-color:#c2c2c2;
+  --bg-glass:#0000000d;
+  --bubbles-1: #93c9ff;
+  --bubbles-2: #a1b0b7;
+  --bubbles-3: #d1ecf1;
+  --bubbles-4: #d4edda;
+  --bubbles-5: #ffffff65;
+
+  --ifm-color-primary: var(--zephyra-color);
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-padding-vertical : 1rem;
+  --ifm-footer-background-color: #121212;
+  --ifm-footer-color: var(--text-color);
 }
+
+
+
 
 @tailwind base;
 @tailwind components;
