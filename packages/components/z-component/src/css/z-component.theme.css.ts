@@ -7,7 +7,6 @@ export class ZComponentTheme {
       color-scheme: light dark;
       --z-color-hover: 110%;
       --z-color-active: 90%;
-      --z-color-zephyra: #00a36d;
       --z-color-transparent: transparent;
 
       /* SIZE */
@@ -146,6 +145,7 @@ export class ZComponentTheme {
       --z-color-background: #f8f9fa;
       --z-color-border: #dee2e6;
       --z-color-text: #fff;
+      --z-color-zephyra: #5689a3;
     }
 
     :host([data-theme='light']) {
@@ -166,6 +166,7 @@ export class ZComponentTheme {
       --z-color-background: #ebebeb;
       --z-color-border: #f1f3f5;
       --z-color-text: #000;
+      --z-color-zephyra: #b3e6eb;
     }
   `;
 
