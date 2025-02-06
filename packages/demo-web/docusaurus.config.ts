@@ -17,6 +17,9 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+  clientModules: [require.resolve('./src/clientModules/registerWCs.js')],
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
