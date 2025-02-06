@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+  
   --zephyra-color: #5689A3;
   --banner-color: #80b4ce;
   --bg-content-color: #e6e6e6;

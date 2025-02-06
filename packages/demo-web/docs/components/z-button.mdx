@@ -1,0 +1,69 @@
+--- 
+title: "z-button"
+component: "z-button"
+sidebar_position: 1
+props: [
+  {
+    "name": "slot",
+    "type": "HTML",
+    "values": {
+      "default": "Button",
+      "value": [
+        "Click me!"
+      ]
+    }
+  },
+  {
+    "name": "disabled",
+    "type": "Boolean",
+    "values": {
+      "default": "false",
+      "value": [
+        "true"
+      ]
+    }
+  },
+  {
+    "name": "isLoading",
+    "type": "Boolean",
+    "values": {
+      "default": "false",
+      "value": [
+        "true"
+      ]
+    }
+  },
+  {
+    "name": "variant",
+    "type": "string",
+    "values": {
+      "default": "info",
+      "value": [
+        "warning",
+        "danger",
+        "outline",
+        "zephyra"
+      ]
+    }
+  }
+]
+events: []
+
+---
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+
+# z-button
+
+
+
+## Properties
+
+| Prop Name   | Type   | Default Value  | Other Values                    |
+|-------------|--------|----------------|---------------------------------|
+| `slot` | `HTML` | `Button` | `Click me!` |
+| `disabled` | `Boolean` | `false` | `true` |
+| `isLoading` | `Boolean` | `false` | `true` |
+| `variant` | `string` | `info` | `warning, danger, outline, zephyra` |
+
+## Events
+`none`

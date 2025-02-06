@@ -1,0 +1,29 @@
+--- 
+title: "z-toggle-theme"
+component: "z-toggle-theme"
+sidebar_position: 2
+props: []
+events: [
+  {
+    "name": "z-theme:changed",
+    "dispatch": "Fires when clicking the SVG",
+    "payload": "detail : { dataTheme: 'light' or 'dark' }"
+  }
+]
+A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme'
+---
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+
+# z-toggle-theme
+
+A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme'
+
+## Properties
+
+`none`
+
+## Events
+
+| Event Name   | Description                             | Payload                           |
+|--------------|-----------------------------------------|-----------------------------------|
+| `z-theme:changed` | Fires when clicking the SVG | `detail : { dataTheme: 'light' or 'dark' }` |

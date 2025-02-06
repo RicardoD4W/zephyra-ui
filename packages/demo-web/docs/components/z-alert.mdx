@@ -1,0 +1,46 @@
+--- 
+title: "z-alert"
+component: "z-alert"
+sidebar_position: 4
+props: [
+  {
+    "name": "slot",
+    "type": "HTML",
+    "values": {
+      "default": "Alert content",
+      "value": [
+        "<div><strong>This is an alert</strong><br>An alert is this</div>"
+      ]
+    }
+  },
+  {
+    "name": "state",
+    "type": "string",
+    "values": {
+      "default": "info",
+      "value": [
+        "success",
+        "warning",
+        "error"
+      ]
+    }
+  }
+]
+events: []
+
+---
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+
+# z-alert
+
+
+
+## Properties
+
+| Prop Name   | Type   | Default Value  | Other Values                    |
+|-------------|--------|----------------|---------------------------------|
+| `slot` | `HTML` | `Alert content` | `<div><strong>This is an alert</strong><br>An alert is this</div>` |
+| `state` | `string` | `info` | `success, warning, error` |
+
+## Events
+`none`
