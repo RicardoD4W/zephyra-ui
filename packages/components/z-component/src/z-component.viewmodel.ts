@@ -1,54 +1,52 @@
 import { LitElement } from 'lit';
 import { state } from 'lit/decorators.js';
-import {
-  ZThemeChangedEvent,
-  THEME_CHANGED_EVENT_NAME,
-} from './event/z-theme-changed.event';
-import { ThemeChangedModel } from './model/theme-changed.model';
+import { ZComponentTheme } from './css/z-component.theme.css';
 
 export class ZComponentViewModel extends LitElement {
   @state() dataTheme: 'light' | 'dark' = 'light';
+  private _themeCssSheet = new CSSStyleSheet();
 
   constructor() {
     super();
     this._initializeTheme();
+    this._setDefaultTheme();
   }
-
-  connectedCallback() {
-    super.connectedCallback();
-    window.addEventListener(
-      THEME_CHANGED_EVENT_NAME,
-      this._onThemeChanged as EventListener
-    );
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-    window.removeEventListener(
-      THEME_CHANGED_EVENT_NAME,
-      this._onThemeChanged as EventListener
-    );
-  }
-
-  private _onThemeChanged = (event: ZThemeChangedEvent) => {
-    this.dataTheme = event.detail.dataTheme;
-    this._applyTheme();
-  };
 
   private _initializeTheme() {
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    this.dataTheme = prefersDark ? 'dark' : 'light';
-    this._applyTheme();
+    this._detectedSysTheme();
+    this.applyTheme();
   }
 
-  private _applyTheme() {
-    this.setAttribute('data-theme', this.dataTheme);
+  private _detectedSysTheme() {
+    const appTheme = localStorage.getItem('theme');
+
+    if (!appTheme || (appTheme !== 'dark' && appTheme !== 'light')) {
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      this.dataTheme = prefersDark ? 'dark' : 'light';
+      this.persistTheme();
+    } else {
+      this.dataTheme = appTheme;
+    }
+  }
+
+  public persistTheme() {
+    localStorage.setItem('theme', this.dataTheme);
+  }
+
+  public applyTheme() {
     document.documentElement.setAttribute('data-theme', this.dataTheme);
   }
 
-  protected dispatchThemeChangedEvent(detail: ThemeChangedModel) {
-    this.dispatchEvent(new ZThemeChangedEvent(detail));
+  private _setDefaultTheme() {
+    this._themeCssSheet.replaceSync(
+      `${ZComponentTheme.zBaseSheet.cssText}  ${ZComponentTheme.zBaseSheetDark.cssText}`
+    );
+
+    document.adoptedStyleSheets = [
+      ...document.adoptedStyleSheets,
+      this._themeCssSheet,
+    ];
   }
 }

@@ -3,8 +3,35 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 export class ZComponentTheme {
   static cssBase: CSSResult = css`
     :host {
-      /* COLORS */
+      /* DEFAULT */
+      display: inline-block;
       color-scheme: light dark;
+      font-family: var(--z-font);
+    }
+  `;
+
+  static zBaseSheet: CSSResult = css`
+    :root {
+      --z-color-primary: #93c9ff;
+      --z-color-secondary: #a1b0b7;
+      --z-color-info: #d1ecf1;
+      --z-color-success: #d4edda;
+      --z-color-warning: #fff3cd;
+      --z-color-danger: #f8d7da;
+      --z-color-info-darkest: #81c3cf;
+      --z-color-success-darkest: #8fcf9e;
+      --z-color-warning-darkest: #d3c083;
+      --z-color-danger-darkest: #c28086;
+      --z-color-light: #ffffff;
+      --z-color-dark: #495057;
+      --z-color-gray: #868e96;
+      --z-color-muted: #adb5bd;
+      --z-color-background: #ebebeb;
+      --z-color-border: #f1f3f5;
+      --z-color-text: #000;
+      --z-color-zephyra: #b3e6eb;
+
+      /* COLORS */
       --z-color-hover: 110%;
       --z-color-active: 90%;
       --z-color-transparent: transparent;
@@ -116,18 +143,11 @@ export class ZComponentTheme {
 
       /* OTHERS */
       --z-none: none;
-
-      /* DEFAULT */
-      display: inline-block;
-      font-family: var(--z-font);
-      transition: background-color var(--z-transition-fast) var(--z-transition),
-        color var(--z-transition-fast) var(--z-transition),
-        box-shadow var(--z-transition-fast) var(--z-transition),
-        border-color var(--z-transition-fast) var(--z-transition),
-        border-radius var(--z-transition-fast) var(--z-transition);
     }
+  `;
 
-    :host([data-theme='dark']) {
+  static zBaseSheetDark: CSSResult = css`
+    [data-theme='dark'] {
       --z-color-primary: #0056b3;
       --z-color-secondary: #3d5a5b;
       --z-color-info: #0c5460;
@@ -146,27 +166,6 @@ export class ZComponentTheme {
       --z-color-border: #dee2e6;
       --z-color-text: #fff;
       --z-color-zephyra: #5689a3;
-    }
-
-    :host([data-theme='light']) {
-      --z-color-primary: #93c9ff;
-      --z-color-secondary: #a1b0b7;
-      --z-color-info: #d1ecf1;
-      --z-color-success: #d4edda;
-      --z-color-warning: #fff3cd;
-      --z-color-danger: #f8d7da;
-      --z-color-info-darkest: #81c3cf;
-      --z-color-success-darkest: #8fcf9e;
-      --z-color-warning-darkest: #d3c083;
-      --z-color-danger-darkest: #c28086;
-      --z-color-light: #ffffff;
-      --z-color-dark: #495057;
-      --z-color-gray: #868e96;
-      --z-color-muted: #adb5bd;
-      --z-color-background: #ebebeb;
-      --z-color-border: #f1f3f5;
-      --z-color-text: #000;
-      --z-color-zephyra: #b3e6eb;
     }
   `;
 
