@@ -9,6 +9,28 @@ function readComponentsJson() {
   return JSON.parse(jsonData);
 }
 
+function generateExamples(props, componentName) {
+  let examples = `<${componentName}></${componentName}>\n`;
+
+  props.forEach((prop) => {
+    const otherValues = prop.values.value;
+
+    otherValues.forEach((value) => {
+      if (prop.type === 'Boolean') {
+        examples += `<${componentName} ${prop.name}></${componentName}>\n`;
+      } else if (prop.name === 'slot') {
+        examples += `<${componentName}>${value}</${componentName}>\n`;
+      } else {
+        examples += `<${componentName} ${
+          prop.name
+        }="${value}">${value.toUpperCase()}</${componentName}>\n`;
+      }
+    });
+  });
+
+  return examples;
+}
+
 function createMdxFile(index, data) {
   const filePath = path.join(docsDir, `${data.title}.mdx`);
 
@@ -18,8 +40,8 @@ component: "${data.title}"
 sidebar_position: ${index + 1}
 props: ${JSON.stringify(data.args.props, null, 2)}
 events: ${JSON.stringify(data.args.events, null, 2)}
-${data.description ? data.description : ''}
----
+${data.description ? 'description: ' + data.description : ''} 
+--- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 # ${data.title}
@@ -51,6 +73,7 @@ ${
 ${
   data.args.events.length > 0
     ? `
+
 | Event Name   | Description                             | Payload                           |
 |--------------|-----------------------------------------|-----------------------------------|` +
       data.args.events
@@ -60,7 +83,33 @@ ${
         )
         .join('')
     : '`none`'
-}`;
+}
+
+
+--- 
+
+## Examples of use
+
+${
+  data.args.props.length > 0
+    ? `
+
+    \`\`\`html
+${generateExamples(data.args.props, data.title)}
+\`\`\`
+
+<WcWrapper html='${generateExamples(data.args.props, data.title)}'/>
+  `
+    : `
+    \`\`\`html
+    <${data.title}></${data.title}>
+    \`\`\` 
+    
+    <WcWrapper html='<${data.title}></${data.title}>'/>
+    `
+}
+
+`;
 
   fs.writeFileSync(filePath, content, 'utf-8');
   console.log(`Archivo creado: ${filePath}`);
