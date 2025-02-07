@@ -4,7 +4,7 @@ component: "z-icon"
 sidebar_position: 3
 props: [
   {
-    "name": "state",
+    "name": "icon",
     "type": "string",
     "values": {
       "default": "info",
@@ -17,8 +17,8 @@ props: [
   }
 ]
 events: []
-
----
+ 
+--- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 # z-icon
@@ -29,7 +29,30 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 | Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|
-| `state` | `string` | `info` | `success, warning, error` |
+| `icon` | `string` | `info` | `success, warning, error` |
 
 ## Events
 `none`
+
+
+--- 
+
+## Examples of use
+
+
+
+    ```html
+<z-icon></z-icon>
+<z-icon icon="success">SUCCESS</z-icon>
+<z-icon icon="warning">WARNING</z-icon>
+<z-icon icon="error">ERROR</z-icon>
+
+```
+
+<WcWrapper html='<z-icon></z-icon>
+<z-icon icon="success">SUCCESS</z-icon>
+<z-icon icon="warning">WARNING</z-icon>
+<z-icon icon="error">ERROR</z-icon>
+'/>
+  
+

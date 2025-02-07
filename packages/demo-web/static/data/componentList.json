@@ -58,7 +58,7 @@
     "args": {
       "props": [
         {
-          "name": "state",
+          "name": "icon",
           "type": "string",
           "values": {
             "default": "info",
