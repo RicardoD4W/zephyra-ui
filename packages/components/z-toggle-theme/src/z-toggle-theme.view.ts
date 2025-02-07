@@ -14,7 +14,7 @@ export class ZToggleThemeView extends ZToggleThemeViewModel {
       <svg
         viewBox="0 0 100 100"
         @click="${this.updateColorScheme}"
-        class="${this.isLightTheme ? 'night' : 'day'}"
+        class="${this.isLightTheme ? 'night' : 'day'} center"
       >
         <circle class="sun" cx="50" cy="50" r="25" />
 
