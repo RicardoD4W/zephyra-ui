@@ -2,7 +2,7 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 
 export class ZToggleThemeTheme {
   static cssBase: CSSResult = css`
-    :host {
+    .center {
       display: flex;
       justify-content: center;
       align-items: center;

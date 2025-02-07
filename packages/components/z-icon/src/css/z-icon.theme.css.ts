@@ -2,13 +2,11 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 
 export class ZIconTheme {
   static cssBase: CSSResult = css`
-    :host {
+    .icon {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
 
-    .icon {
       color: var(--z-color-text);
 
       width: var(--z-icon-md);
