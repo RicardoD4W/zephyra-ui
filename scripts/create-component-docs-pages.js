@@ -21,9 +21,7 @@ function generateExamples(props, componentName) {
       } else if (prop.name === 'slot') {
         examples += `<${componentName}>${value}</${componentName}>\n`;
       } else {
-        examples += `<${componentName} ${
-          prop.name
-        }="${value}">${value.toUpperCase()}</${componentName}>\n`;
+        examples += `<${componentName} ${prop.name}="${value}"></${componentName}>\n`;
       }
     });
   });

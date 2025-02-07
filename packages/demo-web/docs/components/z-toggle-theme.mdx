@@ -3,31 +3,21 @@ title: "z-toggle-theme"
 component: "z-toggle-theme"
 sidebar_position: 2
 props: []
-events: [
-  {
-    "name": "z-theme:changed",
-    "dispatch": "Fires when clicking the SVG",
-    "payload": "detail : { dataTheme: 'light' or 'dark' }"
-  }
-]
-description: A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme' 
+events: []
+description: A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the z-toggle-theme. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 # z-toggle-theme
 
-A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme'
+A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the z-toggle-theme. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes
 
 ## Properties
 
 `none`
 
 ## Events
-
-
-| Event Name   | Description                             | Payload                           |
-|--------------|-----------------------------------------|-----------------------------------|
-| `z-theme:changed` | Fires when clicking the SVG | `detail : { dataTheme: 'light' or 'dark' }` |
+`none`
 
 
 --- 

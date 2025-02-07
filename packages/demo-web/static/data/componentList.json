@@ -41,20 +41,15 @@
   },
   {
     "title": "z-toggle-theme",
-    "description": "A SVG component that can be used for toggling between light and dark themes, works by the html attribute 'data-theme'",
+    "description": "A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the z-toggle-theme. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes",
     "args": {
       "props": [],
-      "events": [
-        {
-          "name": "z-theme:changed",
-          "dispatch": "Fires when clicking the SVG",
-          "payload": "detail : { dataTheme: 'light' or 'dark' }"
-        }
-      ]
+      "events": []
     }
   },
   {
     "title": "z-icon",
+    "description": "An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property",
     "args": {
       "props": [
         {
