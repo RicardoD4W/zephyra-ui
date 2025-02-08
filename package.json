@@ -20,7 +20,7 @@
     "build-all-l": "for d in ./packages/components/*/; do (cd \"$d\" && npm install && npm run build); done",
     "dev-web": "npm run build-all && npm run dev-d",
     "publish-npm": "node ./scripts/publish-components.js",
-    "gc-doc": "node ./scripts/create-component-docs-pages.js"
+    "gc-doc": "node ./scripts/create-component-docs-pages.js && node ./scripts/create-css-docs-pages.js"
   },
   "dependencies": {
     "lit": "3.2.1"

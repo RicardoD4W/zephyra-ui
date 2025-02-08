@@ -71,7 +71,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'appSidebar',
           position: 'left',
-          label: 'Components',
+          label: 'Docs',
         },
         { to: '/integrations', label: 'Integrations', position: 'left' },
         { to: '/extensions', label: 'Extensions', position: 'left' },
