@@ -15,6 +15,18 @@ props: [
   },
   {
     "name": "state",
+    "type": "AlertModel",
+    "values": {
+      "default": "AlertModel.INFO",
+      "value": [
+        "AlertModel.SUCCESS",
+        "AlertModel.WARNING",
+        "AlertModel.ERROR"
+      ]
+    }
+  },
+  {
+    "name": "state",
     "type": "string",
     "values": {
       "default": "info",
@@ -40,11 +52,22 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 | Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|
 | `slot` | `HTML` | `Alert content` | `<div><strong>This is an alert</strong><br>An alert is this</div>` |
+| `state` | `AlertModel` | `AlertModel.INFO` | `AlertModel.SUCCESS, AlertModel.WARNING, AlertModel.ERROR` |
 | `state` | `string` | `info` | `success, warning, error` |
 
 ## Events
 `none`
 
+## CSS Parts
+
+
+| Part name  | Description                             | 
+|--------------|-----------------------------------------|
+| `alert-container` | The main container of the alert. | 
+| `alert-icon` | The area containing the alert icon. | 
+| `alert-state` | The text representing the state of the alert (such as 'success', 'warning', etc.). | 
+| `alert-separator` | The separator between the state and the alert message content. | 
+| `alert-msg` | The content of the alert, found within the slot. | 
 
 --- 
 
@@ -55,6 +78,9 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
     ```html
 <z-alert></z-alert>
 <z-alert><div><strong>This is an alert</strong><br>An alert is this</div></z-alert>
+<z-alert state="AlertModel.SUCCESS"></z-alert>
+<z-alert state="AlertModel.WARNING"></z-alert>
+<z-alert state="AlertModel.ERROR"></z-alert>
 <z-alert state="success"></z-alert>
 <z-alert state="warning"></z-alert>
 <z-alert state="error"></z-alert>
@@ -63,6 +89,9 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 <WcWrapper html='<z-alert></z-alert>
 <z-alert><div><strong>This is an alert</strong><br>An alert is this</div></z-alert>
+<z-alert state="AlertModel.SUCCESS"></z-alert>
+<z-alert state="AlertModel.WARNING"></z-alert>
+<z-alert state="AlertModel.ERROR"></z-alert>
 <z-alert state="success"></z-alert>
 <z-alert state="warning"></z-alert>
 <z-alert state="error"></z-alert>

@@ -7,33 +7,80 @@ props: [
     "name": "icon",
     "type": "string",
     "values": {
-      "default": "info",
+      "default": "help",
       "value": [
-        "success",
         "warning",
         "error"
+      ]
+    }
+  },
+  {
+    "name": "size",
+    "type": "number",
+    "values": {
+      "default": 32,
+      "value": [
+        64
+      ]
+    }
+  },
+  {
+    "name": "variant",
+    "type": "IconVariant",
+    "values": {
+      "default": "IconVariant.OUTLINE",
+      "value": [
+        "IconVariant.REGULAR",
+        "IconVariant.ROUNDED",
+        "IconVariant.SHARP",
+        "IconVariant.OUTLINE_ROUNDED",
+        "IconVariant.OUTLINE_SHARP"
+      ]
+    }
+  },
+  {
+    "name": "variant",
+    "type": "string",
+    "values": {
+      "default": "-outline",
+      "value": [
+        "",
+        "-rounded",
+        "-sharp",
+        "-outline-rounded",
+        "-outline-sharp"
       ]
     }
   }
 ]
 events: []
-description: An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property 
+description: An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the variant with the `IconVariant` will fail because is render in `html` not in `ts` or `js` 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 # z-icon
 
-An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property
+An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the variant with the `IconVariant` will fail because is render in `html` not in `ts` or `js`
 
 ## Properties
 
 | Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|
-| `icon` | `string` | `info` | `success, warning, error` |
+| `icon` | `string` | `help` | `warning, error` |
+| `size` | `number` | `32` | `64` |
+| `variant` | `IconVariant` | `IconVariant.OUTLINE` | `IconVariant.REGULAR, IconVariant.ROUNDED, IconVariant.SHARP, IconVariant.OUTLINE_ROUNDED, IconVariant.OUTLINE_SHARP` |
+| `variant` | `string` | `-outline` | `, -rounded, -sharp, -outline-rounded, -outline-sharp` |
 
 ## Events
 `none`
 
+## CSS Parts
+
+
+| Part name  | Description                             | 
+|--------------|-----------------------------------------|
+| `icon-container` | The container that holds the icon image. | 
+| `icon` | The icon image (svg). | 
 
 --- 
 
@@ -43,16 +90,36 @@ An icon component that allows any `material icon` powered by [google fonts](http
 
     ```html
 <z-icon></z-icon>
-<z-icon icon="success"></z-icon>
 <z-icon icon="warning"></z-icon>
 <z-icon icon="error"></z-icon>
+<z-icon size="64"></z-icon>
+<z-icon variant="IconVariant.REGULAR"></z-icon>
+<z-icon variant="IconVariant.ROUNDED"></z-icon>
+<z-icon variant="IconVariant.SHARP"></z-icon>
+<z-icon variant="IconVariant.OUTLINE_ROUNDED"></z-icon>
+<z-icon variant="IconVariant.OUTLINE_SHARP"></z-icon>
+<z-icon variant=""></z-icon>
+<z-icon variant="-rounded"></z-icon>
+<z-icon variant="-sharp"></z-icon>
+<z-icon variant="-outline-rounded"></z-icon>
+<z-icon variant="-outline-sharp"></z-icon>
 
 ```
 
 <WcWrapper html='<z-icon></z-icon>
-<z-icon icon="success"></z-icon>
 <z-icon icon="warning"></z-icon>
 <z-icon icon="error"></z-icon>
+<z-icon size="64"></z-icon>
+<z-icon variant="IconVariant.REGULAR"></z-icon>
+<z-icon variant="IconVariant.ROUNDED"></z-icon>
+<z-icon variant="IconVariant.SHARP"></z-icon>
+<z-icon variant="IconVariant.OUTLINE_ROUNDED"></z-icon>
+<z-icon variant="IconVariant.OUTLINE_SHARP"></z-icon>
+<z-icon variant=""></z-icon>
+<z-icon variant="-rounded"></z-icon>
+<z-icon variant="-sharp"></z-icon>
+<z-icon variant="-outline-rounded"></z-icon>
+<z-icon variant="-outline-sharp"></z-icon>
 '/>
   
 

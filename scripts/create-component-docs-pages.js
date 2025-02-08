@@ -83,6 +83,18 @@ ${
     : '`none`'
 }
 
+## CSS Parts
+${
+  data.args.cssParts.length > 0
+    ? `
+
+| Part name  | Description                             | 
+|--------------|-----------------------------------------|` +
+      data.args.cssParts
+        .map((part) => `\n| \`${part.name}\` | ${part.description} | `)
+        .join('')
+    : '`none`'
+}
 
 --- 
 
