@@ -4,6 +4,7 @@ export class ZIconTheme {
   static cssBase: CSSResult = css`
     .icon {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
@@ -16,6 +17,8 @@ export class ZIconTheme {
       height: var(--z-icon-md);
       min-height: var(--z-icon-sm);
       max-height: var(--z-icon-lg);
+
+      padding: var(--z-spacing-xs);
     }
   `;
 

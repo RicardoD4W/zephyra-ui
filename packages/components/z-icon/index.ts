@@ -1,2 +1,2 @@
 export * from './src/z-icon.view';
-export { IconModel } from './src/model/z-icon.model';
+export { IconVariant } from './src/model/z-icon.model';

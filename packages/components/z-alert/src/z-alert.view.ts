@@ -1,6 +1,8 @@
 import { CSSResultGroup, CSSResultOrNative, TemplateResult, html } from 'lit';
 import { ZAlertTheme } from './css/z-alert.theme.css';
 import { ZAlertViewModel } from './z-alert.viewmodel';
+import { choose } from 'lit/directives/choose.js';
+
 import '@zephyra-ui/z-icon';
 
 export class ZAlertView extends ZAlertViewModel {
@@ -15,15 +17,20 @@ export class ZAlertView extends ZAlertViewModel {
       role="alert"
       aria-live="assertive"
       class="alert-container ${this.state}"
+      part="alert-container"
     >
-      <div class="alert-icon">
-        <z-icon .state="${this.state}"></z-icon>
-        <span
+      <div class="alert-icon" part="alert-icon">
+        ${choose(
+          this.state,
+          [['success', () => html` <z-icon icon="check-circle"></z-icon>`]],
+          () => html`<z-icon .icon="${this.state}"></z-icon>`
+        )}
+        <span part="alert-state"
           >${this.state[0]?.toUpperCase() + this.state?.slice(1) || ''}</span
         >
       </div>
-      <span class="alert-separator"> - </span>
-      <slot class="alert-msg">Alert content</slot>
+      <span class="alert-separator" part="alert-separator"> - </span>
+      <slot class="alert-msg" part="alert-msg">Alert content</slot>
     </div>`;
   }
 }
