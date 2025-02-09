@@ -39,6 +39,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          lastVersion: 'current',
         },
         blog: {
           showReadingTime: true,
@@ -75,7 +76,6 @@ const config: Config = {
         },
         { to: '/integrations', label: 'Integrations', position: 'left' },
         { to: '/extensions', label: 'Extensions', position: 'left' },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/RicardoD4W/zephyra-ui',
           label: 'GitHub',

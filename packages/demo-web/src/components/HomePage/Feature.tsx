@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import Heading from '@theme/Heading';
-import styles from './feature.module.css';
+import styles from '@site/src/components/HomePage/feature.module.css';
 import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {

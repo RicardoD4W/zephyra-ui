@@ -2,7 +2,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { BubblesContainer } from '../BubblesContainer/BubblesContainer';
+import { BubblesContainer } from '@site/src/components/BubblesContainer/BubblesContainer';
 import Heading from '@theme/Heading';
 
 export const Header = () => {

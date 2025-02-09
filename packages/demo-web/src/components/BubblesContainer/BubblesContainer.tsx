@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import '../../css/animation.css';
+import '@site/src/css/animation.css';
 
 export const BubblesContainer = ({ bubbleCount = 20 }) => {
   const bubbleContainerRef = useRef(null);
