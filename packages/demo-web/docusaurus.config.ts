@@ -75,7 +75,6 @@ const config: Config = {
           label: 'Docs',
         },
         { to: '/integrations', label: 'Integrations', position: 'left' },
-        { to: '/extensions', label: 'Extensions', position: 'left' },
         {
           href: 'https://github.com/RicardoD4W/zephyra-ui',
           label: 'GitHub',

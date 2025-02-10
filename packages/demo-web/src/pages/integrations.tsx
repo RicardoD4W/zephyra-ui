@@ -349,14 +349,14 @@ export default function Integrations(): ReactNode {
   return (
     <Layout
       title={`Integrations`}
-      description="On this page you will learn how to integrate zephyra-ui with your favorite framework"
+      description="On this page you will learn how to integrate zephyra-ui with your favorite frameworks"
     >
       <main className="flex flex-col p-2 text-center gap-14 md:p-12">
         <hgroup className="pb-5">
           <h1>
             <Translate>
               On this page you will learn how to integrate zephyra-ui with your
-              favorite framework
+              favorite frameworks
             </Translate>
           </h1>
         </hgroup>
