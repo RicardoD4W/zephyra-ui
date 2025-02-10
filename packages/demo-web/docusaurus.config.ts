@@ -18,7 +18,7 @@ const config: Config = {
   onBrokenMarkdownLinks: 'throw',
 
   themes: ['@docusaurus/theme-live-codeblock'],
-  clientModules: ['./src/clientModules/registerWCs.js'],
+  clientModules: ['./clientModules/registerWCs.js'],
 
   i18n: {
     defaultLocale: 'en',
