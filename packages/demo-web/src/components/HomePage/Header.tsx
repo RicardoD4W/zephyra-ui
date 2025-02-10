@@ -58,6 +58,7 @@ export const Header = () => {
             style={{
               color: 'var(--text-color)',
               backgroundColor: 'var(--bg-glass)',
+              boxShadow: '0px 0px 5px 0px var(--text-color)',
             }}
             to="/docs/intro"
           >
