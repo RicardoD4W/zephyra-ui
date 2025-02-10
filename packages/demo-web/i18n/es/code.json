@@ -1,14 +1,25 @@
 {
+  "On this page you will learn how to integrate zephyra-ui with your favorite frameworks": {
+    "message": "En esta página aprenderás cómo integrar zephyra-ui con tus frameworks favoritos."
+  },
+  "homepage.feature.easyToUse": {
+    "message": "Zephyra UI ofrece una API intuitiva y bien documentada, que permite a los desarrolladores crear interfaces sin una curva de aprendizaje pronunciada."
+  },
+  "homepage.feature.seamlessIntegration": {
+    "message": "Compatible con cualquier stack moderno, Zephyra UI se adapta fácilmente a proyectos existentes sin configuraciones complejas ni dependencias innecesarias."
+  },
+  "homepage.feature.totalCustomization": {
+    "message": "Diseñada pensando en la flexibilidad, Zephyra UI le permite modificar estilos, temas y componentes sin restricciones, asegurando que cada proyecto mantenga su identidad visual."
+  },
+  "homepage.header.description": {
+    "message": "Zephyra UI es una biblioteca de componentes web reutilizable, moderna y accesible, diseñada para facilitar el desarrollo de interfaces de usuario con componentes de alto rendimiento. Creada con Lit y ​​TypeScript, Zephyra UI ofrece un conjunto de componentes listos para usar que se pueden integrar fácilmente en cualquier aplicación web. Su diseño modular y liviano permite a los desarrolladores personalizar y ampliar cada componente según sus necesidades."
+  },
   "Get Started": {
-    "message": "Get Started"
+    "message": "Empezar"
   },
   "theme.ErrorPageContent.title": {
     "message": "Esta página ha fallado.",
     "description": "The title of the fallback page when the page crashed"
-  },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Volver al principio",
-    "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
     "message": "Archivo",
@@ -18,8 +29,12 @@
     "message": "Archivo",
     "description": "The page & hero description of the blog archive page"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Volver al principio",
+    "description": "The ARIA label for the back to top button"
+  },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navegación por la página de la lista de blogs ",
+    "message": "Navegación por la página de la lista de blogs",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -87,7 +102,7 @@
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "Versión: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Esta es la documentación sin publicar para {siteTitle}, versión {versionLabel}.",
@@ -125,17 +140,21 @@
     "message": "Última actualización{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versiones",
-    "description": "The label for the navbar versions dropdown on mobile view"
-  },
   "theme.NotFound.title": {
     "message": "Página No Encontrada",
     "description": "The title of the 404 page"
   },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiones",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
   "theme.tags.tagsListLabel": {
     "message": "Etiquetas:",
     "description": "The label alongside a tag list"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Cerrar",
+    "description": "The ARIA label for close button of announcement bar"
   },
   "theme.admonition.caution": {
     "message": "precaución",
@@ -154,16 +173,12 @@
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "tip",
+    "message": "consejo",
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
     "message": "aviso",
     "description": "The default label used for the Warning admonition (:::warning)"
-  },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Cerrar",
-    "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Navegación de publicaciones recientes",
@@ -197,10 +212,6 @@
     "message": "Principal",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Idiomas",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "No pudimos encontrar lo que buscaba.",
     "description": "The first paragraph of the 404 page"
@@ -209,13 +220,13 @@
     "message": "Comuníquese con el dueño del sitio que le proporcionó la URL original y hágale saber que su vínculo está roto.",
     "description": "The 2nd paragraph of the 404 page"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Idiomas",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "En esta página",
     "description": "The label used by the button on the collapsible TOC component"
-  },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "Lectura de un minuto|{readingTime} min de lectura",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
     "message": "Leer Más",
@@ -224,6 +235,10 @@
   "theme.blog.post.readMoreLabel": {
     "message": "Leer más acerca de {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Lectura de un minuto|{readingTime} min de lectura",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Página de Inicio",
@@ -261,6 +276,14 @@
     "message": "Expandir barra lateral",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
+  "theme.Playground.result": {
+    "message": "Resultado",
+    "description": "The result label of the live codeblocks"
+  },
+  "theme.Playground.liveEditor": {
+    "message": "Editor en vivo",
+    "description": "The live editor label of the live codeblocks"
+  },
   "theme.blog.post.plurals": {
     "message": "Una publicación|{count} publicaciones",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -274,15 +297,15 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Autores",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "Ver todos los autores",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Este autor aún no ha escrito ninguna publicación.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -294,11 +317,11 @@
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "Borrador de página",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "Esta página es un borrador. Solo será visible en desarrollo y se excluirá de la compilación de producción.",
     "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -313,16 +336,22 @@
     "message": "Etiquetas",
     "description": "The title of the tag list page"
   },
-  "homepage.header.description": {
-    "message": "Zephyra UI is a modern and accessible reusable web component library designed to make it easy to develop user interfaces with high-performance components. Built with Lit, and TypeScript, Zephyra UI offers a set of ready-to-use components that can be easily integrated into any web application. Its modular and lightweight design allows developers to customize and extend each component to their needs."
+  "Basic Usage": {
+    "message": "Uso Básico"
   },
-  "homepage.feature.easyToUse": {
-    "message": "Zephyra UI offers an intuitive and well-documented API, allowing developers to build interfaces without a steep learning curve."
+  "Using Reactive Props": {
+    "message": "Usando Propiedades Reactivas"
   },
-  "homepage.feature.seamlessIntegration": {
-    "message": "Compatible with any modern stack, Zephyra UI easily adapts to existing projects without complex configurations or unnecessary dependencies."
+  "homepage.feature.easyToUse.title": {
+    "message": "🚀 Fácil de usar"
   },
-  "homepage.feature.totalCustomization": {
-    "message": "Designed with flexibility in mind, Zephyra UI allows you to modify styles, themes, and components without restrictions, ensuring every project maintains its visual identity."
+  "homepage.feature.seamlessIntegration.title": {
+    "message": "🔌 Integración perfecta"
+  },
+  "homepage.feature.totalCustomization.title": {
+    "message": "🎨 Personalización total"
+  },
+  "Modular, designed for any stack, with complete freedom to customize it to your style.": {
+    "message": "Modular, diseñado para cualquier tecnología, con total libertad para personalizarlo a tu estilo."
   }
 }

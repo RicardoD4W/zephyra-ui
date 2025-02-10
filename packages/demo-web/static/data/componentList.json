@@ -59,7 +59,7 @@
   },
   {
     "title": "z-toggle-theme",
-    "description": "A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the `z-toggle-theme`. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes",
+    "description": "A component that uses SVG and can be used to switch between light and dark themes, provided by the data-theme attribute of the html tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the z-toggle-theme. You can also change the data-theme attribute of the html tag in the devtools and it will still react to the changes",
     "args": {
       "props": [],
       "events": [],
@@ -68,7 +68,7 @@
   },
   {
     "title": "z-icon",
-    "description": "An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the `variant` with the `IconVariant` will fail because is render in `html` not in `ts` or `js`",
+    "description": "An icon component that allows any material icon powered by google fonts to be used by icon name only through the icon property. If the icon name wasn't found the icon will be unknown-document-outline, in the Examples of use the variant with the IconVariant will fail because is render in htm not in ts or js",
     "args": {
       "props": [
         {
@@ -131,7 +131,7 @@
   },
   {
     "title": "z-alert",
-    "description": "An alert component. In the [Examples of use](#examples-of-use) the `state` with the `AlertModel` will fail because is render in `html` not in `ts` or `js`",
+    "description": "An alert component. In the Examples of usethe state with the AlertModel will fail because is render in html not in ts or js",
     "args": {
       "props": [
         {

@@ -1,4 +1,5 @@
 --- 
+id: "z-icon"
 title: "z-icon"
 component: "z-icon"
 sidebar_position: 3
@@ -54,37 +55,43 @@ props: [
   }
 ]
 events: []
-description: An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the `variant` with the `IconVariant` will fail because is render in `html` not in `ts` or `js` 
+description: An icon component that allows any material icon powered by google fonts to be used by icon name only through the icon property. If the icon name wasn't found the icon will be unknown-document-outline, in the Examples of use the variant with the IconVariant will fail because is render in htm not in ts or js 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import Translate from '@docusaurus/Translate';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
 
 # z-icon
 
-An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the `variant` with the `IconVariant` will fail because is render in `html` not in `ts` or `js`
+<Translate>An icon component that allows any material icon powered by google fonts to be used by icon name only through the icon property. If the icon name wasn't found the icon will be unknown-document-outline, in the Examples of use the variant with the IconVariant will fail because is render in htm not in ts or js</Translate>
+
+
+<br/>
 
 ## Properties
 
-| Prop Name   | Type   | Default Value  | Other Values                    |
+| <Translate>Prop Name</Translate>   | <Translate>Type</Translate>   | <Translate>Default Value</Translate>  | <Translate>Other Values</Translate>                    |
 |-------------|--------|----------------|---------------------------------|
 | `icon` | `string` | `help` | `warning, error` |
 | `size` | `number` | `32` | `64` |
 | `variant` | `IconVariant` | `IconVariant.OUTLINE` | `IconVariant.REGULAR, IconVariant.ROUNDED, IconVariant.SHARP, IconVariant.OUTLINE_ROUNDED, IconVariant.OUTLINE_SHARP` |
 | `variant` | `string` | `-outline` | `, -rounded, -sharp, -outline-rounded, -outline-sharp` |
 
-## Events
-`none`
+## <Translate>Events</Translate>
+<Translate>none</Translate>
 
 ## CSS Parts
 
 
-| Part name  | Description                             | 
+| <Translate>Part name</Translate>  | <Translate>Description</Translate>                             | 
 |--------------|-----------------------------------------|
 | `icon-container` | The container that holds the icon image. | 
 | `icon` | The icon image (svg). | 
 
 --- 
 
-## Examples of use
+## <Translate>Examples of use</Translate>
 
 
 
@@ -106,7 +113,9 @@ An icon component that allows any `material icon` powered by [google fonts](http
 
 ```
 
-<WcWrapper html='<z-icon></z-icon>
+ <BrowserOnly>
+        {() => (
+          <WcWrapper html='<z-icon></z-icon>
 <z-icon icon="warning"></z-icon>
 <z-icon icon="error"></z-icon>
 <z-icon size="64"></z-icon>
@@ -121,5 +130,8 @@ An icon component that allows any `material icon` powered by [google fonts](http
 <z-icon variant="-outline-rounded"></z-icon>
 <z-icon variant="-outline-sharp"></z-icon>
 '/>
+        )}
+</BrowserOnly>
+
   
 

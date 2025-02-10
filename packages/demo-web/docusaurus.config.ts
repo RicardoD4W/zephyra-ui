@@ -14,11 +14,11 @@ const config: Config = {
   organizationName: 'GitHub/RicardoD4W',
   projectName: 'zephyra-ui',
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   themes: ['@docusaurus/theme-live-codeblock'],
-  clientModules: [require.resolve('./src/clientModules/registerWCs.js')],
+  clientModules: ['./src/clientModules/registerWCs.js'],
 
   i18n: {
     defaultLocale: 'en',
@@ -47,9 +47,9 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: 'throw',
+          onInlineAuthors: 'throw',
+          onUntruncatedBlogPosts: 'throw',
         },
         theme: {
           customCss: './src/css/custom.css',

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "dist/z-icon.js",
   "exports": {
-    "import": "./dist/z-icon.js"
+    "import": "./dist/z-icon.js",
+    "require": "./dist/z-icon.umd.js"
   },
   "type": "module",
   "scripts": {

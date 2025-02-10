@@ -3,15 +3,19 @@ title: "Parts"
 sidebar_position: 3
 ---
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import Translate from '@docusaurus/Translate';
 
 
-The CSS pseudo-element `::part` represents any element within a shadow tree that has a matching part attribute.
+<Translate>The CSS pseudo-element ::part represents any element within a shadow tree that has a matching part attribute.</Translate>
 
-All components built with **Zephyra-UI** have their respective assigned `parts`, which **can be consulted in the documentation of the component or by inspecting the shadow-dom of the element itself.**
+<Translate>All components built with Zephyra-UI have their respective assigned parts, which can be consulted in the documentation of the component or by inspecting the shadow-dom of the element itself.</Translate>
 
-## Example to modified a component 
+<br/>
 
-This is an example of how you can modify the default styles with **CSS parts** from outside the components.
+## <Translate> Example to modified a component </Translate>
+
+<Translate>This is an example of how you can modify the default styles with CSS parts from outside the components.</Translate>
+
 ```html
 <style>
     z-button::part(button) {

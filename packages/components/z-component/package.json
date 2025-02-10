@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "main": "dist/z-component.js",
   "exports": {
-    "import": "./dist/z-component.js"
+    "import": "./dist/z-component.js",
+    "require": "./dist/z-component.umd.js"
   },
   "type": "module",
   "scripts": {

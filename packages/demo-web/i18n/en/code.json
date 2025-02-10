@@ -1,18 +1,39 @@
 {
+  "On this page you will learn how to integrate zephyra-ui with your favorite frameworks": {
+    "message": "On this page you will learn how to integrate zephyra-ui with your favorite frameworks"
+  },
+  "Basic Usage": {
+    "message": "Basic Usage"
+  },
+  "Using Reactive Props": {
+    "message": "Using Reactive Props"
+  },
+  "homepage.feature.easyToUse.title": {
+    "message": "🚀 Easy to Use"
+  },
+  "homepage.feature.easyToUse": {
+    "message": "Zephyra UI offers an intuitive and well-documented API, allowing developers to build interfaces without a steep learning curve."
+  },
+  "homepage.feature.seamlessIntegration.title": {
+    "message": "🔌 Seamless Integration"
+  },
+  "homepage.feature.seamlessIntegration": {
+    "message": "Compatible with any modern stack, Zephyra UI easily adapts to existing projects without complex configurations or unnecessary dependencies."
+  },
+  "homepage.feature.totalCustomization.title": {
+    "message": "🎨 Total Customization"
+  },
+  "homepage.feature.totalCustomization": {
+    "message": "Designed with flexibility in mind, Zephyra UI allows you to modify styles, themes, and components without restrictions, ensuring every project maintains its visual identity."
+  },
+  "Modular, designed for any stack, with complete freedom to customize it to your style.": {
+    "message": "Modular, designed for any stack, with complete freedom to customize it to your style."
+  },
   "homepage.header.description": {
     "message": "Zephyra UI is a modern and accessible reusable web component library designed to make it easy to develop user interfaces with high-performance components. Built with Lit, and TypeScript, Zephyra UI offers a set of ready-to-use components that can be easily integrated into any web application. Its modular and lightweight design allows developers to customize and extend each component to their needs."
   },
   "Get Started": {
     "message": "Get Started"
-  },
-  "homepage.feature.easyToUse": {
-    "message": "Zephyra UI offers an intuitive and well-documented API, allowing developers to build interfaces without a steep learning curve."
-  },
-  "homepage.feature.seamlessIntegration": {
-    "message": "Compatible with any modern stack, Zephyra UI easily adapts to existing projects without complex configurations or unnecessary dependencies."
-  },
-  "homepage.feature.totalCustomization": {
-    "message": "Designed with flexibility in mind, Zephyra UI allows you to modify styles, themes, and components without restrictions, ensuring every project maintains its visual identity."
   },
   "theme.ErrorPageContent.title": {
     "message": "This page crashed.",
@@ -137,13 +158,13 @@
     "message": "Last updated{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
-    "description": "The label for the navbar versions dropdown on mobile view"
-  },
   "theme.NotFound.title": {
     "message": "Page Not Found",
     "description": "The title of the 404 page"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
     "message": "Tags:",
@@ -209,10 +230,6 @@
     "message": "Main",
     "description": "The ARIA label for the main navigation"
   },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
-    "description": "The label for the mobile language switcher dropdown"
-  },
   "theme.NotFound.p1": {
     "message": "We could not find what you were looking for.",
     "description": "The first paragraph of the 404 page"
@@ -224,6 +241,10 @@
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "On this page",
     "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Languages",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.blog.post.readMore": {
     "message": "Read more",
@@ -272,6 +293,14 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.Playground.result": {
+    "message": "Result",
+    "description": "The result label of the live codeblocks"
+  },
+  "theme.Playground.liveEditor": {
+    "message": "Live Editor",
+    "description": "The live editor label of the live codeblocks"
   },
   "theme.blog.post.plurals": {
     "message": "One post|{count} posts",

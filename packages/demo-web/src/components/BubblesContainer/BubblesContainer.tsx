@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import '@site/src/css/animation.css';
+import PopAudio from '@site/static/audio/bubblepop.mp3';
 
 export const BubblesContainer = ({ bubbleCount = 20 }) => {
   const bubbleContainerRef = useRef(null);
@@ -7,7 +8,7 @@ export const BubblesContainer = ({ bubbleCount = 20 }) => {
   useEffect(() => {
     const bubbleContainer = bubbleContainerRef.current;
     const spanCount = 5;
-    const pop = new Audio('/audio/bubblepop.mp3');
+    const pop = new Audio(PopAudio);
 
     if (!bubbleContainer) return;
 

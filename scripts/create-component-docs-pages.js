@@ -33,6 +33,7 @@ function createMdxFile(index, data) {
   const filePath = path.join(docsDir, `${data.title}.mdx`);
 
   const content = `--- 
+id: "${data.title}"
 title: "${data.title}"
 component: "${data.title}"
 sidebar_position: ${index + 1}
@@ -41,16 +42,21 @@ events: ${JSON.stringify(data.args.events, null, 2)}
 ${data.description ? 'description: ' + data.description : ''} 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import Translate from '@docusaurus/Translate';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
 
 # ${data.title}
 
-${data.description ? data.description : ''}
+${data.description ? `<Translate>${data.description}</Translate>\n` : ''}
+
+<br/>
 
 ## Properties
 
 ${
   data.args.props.length > 0
-    ? `| Prop Name   | Type   | Default Value  | Other Values                    |
+    ? `| <Translate>Prop Name</Translate>   | <Translate>Type</Translate>   | <Translate>Default Value</Translate>  | <Translate>Other Values</Translate>                    |
 |-------------|--------|----------------|---------------------------------|` +
       data.args.props
         .map((prop) => {
@@ -64,15 +70,15 @@ ${
           }\` | \`${otherValues}\` |`;
         })
         .join('')
-    : '`none`'
+    : '<Translate>none</Translate>'
 }
 
-## Events
+## <Translate>Events</Translate>
 ${
   data.args.events.length > 0
     ? `
 
-| Event Name   | Description                             | Payload                           |
+| <Translate>Event Name<Translate>   | <Translate>Description</Translate>                             | <Translate>Payload</Translate>                           |
 |--------------|-----------------------------------------|-----------------------------------|` +
       data.args.events
         .map(
@@ -80,7 +86,7 @@ ${
             `\n| \`${event.name}\` | ${event.dispatch} | \`${event.payload}\` |`
         )
         .join('')
-    : '`none`'
+    : '<Translate>none</Translate>'
 }
 
 ## CSS Parts
@@ -88,17 +94,17 @@ ${
   data.args.cssParts.length > 0
     ? `
 
-| Part name  | Description                             | 
+| <Translate>Part name</Translate>  | <Translate>Description</Translate>                             | 
 |--------------|-----------------------------------------|` +
       data.args.cssParts
         .map((part) => `\n| \`${part.name}\` | ${part.description} | `)
         .join('')
-    : '`none`'
+    : '<Translate>none</Translate>'
 }
 
 --- 
 
-## Examples of use
+## <Translate>Examples of use</Translate>
 
 ${
   data.args.props.length > 0
@@ -108,14 +114,24 @@ ${
 ${generateExamples(data.args.props, data.title)}
 \`\`\`
 
-<WcWrapper html='${generateExamples(data.args.props, data.title)}'/>
+ <BrowserOnly>
+        {() => (
+          <WcWrapper html='${generateExamples(data.args.props, data.title)}'/>
+        )}
+</BrowserOnly>
+
   `
     : `
     \`\`\`html
     <${data.title}></${data.title}>
     \`\`\` 
     
-    <WcWrapper html='<${data.title}></${data.title}>'/>
+     <BrowserOnly>
+        {() => (
+          <WcWrapper html='<${data.title}></${data.title}>'/>
+        )}
+    </BrowserOnly>
+
     `
 }
 

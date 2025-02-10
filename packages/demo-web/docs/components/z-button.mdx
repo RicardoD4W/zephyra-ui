@@ -1,4 +1,5 @@
 --- 
+id: "z-button"
 title: "z-button"
 component: "z-button"
 sidebar_position: 1
@@ -51,27 +52,32 @@ events: []
  
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import Translate from '@docusaurus/Translate';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
 
 # z-button
 
 
 
+<br/>
+
 ## Properties
 
-| Prop Name   | Type   | Default Value  | Other Values                    |
+| <Translate>Prop Name</Translate>   | <Translate>Type</Translate>   | <Translate>Default Value</Translate>  | <Translate>Other Values</Translate>                    |
 |-------------|--------|----------------|---------------------------------|
 | `slot` | `HTML` | `Button` | `Click me!` |
 | `disabled` | `Boolean` | `false` | `true` |
 | `isLoading` | `Boolean` | `false` | `true` |
 | `variant` | `string` | `info` | `warning, danger, outline, zephyra` |
 
-## Events
-`none`
+## <Translate>Events</Translate>
+<Translate>none</Translate>
 
 ## CSS Parts
 
 
-| Part name  | Description                             | 
+| <Translate>Part name</Translate>  | <Translate>Description</Translate>                             | 
 |--------------|-----------------------------------------|
 | `button` | The main button of the component. | 
 | `loading-container` | Main container loading animation. | 
@@ -80,7 +86,7 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 --- 
 
-## Examples of use
+## <Translate>Examples of use</Translate>
 
 
 
@@ -96,7 +102,9 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 
 ```
 
-<WcWrapper html='<z-button></z-button>
+ <BrowserOnly>
+        {() => (
+          <WcWrapper html='<z-button></z-button>
 <z-button>Click me!</z-button>
 <z-button disabled></z-button>
 <z-button isLoading></z-button>
@@ -105,5 +113,8 @@ import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 <z-button variant="outline"></z-button>
 <z-button variant="zephyra"></z-button>
 '/>
+        )}
+</BrowserOnly>
+
   
 

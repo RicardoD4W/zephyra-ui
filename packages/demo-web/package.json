@@ -22,7 +22,12 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@zephyra-ui/z-button": "^1.0.0",
+    "@zephyra-ui/z-alert": "^1.0.0",
+    "@zephyra-ui/z-icon": "^1.0.0",
+    "@zephyra-ui/z-toggle-theme": "^1.0.0",
+    "@zephyra-ui/z-color": "^1.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",

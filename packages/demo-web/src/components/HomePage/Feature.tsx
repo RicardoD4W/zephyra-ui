@@ -4,13 +4,17 @@ import styles from '@site/src/components/HomePage/feature.module.css';
 import Translate from '@docusaurus/Translate';
 
 type FeatureItem = {
-  title: string;
+  title: ReactNode;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '🚀 Easy to Use',
+    title: (
+      <Translate id="homepage.feature.easyToUse.title">
+        🚀 Easy to Use
+      </Translate>
+    ),
     description: (
       <Translate id="homepage.feature.easyToUse">
         Zephyra UI offers an intuitive and well-documented API, allowing
@@ -19,7 +23,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: '🔌 Seamless Integration',
+    title: (
+      <Translate id="homepage.feature.seamlessIntegration.title">
+        🔌 Seamless Integration
+      </Translate>
+    ),
     description: (
       <Translate id="homepage.feature.seamlessIntegration">
         Compatible with any modern stack, Zephyra UI easily adapts to existing
@@ -28,7 +36,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: '🎨 Total Customization',
+    title: (
+      <Translate id="homepage.feature.totalCustomization.title">
+        🎨 Total Customization
+      </Translate>
+    ),
     description: (
       <Translate id="homepage.feature.totalCustomization">
         Designed with flexibility in mind, Zephyra UI allows you to modify

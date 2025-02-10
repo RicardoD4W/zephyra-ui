@@ -3,14 +3,18 @@ title: "Custom Properties"
 sidebar_position: 1
 ---
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import Translate from '@docusaurus/Translate';
 
 
-The CSS variables that we will see below are available at **any point in your app** from the moment you use any `zephira-ui` component, keep in mind that **you can modify them as you want** and that with the themes (light and dark) their values ​​will change, this can also be changed by CSS taking into account that we use the `[data-theme="light"]` or `[data-theme="dark"]` attribute of the `html` tag.
+<Translate> The CSS variables that we will see below are available at any point in your app from the moment you use any zephira-ui component, keep in mind that you can modify them as you want and that with the themes (light and dark) their values ​​will change, this can also be changed by CSS taking into account that we use the [data-theme="light"] or [data-theme="dark"] attribute of the html tag.</Translate>
 
+<br/>
 
-## Example to modified a component 
+## <Translate>Example to modified a component</Translate> 
 
-This is an example of how you can modified default `css custom properties` inspect in devtools if you want to see how it works and how the css variable was overwritten only at this point
+<Translate>This is an example of how you can modified default css custom properties inspect in devtools if you want to see how it works and how the css variable was overwritten only at this point</Translate>
+
+<br/>
 
 ```html
 <style>
@@ -38,10 +42,11 @@ This is an example of how you can modified default `css custom properties` inspe
 </style><z-button variant="zephyra"></z-button> <z-button class="red"></z-button>'/>
 
 
-## Example to modified a theme 
+## <Translate>Example to modified a theme</Translate> 
 
-If you want to use the zephyra-ui custom properties but you want to change it in all the document to make your own theme, provide an id to the main container of your application like in the example
+<Translate>If you want to use the zephyra-ui custom properties but you want to change it in all the document to make your own theme, provide an id to the main container of your application like in the example</Translate>
 
+<br/>
 
 ```html
 <main id="my-theme">
