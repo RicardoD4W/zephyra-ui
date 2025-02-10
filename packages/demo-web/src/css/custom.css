@@ -2,6 +2,7 @@
   scroll-behavior: smooth;
   
   --zephyra-color: #5689A3;
+  --integration-color: #b7cdeb;
   --banner-color: #80b4ce;
   --bg-content-color: #e6e6e6;
   --bg-content-box-color: #F5F5F5;
@@ -14,7 +15,7 @@
   --bubbles-3: #d1ecf1;
   --bubbles-4: #d4edda;
   --bubbles-5: #ffffff65;
-
+  
   --ifm-color-primary: var(--zephyra-color);
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -31,6 +32,7 @@
 
 [data-theme='dark'] {
   --zephyra-color: #5689A3;
+  --integration-color: #21344e;
   --banner-color: #5689A3;
   --bg-content-color: #1E1E1E;
   --bg-content-box-color: #2A2A2A;
