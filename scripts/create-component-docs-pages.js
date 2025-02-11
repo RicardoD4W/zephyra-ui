@@ -41,7 +41,10 @@ events: ${JSON.stringify(data.args.events, null, 2)}
 ${data.description ? 'description: ' + data.description : ''} 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
 
+
+<DocLayout>
 # ${data.title}
 
 ${data.description ? data.description : ''}
@@ -119,6 +122,7 @@ ${generateExamples(data.args.props, data.title)}
     `
 }
 
+</DocLayout>
 `;
 
   fs.writeFileSync(filePath, content, 'utf-8');

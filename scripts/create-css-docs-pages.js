@@ -27,6 +27,10 @@ sidebar_position: ${index + 1}
 vars:${content.map((val) => ` ${val.name}`)}
 ${description ? 'description: ' + description : ''} 
 --- 
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
+
+
+<DocLayout>
 
 # ${title}
 
@@ -59,6 +63,7 @@ ${description}
         mdxContent += '| \n';
       });
 
+      mdxContent += `</DocLayout>`;
       const filePath = path.join(
         docsDir,
         `${title.toLowerCase().replace(/\s+/g, '-')}.mdx`

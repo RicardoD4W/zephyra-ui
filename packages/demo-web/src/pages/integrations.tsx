@@ -11,7 +11,7 @@ const POPULAR_FRAMEWORKS = [
     extension: 'jsx',
     entryPoint: 'src/components/App.jsx',
     code: `
-    import React from 'react';
+    
     import '@zephyra-ui/z-button';
   
       function App() {

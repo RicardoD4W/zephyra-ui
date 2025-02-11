@@ -7,7 +7,10 @@ events: []
 description: A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the `z-toggle-theme`. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
 
+
+<DocLayout>
 # z-toggle-theme
 
 A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the `z-toggle-theme`. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes
@@ -34,3 +37,4 @@ A component that uses SVG and can be used to switch between **'light'** and **'d
     <WcWrapper html='<z-toggle-theme></z-toggle-theme>'/>
     
 
+</DocLayout>

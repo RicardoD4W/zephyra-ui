@@ -10,18 +10,17 @@ export const Header = () => {
 
   return (
     <header
-      className="relative px-0 py-10 overflow-hidden text-center"
+      className="relative h-full px-0 py-10 overflow-hidden text-center"
       style={{
         color: 'var(--text-color)',
         backgroundColor: 'var(--banner-color)',
       }}
     >
       <BrowserOnly>
-        {() => (
-          <BubblesContainer
-            bubbleCount={(window.innerWidth / window.innerHeight) * 15}
-          />
-        )}
+        {() => {
+          const count = (window.innerWidth / window.innerHeight) * 15;
+          return <BubblesContainer bubbleCount={count} />;
+        }}
       </BrowserOnly>
 
       <div className="container flex flex-col items-center justify-around gap-2">
