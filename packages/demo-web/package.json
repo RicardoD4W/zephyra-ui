@@ -1,5 +1,5 @@
 {
-  "name": "@zephyra-ui/demo-web",
+  "name": "zephyra-ui-web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
