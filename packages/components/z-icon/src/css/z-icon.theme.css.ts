@@ -2,13 +2,12 @@ import { CSSResult, CSSResultOrNative, css } from 'lit';
 
 export class ZIconTheme {
   static cssBase: CSSResult = css`
-    :host {
+    .icon {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
 
-    .icon {
       color: var(--z-color-text);
 
       width: var(--z-icon-md);
@@ -18,6 +17,8 @@ export class ZIconTheme {
       height: var(--z-icon-md);
       min-height: var(--z-icon-sm);
       max-height: var(--z-icon-lg);
+
+      padding: var(--z-spacing-xs);
     }
   `;
 

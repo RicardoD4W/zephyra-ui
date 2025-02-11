@@ -129,11 +129,15 @@ export class ZButtonTheme {
       0% {
         height: var(--z-radius-md);
       }
-
+      25% {
+        height: var(--z-radius-md);
+      }
       50% {
         height: var(--z-radius-xl);
       }
-
+      75% {
+        height: var(--z-radius-md);
+      }
       100% {
         height: var(--z-radius-md);
       }

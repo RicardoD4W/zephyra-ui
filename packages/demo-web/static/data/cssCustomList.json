@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Colors",
+    "description": "",
+    "content": [
+      { "name": "--z-color-zephyra", "values": ["#b3e6eb", "#5689a3"] },
+      { "name": "--z-color-primary", "values": ["#93c9ff", "#0056b3"] },
+      { "name": "--z-color-secondary", "values": ["#a1b0b7", "#3d5a5b"] },
+      { "name": "--z-color-info", "values": ["#d1ecf1", "#0c5460"] },
+      { "name": "--z-color-success", "values": ["#d4edda", "#155724"] },
+      { "name": "--z-color-warning", "values": ["#fff3cd", "#856404"] },
+      { "name": "--z-color-danger", "values": ["#f8d7da", "#721c24"] },
+      { "name": "--z-color-info-darkest", "values": ["#81c3cf", "#0095af"] },
+      { "name": "--z-color-success-darkest", "values": ["#8fcf9e", "#009222"] },
+      { "name": "--z-color-warning-darkest", "values": ["#d3c083", "#d39e00"] },
+      { "name": "--z-color-danger-darkest", "values": ["#c28086", "#a70011"] },
+      { "name": "--z-color-light", "values": ["#ffffff", "#343a40"] },
+      { "name": "--z-color-dark", "values": ["#495057", "#212529"] },
+      { "name": "--z-color-gray", "values": ["#868e96", "#6c757d"] },
+      { "name": "--z-color-muted", "values": ["#adb5bd", "#495057"] },
+      { "name": "--z-color-background", "values": ["#ebebeb", "#f8f9fa"] },
+      { "name": "--z-color-border", "values": ["#f1f3f5", "#dee2e6"] },
+      { "name": "--z-color-text", "values": ["#000", "#fff"] }
+    ]
+  },
+  {
+    "title": "Sizes",
+    "description": "CSS variables for size, useful for width and height.",
+    "content": [
+      { "name": "--z-w-auto", "values": ["auto"] },
+      { "name": "--z-w-xs", "values": ["4rem"] },
+      { "name": "--z-w-sm", "values": ["8rem"] },
+      { "name": "--z-w-md", "values": ["16rem"] },
+      { "name": "--z-w-lg", "values": ["32rem"] },
+      { "name": "--z-w-xl", "values": ["64rem"] },
+      { "name": "--z-w-xxl", "values": ["128rem"] },
+      { "name": "--z-w-full", "values": ["100%"] },
+      { "name": "--z-w-min", "values": ["min-content"] },
+      { "name": "--z-w-max", "values": ["max-content"] },
+      { "name": "--z-h-auto", "values": ["auto"] },
+      { "name": "--z-h-xs", "values": ["2rem"] },
+      { "name": "--z-h-sm", "values": ["4rem"] },
+      { "name": "--z-h-md", "values": ["8rem"] },
+      { "name": "--z-h-lg", "values": ["16rem"] },
+      { "name": "--z-h-xl", "values": ["32rem"] },
+      { "name": "--z-h-xxl", "values": ["64rem"] },
+      { "name": "--z-h-full", "values": ["100%"] },
+      { "name": "--z-h-min", "values": ["min-content"] },
+      { "name": "--z-h-max", "values": ["max-content"] }
+    ]
+  },
+  {
+    "title": "Spacing",
+    "description": "CSS variables for spacing, useful for margins and paddings.",
+    "content": [
+      { "name": "--z-spacing-xxs", "values": ["0.25rem"] },
+      { "name": "--z-spacing-xs", "values": ["0.5rem"] },
+      { "name": "--z-spacing-sm", "values": ["0.75rem"] },
+      { "name": "--z-spacing-md", "values": ["1rem"] },
+      { "name": "--z-spacing-lg", "values": ["1.5rem"] },
+      { "name": "--z-spacing-xl", "values": ["2rem"] },
+      { "name": "--z-spacing-xxl", "values": ["3rem"] }
+    ]
+  },
+  {
+    "title": "Radius",
+    "description": "CSS variables for border-radius, useful for rounded corners in components.",
+    "content": [
+      { "name": "--z-radius-none", "values": ["0"] },
+      { "name": "--z-radius-sm", "values": ["0.125rem"] },
+      { "name": "--z-radius-md", "values": ["0.25rem"] },
+      { "name": "--z-radius-lg", "values": ["0.5rem"] },
+      { "name": "--z-radius-xl", "values": ["1rem"] },
+      { "name": "--z-radius-full", "values": ["9999px"] }
+    ]
+  },
+  {
+    "title": "Typography",
+    "description": "Typography-related CSS variables like fonts, sizes, and weights that can be customized.",
+    "content": [
+      { "name": "--z-font", "values": ["'Noto Sans', system-ui"] },
+      { "name": "--z-font-xs", "values": ["0.75rem"] },
+      { "name": "--z-font-sm", "values": ["0.875rem"] },
+      { "name": "--z-font-md", "values": ["1rem"] },
+      { "name": "--z-font-lg", "values": ["1.25rem"] },
+      { "name": "--z-font-xl", "values": ["1.5rem"] },
+      { "name": "--z-font-xxl", "values": ["2rem"] },
+      { "name": "--z-font-light", "values": ["300"] },
+      { "name": "--z-font-regular", "values": ["400"] },
+      { "name": "--z-font-medium", "values": ["500"] },
+      { "name": "--z-font-bold", "values": ["700"] }
+    ]
+  },
+  {
+    "title": "Opacities",
+    "description": "CSS variables for opacity and grayscale settings.",
+    "content": [
+      { "name": "--z-opacity-0", "values": ["0"] },
+      { "name": "--z-opacity-2", "values": ["0.25"] },
+      { "name": "--z-opacity-disabled", "values": ["0.25"] },
+      { "name": "--z-opacity-5", "values": ["0.5"] },
+      { "name": "--z-opacity-7", "values": ["0.75"] },
+      { "name": "--z-opacity-10", "values": ["1"] },
+      { "name": "--z-grayscale-disabled", "values": ["0.8"] }
+    ]
+  },
+  {
+    "title": "Shadows",
+    "description": "CSS variables for shadows, used to define elevation for different components.",
+    "content": [
+      { "name": "--z-shadow-none", "values": ["none"] },
+      {
+        "name": "--z-shadow-sm",
+        "values": [
+          "0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24)"
+        ]
+      },
+      {
+        "name": "--z-shadow-md",
+        "values": [
+          "0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1)"
+        ]
+      },
+      {
+        "name": "--z-shadow-lg",
+        "values": [
+          "0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1)"
+        ]
+      },
+      {
+        "name": "--z-shadow-xl",
+        "values": [
+          "0px 20px 25px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Elevations",
+    "description": "CSS variables for z-index, useful for layering components.",
+    "content": [
+      { "name": "--z-index-auto", "values": ["auto"] },
+      { "name": "--z-index-0", "values": ["0"] },
+      { "name": "--z-index-dropdown", "values": ["5"] },
+      { "name": "--z-index-modal", "values": ["10"] },
+      { "name": "--z-index-popover", "values": ["15"] },
+      { "name": "--z-index-tooltip", "values": ["20"] },
+      { "name": "--z-index-max", "values": ["999"] }
+    ]
+  },
+  {
+    "title": "Transitions",
+    "description": "CSS variables for transitions, useful for animations and smooth effects.",
+    "content": [
+      { "name": "--z-transition-fast", "values": ["150ms"] },
+      { "name": "--z-transition-medium", "values": ["300ms"] },
+      { "name": "--z-transition-slow", "values": ["500ms"] },
+      { "name": "--z-transition-slower", "values": ["1000ms"] },
+      { "name": "--z-transition-linear", "values": ["linear"] },
+      { "name": "--z-transition", "values": ["ease"] },
+      { "name": "--z-transition-in", "values": ["ease-in"] },
+      { "name": "--z-transition-out", "values": ["ease-out"] },
+      { "name": "--z-transition-in-out", "values": ["ease-in-out"] }
+    ]
+  },
+  {
+    "title": "Utilities",
+    "description": "Typography-related CSS variables like fonts, sizes, and weights that can be customized.",
+    "content": [
+      { "name": "--z-grayscale-disabled", "values": ["0.8"] },
+      { "name": "--z-color-transparent", "values": ["transparent"] },
+      { "name": "--z-color-hover", "values": ["110%"] },
+      { "name": "--z-color-active", "values": ["90%"] },
+      { "name": "--z-none", "values": ["none"] }
+    ]
+  }
+]

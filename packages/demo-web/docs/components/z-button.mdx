@@ -1,0 +1,113 @@
+--- 
+title: "z-button"
+component: "z-button"
+sidebar_position: 1
+props: [
+  {
+    "name": "slot",
+    "type": "HTML",
+    "values": {
+      "default": "Button",
+      "value": [
+        "Click me!"
+      ]
+    }
+  },
+  {
+    "name": "disabled",
+    "type": "Boolean",
+    "values": {
+      "default": "false",
+      "value": [
+        "true"
+      ]
+    }
+  },
+  {
+    "name": "isLoading",
+    "type": "Boolean",
+    "values": {
+      "default": "false",
+      "value": [
+        "true"
+      ]
+    }
+  },
+  {
+    "name": "variant",
+    "type": "string",
+    "values": {
+      "default": "info",
+      "value": [
+        "warning",
+        "danger",
+        "outline",
+        "zephyra"
+      ]
+    }
+  }
+]
+events: []
+ 
+--- 
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
+
+
+<DocLayout>
+# z-button
+
+
+
+## Properties
+
+| Prop Name   | Type   | Default Value  | Other Values                    |
+|-------------|--------|----------------|---------------------------------|
+| `slot` | `HTML` | `Button` | `Click me!` |
+| `disabled` | `Boolean` | `false` | `true` |
+| `isLoading` | `Boolean` | `false` | `true` |
+| `variant` | `string` | `info` | `warning, danger, outline, zephyra` |
+
+## Events
+`none`
+
+## CSS Parts
+
+
+| Part name  | Description                             | 
+|--------------|-----------------------------------------|
+| `button` | The main button of the component. | 
+| `loading-container` | Main container loading animation. | 
+| `loading-wave` | Loading bar container. | 
+| `loading-bar` | Each of the individual bars within the loading animation. | 
+
+--- 
+
+## Examples of use
+
+
+
+    ```html
+<z-button></z-button>
+<z-button>Click me!</z-button>
+<z-button disabled></z-button>
+<z-button isLoading></z-button>
+<z-button variant="warning"></z-button>
+<z-button variant="danger"></z-button>
+<z-button variant="outline"></z-button>
+<z-button variant="zephyra"></z-button>
+
+```
+
+<WcWrapper html='<z-button></z-button>
+<z-button>Click me!</z-button>
+<z-button disabled></z-button>
+<z-button isLoading></z-button>
+<z-button variant="warning"></z-button>
+<z-button variant="danger"></z-button>
+<z-button variant="outline"></z-button>
+<z-button variant="zephyra"></z-button>
+'/>
+  
+
+</DocLayout>

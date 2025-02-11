@@ -12,16 +12,20 @@ export class ZButtonView extends ZButtonViewModel {
 
   public render(): TemplateResult {
     return html`
-      <button class="button ${this.variant}" ?disabled=${this.disabled}>
+      <button
+        class="button ${this.variant}"
+        ?disabled=${this.disabled}
+        part="button"
+      >
         ${when(
           this.isLoading,
-          () => html` <div class="loading-container">
+          () => html` <div class="loading-container" part="loading-container">
             <div class="hidden"><slot>Button</slot></div>
-            <div class="loading-wave">
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
-              <div class="loading-bar"></div>
+            <div class="loading-wave" part="loading-wave">
+              <div class="loading-bar" part="loading-bar"></div>
+              <div class="loading-bar" part="loading-bar"></div>
+              <div class="loading-bar" part="loading-bar"></div>
+              <div class="loading-bar" part="loading-bar"></div>
             </div>
           </div>`,
           () => html`<slot>Button</slot>`

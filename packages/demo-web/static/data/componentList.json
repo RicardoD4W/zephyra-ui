@@ -1,0 +1,193 @@
+[
+  {
+    "title": "z-button",
+    "args": {
+      "props": [
+        {
+          "name": "slot",
+          "type": "HTML",
+          "values": {
+            "default": "Button",
+            "value": ["Click me!"]
+          }
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "values": {
+            "default": "false",
+            "value": ["true"]
+          }
+        },
+        {
+          "name": "isLoading",
+          "type": "Boolean",
+          "values": {
+            "default": "false",
+            "value": ["true"]
+          }
+        },
+        {
+          "name": "variant",
+          "type": "string",
+          "values": {
+            "default": "info",
+            "value": ["warning", "danger", "outline", "zephyra"]
+          }
+        }
+      ],
+      "events": [],
+      "cssParts": [
+        {
+          "name": "button",
+          "description": "The main button of the component."
+        },
+        {
+          "name": "loading-container",
+          "description": "Main container loading animation."
+        },
+        {
+          "name": "loading-wave",
+          "description": "Loading bar container."
+        },
+        {
+          "name": "loading-bar",
+          "description": "Each of the individual bars within the loading animation."
+        }
+      ]
+    }
+  },
+  {
+    "title": "z-toggle-theme",
+    "description": "A component that uses SVG and can be used to switch between **'light'** and **'dark'** themes, provided by the `data-theme` attribute of the `html` tag. Note that without any type of integration or configuration it is functional on its own, it is even functional when integrated with other toggle components. Try changing the theme from the header and see how it automatically changes the appearance of the `z-toggle-theme`. You can also change the `data-theme` attribute of the `html` tag in the devtools and it will still react to the changes",
+    "args": {
+      "props": [],
+      "events": [],
+      "cssParts": []
+    }
+  },
+  {
+    "title": "z-icon",
+    "description": "An icon component that allows any `material icon` powered by [google fonts](https://fonts.google.com/icons) to be used by icon name only through the `icon` property. If the icon name wasn't found the icon will be `unknown-document-outline`, in the [Examples of use](#examples-of-use) the `variant` with the `IconVariant` will fail because is render in `html` not in `ts` or `js`",
+    "args": {
+      "props": [
+        {
+          "name": "icon",
+          "type": "string",
+          "values": {
+            "default": "help",
+            "value": ["warning", "error"]
+          }
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "values": {
+            "default": 32,
+            "value": [64]
+          }
+        },
+        {
+          "name": "variant",
+          "type": "IconVariant",
+          "values": {
+            "default": "IconVariant.OUTLINE",
+            "value": [
+              "IconVariant.REGULAR",
+              "IconVariant.ROUNDED",
+              "IconVariant.SHARP",
+              "IconVariant.OUTLINE_ROUNDED",
+              "IconVariant.OUTLINE_SHARP"
+            ]
+          }
+        },
+        {
+          "name": "variant",
+          "type": "string",
+          "values": {
+            "default": "-outline",
+            "value": [
+              "",
+              "-rounded",
+              "-sharp",
+              "-outline-rounded",
+              "-outline-sharp"
+            ]
+          }
+        }
+      ],
+      "events": [],
+      "cssParts": [
+        {
+          "name": "icon-container",
+          "description": "The container that holds the icon image."
+        },
+        {
+          "name": "icon",
+          "description": "The icon image (svg)."
+        }
+      ]
+    }
+  },
+  {
+    "title": "z-alert",
+    "description": "An alert component. In the [Examples of use](#examples-of-use) the `state` with the `AlertModel` will fail because is render in `html` not in `ts` or `js`",
+    "args": {
+      "props": [
+        {
+          "name": "slot",
+          "type": "HTML",
+          "values": {
+            "default": "Alert content",
+            "value": [
+              "<div><strong>This is an alert</strong><br>An alert is this</div>"
+            ]
+          }
+        },
+        {
+          "name": "state",
+          "type": "AlertModel",
+          "values": {
+            "default": "AlertModel.INFO",
+            "value": [
+              "AlertModel.SUCCESS",
+              "AlertModel.WARNING",
+              "AlertModel.ERROR"
+            ]
+          }
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "values": {
+            "default": "info",
+            "value": ["success", "warning", "error"]
+          }
+        }
+      ],
+      "events": [],
+      "cssParts": [
+        {
+          "name": "alert-container",
+          "description": "The main container of the alert."
+        },
+        {
+          "name": "alert-icon",
+          "description": "The area containing the alert icon."
+        },
+        {
+          "name": "alert-state",
+          "description": "The text representing the state of the alert (such as 'success', 'warning', etc.)."
+        },
+        {
+          "name": "alert-separator",
+          "description": "The separator between the state and the alert message content."
+        },
+        {
+          "name": "alert-msg",
+          "description": "The content of the alert, found within the slot."
+        }
+      ]
+    }
+  }
+]
