@@ -1,6 +1,6 @@
 {
-  "name": "demo-web",
-  "version": "0.0.0",
+  "name": "@zephyra-ui/demo-web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
