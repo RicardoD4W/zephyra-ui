@@ -362,9 +362,7 @@ export default function Integrations(): ReactNode {
         </hgroup>
 
         <section>
-          <h2>
-            <Translate> Basic Usage</Translate>
-          </h2>
+          <h2>Basic Usage</h2>
           <article
             className="p-5 rounded"
             style={{ backgroundColor: 'var(--integration-color)' }}
@@ -391,9 +389,7 @@ export default function Integrations(): ReactNode {
         </section>
 
         <section>
-          <h2>
-            <Translate>Using Reactive Props</Translate>
-          </h2>
+          <h2>Using Reactive Props</h2>
           <article
             className="p-5 rounded"
             style={{ backgroundColor: 'var(--integration-color)' }}

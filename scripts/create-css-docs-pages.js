@@ -21,38 +21,27 @@ fs.readFile(cssJsonPath, 'utf-8', (err, data) => {
       const { title, description, content } = item;
 
       let mdxContent = `--- 
-id: "${title}"
 title: "${title}"
 component: "${title}"
 sidebar_position: ${index + 1}
 vars:${content.map((val) => ` ${val.name}`)}
 ${description ? 'description: ' + description : ''} 
 --- 
-import Translate from '@docusaurus/Translate';
-import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 
+# ${title}
 
-# <Translate id="css.title">${title}</Translate>
-
- ${
-   description
-     ? `<Translate id="css.description">${description}</Translate>`
-     : ''
- }  
-
-<br/>
+${description}
 
 `;
 
       if (title === 'Colors') {
         mdxContent += `
-| <Translate id="css.name">Name</Translate> | <Translate id="css.light">Light</Translate> | <Translate id="css.value">Value</Translate> | <Translate id="css.dark">Dark</Translate> | <Translate id="css.value">Value</Translate> |
+| Name | Light | Value | Dark | Value |
 |------|-------|-------|------|-------|
 `;
       } else {
         mdxContent += `
-| <Translate id="css.name">Name</Translate> | <Translate id="css.value">Value</Translate> |
+| Name | Value |
 |------|-------|
 `;
       }
@@ -62,7 +51,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
         mdxContent += `| ${name} |`;
         values.forEach((value) => {
           if (title === 'Colors') {
-            mdxContent += ` ${value} | <BrowserOnly>{() => (<WcWrapper html='<z-color color="${value}"></z-color>'/>)}</BrowserOnly> | `;
+            mdxContent += ` ${value} | <z-color color="${value}"></z-color> | `;
           } else {
             mdxContent += ` ${value} ${values.at(-1) !== value ? ',' : ' '}`;
           }

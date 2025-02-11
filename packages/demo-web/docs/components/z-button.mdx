@@ -1,5 +1,4 @@
 --- 
-id: "z-button"
 title: "z-button"
 component: "z-button"
 sidebar_position: 1
@@ -52,32 +51,27 @@ events: []
  
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
-import Translate from '@docusaurus/Translate';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-
 
 # z-button
 
 
 
-<br/>
-
 ## Properties
 
-| <Translate>Prop Name</Translate>   | <Translate>Type</Translate>   | <Translate>Default Value</Translate>  | <Translate>Other Values</Translate>                    |
+| Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|
 | `slot` | `HTML` | `Button` | `Click me!` |
 | `disabled` | `Boolean` | `false` | `true` |
 | `isLoading` | `Boolean` | `false` | `true` |
 | `variant` | `string` | `info` | `warning, danger, outline, zephyra` |
 
-## <Translate>Events</Translate>
-<Translate>none</Translate>
+## Events
+`none`
 
 ## CSS Parts
 
 
-| <Translate>Part name</Translate>  | <Translate>Description</Translate>                             | 
+| Part name  | Description                             | 
 |--------------|-----------------------------------------|
 | `button` | The main button of the component. | 
 | `loading-container` | Main container loading animation. | 
@@ -86,7 +80,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 --- 
 
-## <Translate>Examples of use</Translate>
+## Examples of use
 
 
 
@@ -102,9 +96,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 ```
 
- <BrowserOnly>
-        {() => (
-          <WcWrapper html='<z-button></z-button>
+<WcWrapper html='<z-button></z-button>
 <z-button>Click me!</z-button>
 <z-button disabled></z-button>
 <z-button isLoading></z-button>
@@ -113,8 +105,5 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 <z-button variant="outline"></z-button>
 <z-button variant="zephyra"></z-button>
 '/>
-        )}
-</BrowserOnly>
-
   
 

@@ -4,8 +4,7 @@
   "main": "dist/z-alert.js",
   "type": "module",
   "exports": {
-    "import": "./dist/z-alert.js",
-    "require": "./dist/z-alert.umd.js"
+    "import": "./dist/z-alert.js"
   },
   "scripts": {
     "build": "vite build"

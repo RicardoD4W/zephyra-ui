@@ -36,10 +36,7 @@ export const Header = () => {
             filter: 'drop-shadow(0 0 20px var(--text-s-color))',
           }}
         >
-          <Translate>
-            Modular, designed for any stack, with complete freedom to customize
-            it to your style.
-          </Translate>
+          {siteConfig.tagline}
         </p>
         <p
           className="z-10 w-11/12 px-2 py-4 text-lg rounded-lg md:w-1/2 text-balance backdrop-blur-md"

@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "dist/z-color.js",
   "exports": {
-    "import": "./dist/z-color.js",
-    "require": "./dist/z-color.umd.js"
+    "import": "./dist/z-color.js"
   },
   "type": "module",
   "scripts": {

@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "dist/z-toggle-theme.js",
   "exports": {
-    "import": "./dist/z-toggle-theme.js",
-    "require": "./dist/z-toggle-theme.umd.js"
+    "import": "./dist/z-toggle-theme.js"
   },
   "type": "module",
   "scripts": {

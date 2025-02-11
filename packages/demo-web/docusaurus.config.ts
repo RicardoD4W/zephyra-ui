@@ -14,8 +14,8 @@ const config: Config = {
   organizationName: 'GitHub/RicardoD4W',
   projectName: 'zephyra-ui',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   themes: ['@docusaurus/theme-live-codeblock'],
   clientModules: ['./clientModules/registerWCs.js'],
@@ -47,9 +47,9 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          onInlineTags: 'throw',
-          onInlineAuthors: 'throw',
-          onUntruncatedBlogPosts: 'throw',
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',

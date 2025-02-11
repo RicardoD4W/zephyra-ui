@@ -7,13 +7,21 @@
     "message": "Zephyra UI Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Docs": {
-    "message": "Docs",
-    "description": "Navbar item with label Docs"
+  "item.label.Components": {
+    "message": "Components",
+    "description": "Navbar item with label Components"
   },
   "item.label.Integrations": {
     "message": "Integrations",
     "description": "Navbar item with label Integrations"
+  },
+  "item.label.Extensions": {
+    "message": "Extensions",
+    "description": "Navbar item with label Extensions"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
   },
   "item.label.GitHub": {
     "message": "GitHub",

@@ -1,5 +1,4 @@
 --- 
-id: "z-alert"
 title: "z-alert"
 component: "z-alert"
 sidebar_position: 4
@@ -40,35 +39,29 @@ props: [
   }
 ]
 events: []
-description: An alert component. In the Examples of usethe state with the AlertModel will fail because is render in html not in ts or js 
+description: An alert component. In the [Examples of use](#examples-of-use) the `state` with the `AlertModel` will fail because is render in `html` not in `ts` or `js` 
 --- 
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
-import Translate from '@docusaurus/Translate';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-
 
 # z-alert
 
-<Translate>An alert component. In the Examples of usethe state with the AlertModel will fail because is render in html not in ts or js</Translate>
-
-
-<br/>
+An alert component. In the [Examples of use](#examples-of-use) the `state` with the `AlertModel` will fail because is render in `html` not in `ts` or `js`
 
 ## Properties
 
-| <Translate>Prop Name</Translate>   | <Translate>Type</Translate>   | <Translate>Default Value</Translate>  | <Translate>Other Values</Translate>                    |
+| Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|
 | `slot` | `HTML` | `Alert content` | `<div><strong>This is an alert</strong><br>An alert is this</div>` |
 | `state` | `AlertModel` | `AlertModel.INFO` | `AlertModel.SUCCESS, AlertModel.WARNING, AlertModel.ERROR` |
 | `state` | `string` | `info` | `success, warning, error` |
 
-## <Translate>Events</Translate>
-<Translate>none</Translate>
+## Events
+`none`
 
 ## CSS Parts
 
 
-| <Translate>Part name</Translate>  | <Translate>Description</Translate>                             | 
+| Part name  | Description                             | 
 |--------------|-----------------------------------------|
 | `alert-container` | The main container of the alert. | 
 | `alert-icon` | The area containing the alert icon. | 
@@ -78,7 +71,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 --- 
 
-## <Translate>Examples of use</Translate>
+## Examples of use
 
 
 
@@ -94,9 +87,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 ```
 
- <BrowserOnly>
-        {() => (
-          <WcWrapper html='<z-alert></z-alert>
+<WcWrapper html='<z-alert></z-alert>
 <z-alert><div><strong>This is an alert</strong><br>An alert is this</div></z-alert>
 <z-alert state="AlertModel.SUCCESS"></z-alert>
 <z-alert state="AlertModel.WARNING"></z-alert>
@@ -105,8 +96,5 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 <z-alert state="warning"></z-alert>
 <z-alert state="error"></z-alert>
 '/>
-        )}
-</BrowserOnly>
-
   
 
