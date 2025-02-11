@@ -2,11 +2,15 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { BubblesContainer } from '@site/src/components/BubblesContainer/BubblesContainer';
 import Heading from '@theme/Heading';
+import { useEffect } from 'react';
 
 export const Header = () => {
   const { siteConfig } = useDocusaurusContext();
+
+  useEffect(() => {
+    import('../BubblesContainer/bubbles-container');
+  }, []);
 
   return (
     <header
@@ -16,12 +20,7 @@ export const Header = () => {
         backgroundColor: 'var(--banner-color)',
       }}
     >
-      <BrowserOnly>
-        {() => {
-          const count = (window.innerWidth / window.innerHeight) * 15;
-          return <BubblesContainer bubbleCount={count} />;
-        }}
-      </BrowserOnly>
+      <bubbles-container></bubbles-container>
 
       <div className="container flex flex-col items-center justify-around gap-2">
         <div className="flex items-center justify-center p-2 text-center">

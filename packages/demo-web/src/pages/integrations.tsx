@@ -11,7 +11,6 @@ const POPULAR_FRAMEWORKS = [
     extension: 'jsx',
     entryPoint: 'src/components/App.jsx',
     code: `
-    
     import '@zephyra-ui/z-button';
   
       function App() {
@@ -23,7 +22,8 @@ const POPULAR_FRAMEWORKS = [
         );
       }
   
-      export default App;`,
+      export default App;
+      `,
   },
   {
     name: 'Next',
