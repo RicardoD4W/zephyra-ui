@@ -1,6 +1,6 @@
 {
   "name": "@zephyra-ui/z-icon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/z-icon.js",
   "exports": {
     "import": "./dist/z-icon.js"
