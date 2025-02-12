@@ -110,28 +110,28 @@ export class BubblesContainer extends HTMLElement {
         switch (j) {
           case 0:
             span.style.inset = '10px';
-            span.style.borderLeft = `7px solid var(--bubbles-${j + 1})`;
-            span.style.filter = `blur(8px)`;
+            span.style.borderLeft = `5px solid var(--bubbles-${j + 1})`;
+            span.style.filter = `blur(5px)`;
             break;
           case 1:
             span.style.inset = '10px';
-            span.style.borderRight = `7px solid var(--bubbles-${j + 1})`;
-            span.style.filter = `blur(8px)`;
+            span.style.borderRight = `5px solid var(--bubbles-${j + 1})`;
+            span.style.filter = `blur(5px)`;
             break;
           case 2:
             span.style.inset = '10px';
-            span.style.borderTop = `7px solid var(--bubbles-${j + 1})`;
-            span.style.filter = `blur(8px)`;
+            span.style.borderTop = `5px solid var(--bubbles-${j + 1})`;
+            span.style.filter = `blur(5px)`;
             break;
           case 3:
             span.style.inset = '30px';
-            span.style.borderLeft = `7px solid var(--bubbles-${j + 1})`;
-            span.style.filter = `blur(12px)`;
+            span.style.borderLeft = `9px solid var(--bubbles-${j + 1})`;
+            span.style.filter = `blur(10px)`;
             break;
           case 4:
             span.style.inset = '10px';
-            span.style.borderBottom = `5px solid var(--bubbles-${j + 1})`;
-            span.style.filter = `blur(8px)`;
+            span.style.borderBottom = `3px solid var(--bubbles-${j + 1})`;
+            span.style.filter = `blur(5px)`;
             span.style.transform = `rotate(330deg)`;
             break;
 
