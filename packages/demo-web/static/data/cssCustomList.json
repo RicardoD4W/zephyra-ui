@@ -71,6 +71,7 @@
       { "name": "--z-radius-md", "values": ["0.25rem"] },
       { "name": "--z-radius-lg", "values": ["0.5rem"] },
       { "name": "--z-radius-xl", "values": ["1rem"] },
+      { "name": "--z-rounded", "values": ["50%"] },
       { "name": "--z-radius-full", "values": ["9999px"] }
     ]
   },

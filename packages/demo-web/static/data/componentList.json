@@ -189,5 +189,53 @@
         }
       ]
     }
+  },
+  {
+    "title": "z-avatar",
+    "args": {
+      "props": [
+        {
+          "name": "size",
+          "type": "string",
+          "values": {
+            "default": "50px",
+            "value": ["100px", "20px"]
+          }
+        },
+        {
+          "name": "type",
+          "type": " 'initials' | 'image' ",
+          "values": {
+            "default": "initials",
+            "value": []
+          }
+        },
+        {
+          "name": "slot",
+          "type": "HTML",
+          "values": {
+            "default": "Rebecca Brown",
+            "value": [
+              "<img src='https://cdn2.thecatapi.com/images/115.png' alt='Avatar' />"
+            ]
+          }
+        }
+      ],
+      "events": [],
+      "cssParts": [
+        {
+          "name": "avatar-container",
+          "description": "The main avatar container."
+        },
+        {
+          "name": "img",
+          "description": "The part who represent the image."
+        },
+        {
+          "name": "initials",
+          "description": "The part who represent the initials."
+        }
+      ]
+    }
   }
 ]
