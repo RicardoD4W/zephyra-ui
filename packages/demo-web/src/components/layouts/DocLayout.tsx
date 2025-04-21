@@ -7,6 +7,7 @@ export const DocLayout = ({ children }) => {
     import('../../../../components/z-icon/dist/z-icon.js');
     import('../../../../components/z-toggle-theme/dist/z-toggle-theme.js');
     import('../../../../components/z-color/dist/z-color.js');
+    import('../../../../components/z-avatar/dist/z-avatar.js');
   }, []);
 
   return <>{children}</>;
