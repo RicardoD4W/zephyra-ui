@@ -1,6 +1,6 @@
 {
   "name": "@zephyra-ui/z-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/z-component.js",
   "exports": {
     "import": "./dist/z-component.js"
