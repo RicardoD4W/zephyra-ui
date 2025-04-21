@@ -15,4 +15,12 @@ export class ZAvatarViewModel extends ZComponent {
       .join('');
     return initials;
   }
+
+  connectedCallback(): void {
+    super.connectedCallback();
+
+    if (this.children[0]?.tagName === 'IMG') {
+      this.type = 'img';
+    }
+  }
 }
