@@ -1,0 +1,96 @@
+--- 
+title: "z-avatar"
+component: "z-avatar"
+sidebar_position: 5
+props: [
+  {
+    "name": "size",
+    "type": "string",
+    "values": {
+      "default": "50px",
+      "value": [
+        "3rem",
+        "20px"
+      ]
+    }
+  },
+  {
+    "name": "type",
+    "type": " 'initials' or 'img' ",
+    "values": {
+      "default": "initials",
+      "value": [
+        "img"
+      ]
+    }
+  },
+  {
+    "name": "slot",
+    "type": "HTML",
+    "values": {
+      "default": "",
+      "value": [
+        "Rebecca Brown",
+        "<img src=\"https://cdn2.thecatapi.com/images/115.png\" alt=\"Avatar\" />"
+      ]
+    }
+  }
+]
+events: []
+description: A simple component for generating avatars with either a name or a photo. By default, the 'type' is 'initials', but if the component detects an img tag inside the avatar, it will automatically change the 'type' to 'img'. It's best to specify each one, but the component still performs a small check. 
+--- 
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
+
+
+<DocLayout>
+# z-avatar
+
+A simple component for generating avatars with either a name or a photo. By default, the 'type' is 'initials', but if the component detects an img tag inside the avatar, it will automatically change the 'type' to 'img'. It's best to specify each one, but the component still performs a small check.
+
+## Properties
+
+| Prop Name   | Type   | Default Value  | Other Values                    |
+|-------------|--------|----------------|---------------------------------|
+| `size` | `string` | `50px` | `3rem, 20px` |
+| `type` | ` 'initials' or 'img' ` | `initials` | `img` |
+| `slot` | `HTML` | `None` | `Rebecca Brown, <img src="https://cdn2.thecatapi.com/images/115.png" alt="Avatar" />` |
+
+## Events
+`none`
+
+## CSS Parts
+
+
+| Part name  | Description                             | 
+|--------------|-----------------------------------------|
+| `avatar-container` | The main avatar container. | 
+| `img` | The part who represent the image. | 
+| `initials` | The part who represent the initials. | 
+
+--- 
+
+## Examples of use
+
+
+
+    ```html
+<z-avatar></z-avatar>
+<z-avatar size="3rem"></z-avatar>
+<z-avatar size="20px"></z-avatar>
+<z-avatar type="img"></z-avatar>
+<z-avatar>Rebecca Brown</z-avatar>
+<z-avatar><img src="https://cdn2.thecatapi.com/images/115.png" alt="Avatar" /></z-avatar>
+
+```
+
+<WcWrapper html='<z-avatar></z-avatar>
+<z-avatar size="3rem"></z-avatar>
+<z-avatar size="20px"></z-avatar>
+<z-avatar type="img"></z-avatar>
+<z-avatar>Rebecca Brown</z-avatar>
+<z-avatar><img src="https://cdn2.thecatapi.com/images/115.png" alt="Avatar" /></z-avatar>
+'/>
+  
+
+</DocLayout>
