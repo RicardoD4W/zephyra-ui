@@ -15,10 +15,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "dev-c": "npm run dev --workspace=packages/components",
-    "dev-d": "npm run dev --workspace=packages/demo-web",
+    "dev-d": "npm run start --workspace=packages/demo-web",
     "build-all-w": "powershell -Command \"Get-ChildItem -Path ./packages/components -Directory | ForEach-Object {cd $_.FullName; npm i; npm run build; cd ../..}\"",
     "build-all-l": "for d in ./packages/components/*/; do (cd \"$d\" && npm install && npm run build); done",
-    "dev-web": "npm run build-all && npm run dev-d",
+    "dev-web": "npm run build-all-w && npm run dev-d",
     "publish-npm": "node ./scripts/publish-components.js",
     "gc-doc": "node ./scripts/create-component-docs-pages.js && node ./scripts/create-css-docs-pages.js"
   },
