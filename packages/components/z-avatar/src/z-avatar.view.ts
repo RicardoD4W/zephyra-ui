@@ -13,13 +13,18 @@ export class ZAvatarView extends ZAvatarViewModel {
 
   public render(): TemplateResult {
     return html`
-      <div class="avatar-container" style="--avatar-size: ${this.size}">
+      <div
+        class="avatar-container"
+        part="avatar-container"
+        style="--avatar-size: ${this.size}"
+      >
         ${choose(this.type, [
-          ['img', () => html` <slot class="img"></slot>`],
+          ['img', () => html` <slot part="img" class="img"></slot>`],
           [
             'initials',
             () =>
               html` <span
+                part="initials"
                 class=${classMap({ initials: true, [this.dataTheme]: true })}
               >
                 ${this.getInitials()}
