@@ -2,7 +2,6 @@ import { CSSResultGroup, CSSResultOrNative, TemplateResult, html } from 'lit';
 import { ZAvatarTheme } from './css/z-avatar.theme.css';
 import { ZAvatarViewModel } from './z-avatar.viewmodel';
 import { choose } from 'lit/directives/choose.js';
-import { classMap } from 'lit/directives/class-map.js';
 
 export class ZAvatarView extends ZAvatarViewModel {
   protected static finalizeStyles(
@@ -23,10 +22,7 @@ export class ZAvatarView extends ZAvatarViewModel {
           [
             'initials',
             () =>
-              html` <span
-                part="initials"
-                class=${classMap({ initials: true, [this.dataTheme]: true })}
-              >
+              html` <span part="initials" class="initials">
                 ${this.getInitials()}
               </span>`,
           ],

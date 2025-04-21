@@ -37,15 +37,9 @@ export class ZAvatarTheme {
       font-weight: var(--z-font-light);
 
       text-transform: uppercase;
-    }
 
-    .light {
-      color: var(--z-color-light);
-      background-color: var(--z-color-dark);
-    }
-    .dark {
-      color: var(--z-color-text);
-      background-color: var(--z-color-light);
+      color: var(--z-color-white);
+      background-color: var(--z-color-gray);
     }
   `;
 

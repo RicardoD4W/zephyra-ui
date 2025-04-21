@@ -7,6 +7,7 @@ export class ZComponentTheme {
       display: inline-block;
       color-scheme: light dark;
       font-family: var(--z-font);
+      --z-color-white: #fff;
     }
   `;
 
