@@ -119,6 +119,7 @@ export class ZComponentTheme {
       --z-radius-md: 0.25rem;
       --z-radius-lg: 0.5rem;
       --z-radius-xl: 1rem;
+      --z-rounded: 50%;
       --z-radius-full: 9999px;
 
       /* TRANSITIONS */
