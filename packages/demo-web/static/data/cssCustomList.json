@@ -20,7 +20,8 @@
       { "name": "--z-color-muted", "values": ["#adb5bd", "#495057"] },
       { "name": "--z-color-background", "values": ["#ebebeb", "#f8f9fa"] },
       { "name": "--z-color-border", "values": ["#f1f3f5", "#dee2e6"] },
-      { "name": "--z-color-text", "values": ["#000", "#fff"] }
+      { "name": "--z-color-text", "values": ["#000", "#fff"] },
+      { "name": "--z-color-white", "values": ["#fff"] }
     ]
   },
   {
