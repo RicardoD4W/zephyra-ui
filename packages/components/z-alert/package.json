@@ -25,8 +25,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "lit": "3.2.1",
     "@zephyra-ui/z-component": "^1.0.0",
     "@zephyra-ui/z-icon": "^1.0.0"
+  },
+  "peerDependencies": {
+    "lit": "3.2.1"
   }
 }

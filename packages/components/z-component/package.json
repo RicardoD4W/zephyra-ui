@@ -23,7 +23,7 @@
     "component"
   ],
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "lit": "3.2.1"
   }
 }

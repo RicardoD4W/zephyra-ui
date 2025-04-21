@@ -9,7 +9,7 @@ export default defineConfig({
       fileName: `z-color`,
     },
     rollupOptions: {
-      external: ['lit'],
+      external: (id) => /^lit/.test(id),
       output: {
         globals: {
           lit: 'Lit',
