@@ -24,6 +24,17 @@ export class BubblesContainer extends HTMLElement {
 
   _getStyles() {
     return /*css */ ` 
+    :host {
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+    
+    @keyframes fade-in {
+      to {
+        opacity: 1;
+      }
+    }
+    
     .bubble-container {
     position: absolute;
     width: 100%;
