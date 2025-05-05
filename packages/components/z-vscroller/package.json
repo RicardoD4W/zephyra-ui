@@ -1,0 +1,33 @@
+{
+  "name": "@zephyra-ui/z-vscroller",
+  "version": "1.0.2",
+  "main": "dist/z-vscroller.js",
+  "exports": {
+    "import": "./dist/z-vscroller.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zephyra-ui",
+    "ui",
+    "zephyra",
+    "z-vscroller",
+    "virtual scroller",
+    "component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@zephyra-ui/z-component": "^1.0.0"
+  },
+  "peerDependencies": {
+    "lit": "3.2.1"
+  }
+}
