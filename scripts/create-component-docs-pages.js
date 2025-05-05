@@ -33,19 +33,24 @@ function createMdxFile(index, data) {
   const filePath = path.join(docsDir, `${data.title}.mdx`);
 
   const content = `--- 
-title: "${data.title}"
+title: "${data.title}${data.beta ? ' (beta)' : ''}"
 component: "${data.title}"
 sidebar_position: ${index + 1}
 props: ${JSON.stringify(data.args.props, null, 2)}
 events: ${JSON.stringify(data.args.events, null, 2)}
 ${data.description ? 'description: ' + data.description : ''} 
---- 
+${data.beta ? 'sidebar_label: ' + data.title + ' (beta)' : ''} 
+---
 import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
 import { DocLayout } from '@site/src/components/layouts/DocLayout'
 
 
 <DocLayout>
-# ${data.title}
+${
+  data.beta
+    ? `# ${data.title} <span style={{fontSize: 20}}>(beta)</span>`
+    : `# ${data.title}`
+} 
 
 ${data.description ? data.description : ''}
 

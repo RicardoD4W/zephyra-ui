@@ -241,7 +241,8 @@
     }
   },
   {
-    "title": "z-vscroller (beta)",
+    "title": "z-vscroller",
+    "beta": true,
     "description": "A virtual scroller component for rendering large lists efficiently. It only renders the visible items in the viewport, improving performance for long lists. Open the devtools and inspect the component, you will see that only the visible items are rendered.",
     "args": {
       "props": [
