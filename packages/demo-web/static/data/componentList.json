@@ -239,5 +239,34 @@
         }
       ]
     }
+  },
+  {
+    "title": "z-vscroller",
+    "description": "A virtual scroller component for rendering large lists efficiently. It only renders the visible items in the viewport, improving performance for long lists.",
+    "args": {
+      "props": [
+        {
+          "name": "slot",
+          "type": "HTML",
+          "values": {
+            "default": "",
+            "value": [
+              "<div>Elemento 1</div><div>Elemento 2</div><div>Elemento 3</div><div>Elemento 4</div><div>Elemento 5</div><div>Elemento 6</div><div>Elemento 7</div><div>Elemento 8</div><div>Elemento 9</div><div>Elemento 10</div><div>Elemento 11</div><div>Elemento 12</div><div>Elemento 13</div><div>Elemento 14</div><div>Elemento 15</div><div>Elemento 16</div><div>Elemento 17</div><div>Elemento 18</div><div>Elemento 19</div><div>Elemento 20</div>"
+            ]
+          }
+        }
+      ],
+      "events": [],
+      "cssParts": [
+        {
+          "name": "inner",
+          "description": "The main container. Here the items are rendered."
+        },
+        {
+          "name": "item",
+          "description": "The individual items within the scroller."
+        }
+      ]
+    }
   }
 ]
