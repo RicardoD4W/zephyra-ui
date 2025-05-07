@@ -30,6 +30,8 @@ function generateExamples(props, componentName) {
 }
 
 function createMdxFile(index, data) {
+  if (data.custom) return;
+
   const filePath = path.join(docsDir, `${data.title}.mdx`);
 
   const content = `--- 
