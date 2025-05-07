@@ -60,8 +60,7 @@
   --ifm-footer-color: var(--text-color);
 }
 
-
-
+z-alert:not(:defined),z-avatar:not(:defined),z-button:not(:defined),z-icon:not(:defined),z-toggle-theme:not(:defined),z-vscroller:not(:defined){display: none;}
 
 @tailwind base;
 @tailwind components;
