@@ -22,7 +22,7 @@ export class ZVScrollerView extends ZVScrollerViewModel {
                 class="item"
                 part="item"
                 style="top: ${this.getItemTop(index)}px; height: ${this
-                  .itemHeight}px;"
+                  .allItemsHeight[index]}px;"
               >
                 ${element.cloneNode(true)}
               </div>
@@ -30,7 +30,7 @@ export class ZVScrollerView extends ZVScrollerViewModel {
           }
         )}
       </div>
-      <slot hidden></slot>
+      <slot></slot>
     `;
   }
 }
