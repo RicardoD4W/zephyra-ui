@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Head from '@docusaurus/Head';
 
 export const DocLayout = ({ children }) => {
   useEffect(() => {
@@ -11,5 +12,14 @@ export const DocLayout = ({ children }) => {
     import('../../../../components/z-vscroller/dist/z-vscroller.js');
   }, []);
 
-  return <>{children}</>;
+  return (
+    <>
+      <Head>
+        <style>
+          {`z-alert:not(:defined),z-avatar:not(:defined),z-button:not(:defined),z-icon:not(:defined),z-toggle-theme:not(:defined),z-vscroller:not(:defined){display: none;}`}
+        </style>
+      </Head>
+      {children}
+    </>
+  );
 };
