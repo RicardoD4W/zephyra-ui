@@ -1,6 +1,6 @@
 {
   "name": "@zephyra-ui/z-vscroller",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/z-vscroller.js",
   "exports": {
     "import": "./dist/z-vscroller.js"
