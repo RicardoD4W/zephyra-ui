@@ -1,0 +1,81 @@
+--- 
+title: "z-spoiler"
+component: "z-spoiler"
+sidebar_position: 7
+props: [
+  {
+    "name": "slot",
+    "type": "HTML",
+    "values": {
+      "default": "",
+      "value": [
+        "<article> <h2>1. Interstellar. The Time Dilation Scene</h2> <p> When Cooper and his team land on Miller’s planet, where time passes differently due to gravitational effects, every hour equals seven years on Earth. This concept hits emotionally when they return to the ship and find that 23 years have passed. </p> <h2>2. The Empire Strikes Back. \"I am your father\"</h2> <p> One of the most quoted lines in cinema history. The reveal that Darth Vader is Luke Skywalker’s father changed the entire narrative and deepened the emotional stakes. </p> <blockquote> “No, I am your father.”. Darth Vader </blockquote> <h2>3. Arrival. Nonlinear Time Revelation</h2> <p> The entire structure of the movie shifts when Louise realizes that the \"memories\" she is having are actually visions of the future. This moment redefines not just the story but also the viewer’s understanding of time. </p> <img src=\"https://cdn2.thecatapi.com/images/nb.jpg\" alt=\"Arrival Movie\" width=\"300\" /> </article>"
+      ]
+    }
+  },
+  {
+    "name": "delay",
+    "type": "number",
+    "values": {
+      "default": 300,
+      "value": []
+    }
+  },
+  {
+    "name": "cursor",
+    "type": "string",
+    "values": {
+      "default": "crosshair",
+      "value": [
+        "pointer"
+      ]
+    }
+  }
+]
+events: []
+description: A Component that hides its content and reveals it after a customizable delay 
+ 
+---
+import {WcWrapper} from '@site/src/components/WcWrapper/WcWrapper';
+import { DocLayout } from '@site/src/components/layouts/DocLayout'
+
+
+<DocLayout>
+# z-spoiler 
+
+A Component that hides its content and reveals it after a customizable delay
+
+## Properties
+
+| Prop Name   | Type   | Default Value  | Other Values                    |
+|-------------|--------|----------------|---------------------------------|
+| `slot` | `HTML` | `None` | `<article> <h2>1. Interstellar. The Time Dilation Scene</h2> <p> When Cooper and his team land on Miller’s planet, where time passes differently due to gravitational effects, every hour equals seven years on Earth. This concept hits emotionally when they return to the ship and find that 23 years have passed. </p> <h2>2. The Empire Strikes Back. "I am your father"</h2> <p> One of the most quoted lines in cinema history. The reveal that Darth Vader is Luke Skywalker’s father changed the entire narrative and deepened the emotional stakes. </p> <blockquote> “No, I am your father.”. Darth Vader </blockquote> <h2>3. Arrival. Nonlinear Time Revelation</h2> <p> The entire structure of the movie shifts when Louise realizes that the "memories" she is having are actually visions of the future. This moment redefines not just the story but also the viewer’s understanding of time. </p> <img src="https://cdn2.thecatapi.com/images/nb.jpg" alt="Arrival Movie" width="300" /> </article>` |
+| `delay` | `number` | `300` | `None` |
+| `cursor` | `string` | `crosshair` | `pointer` |
+
+## Events
+`none`
+
+## CSS Parts
+`none`
+
+--- 
+
+## Examples of use
+
+
+
+    ```html
+<z-spoiler></z-spoiler>
+<z-spoiler><article> <h2>1. Interstellar. The Time Dilation Scene</h2> <p> When Cooper and his team land on Miller’s planet, where time passes differently due to gravitational effects, every hour equals seven years on Earth. This concept hits emotionally when they return to the ship and find that 23 years have passed. </p> <h2>2. The Empire Strikes Back. "I am your father"</h2> <p> One of the most quoted lines in cinema history. The reveal that Darth Vader is Luke Skywalker’s father changed the entire narrative and deepened the emotional stakes. </p> <blockquote> “No, I am your father.”. Darth Vader </blockquote> <h2>3. Arrival. Nonlinear Time Revelation</h2> <p> The entire structure of the movie shifts when Louise realizes that the "memories" she is having are actually visions of the future. This moment redefines not just the story but also the viewer’s understanding of time. </p> <img src="https://cdn2.thecatapi.com/images/nb.jpg" alt="Arrival Movie" width="300" /> </article></z-spoiler>
+<z-spoiler cursor="pointer"></z-spoiler>
+
+```
+
+<WcWrapper html='<z-spoiler></z-spoiler>
+<z-spoiler><article> <h2>1. Interstellar. The Time Dilation Scene</h2> <p> When Cooper and his team land on Miller’s planet, where time passes differently due to gravitational effects, every hour equals seven years on Earth. This concept hits emotionally when they return to the ship and find that 23 years have passed. </p> <h2>2. The Empire Strikes Back. "I am your father"</h2> <p> One of the most quoted lines in cinema history. The reveal that Darth Vader is Luke Skywalker’s father changed the entire narrative and deepened the emotional stakes. </p> <blockquote> “No, I am your father.”. Darth Vader </blockquote> <h2>3. Arrival. Nonlinear Time Revelation</h2> <p> The entire structure of the movie shifts when Louise realizes that the "memories" she is having are actually visions of the future. This moment redefines not just the story but also the viewer’s understanding of time. </p> <img src="https://cdn2.thecatapi.com/images/nb.jpg" alt="Arrival Movie" width="300" /> </article></z-spoiler>
+<z-spoiler cursor="pointer"></z-spoiler>
+'/>
+  
+
+</DocLayout>

@@ -48,19 +48,17 @@ import { DocLayout } from '@site/src/components/layouts/DocLayout'
 
 
 <DocLayout>
-${
-  data.beta
-    ? `# ${data.title} <span style={{fontSize: 20}}>(beta)</span>`
-    : `# ${data.title}`
-} 
+${data.beta
+      ? `# ${data.title} <span style={{fontSize: 20}}>(beta)</span>`
+      : `# ${data.title}`
+    } 
 
 ${data.description ? data.description : ''}
 
 ## Properties
 
-${
-  data.args.props.length > 0
-    ? `| Prop Name   | Type   | Default Value  | Other Values                    |
+${data.args.props.length > 0
+      ? `| Prop Name   | Type   | Default Value  | Other Values                    |
 |-------------|--------|----------------|---------------------------------|` +
       data.args.props
         .map((prop) => {
@@ -69,18 +67,16 @@ ${
               ? prop.values.value.join(', ')
               : 'None';
 
-          return `\n| \`${prop.name}\` | \`${prop.type}\` | \`${
-            prop.values.default || 'None'
-          }\` | \`${otherValues}\` |`;
+          return `\n| \`${prop.name}\` | \`${prop.type}\` | \`${prop.values.default || 'None'
+            }\` | \`${otherValues}\` |`;
         })
         .join('')
-    : '`none`'
-}
+      : '`none`'
+    }
 
 ## Events
-${
-  data.args.events.length > 0
-    ? `
+${data.args.events.length > 0
+      ? `
 
 | Event Name   | Description                             | Payload                           |
 |--------------|-----------------------------------------|-----------------------------------|` +
@@ -90,29 +86,27 @@ ${
             `\n| \`${event.name}\` | ${event.dispatch} | \`${event.payload}\` |`
         )
         .join('')
-    : '`none`'
-}
+      : '`none`'
+    }
 
 ## CSS Parts
-${
-  data.args.cssParts.length > 0
-    ? `
+${data.args.cssParts.length > 0
+      ? `
 
 | Part name  | Description                             | 
 |--------------|-----------------------------------------|` +
       data.args.cssParts
         .map((part) => `\n| \`${part.name}\` | ${part.description} | `)
         .join('')
-    : '`none`'
-}
+      : '`none`'
+    }
 
 --- 
 
 ## Examples of use
 
-${
-  data.args.props.length > 0
-    ? `
+${data.args.props.length > 0
+      ? `
 
     \`\`\`html
 ${generateExamples(data.args.props, data.title)}
@@ -120,14 +114,14 @@ ${generateExamples(data.args.props, data.title)}
 
 <WcWrapper html='${generateExamples(data.args.props, data.title)}'/>
   `
-    : `
+      : `
     \`\`\`html
     <${data.title}></${data.title}>
     \`\`\` 
     
     <WcWrapper html='<${data.title}></${data.title}>'/>
     `
-}
+    }
 
 </DocLayout>
 `;
