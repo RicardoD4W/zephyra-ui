@@ -10,13 +10,14 @@ export const DocLayout = ({ children }) => {
     import('../../../../components/z-color/dist/z-color.js');
     import('../../../../components/z-avatar/dist/z-avatar.js');
     import('../../../../components/z-vscroller/dist/z-vscroller.js');
+    import('../../../../components/z-spoiler/dist/z-spoiler.js');
   }, []);
 
   return (
     <>
       <Head>
         <style>
-          {`z-alert:not(:defined),z-avatar:not(:defined),z-button:not(:defined),z-icon:not(:defined),z-toggle-theme:not(:defined),z-vscroller:not(:defined){display: none;}`}
+          {`z-alert:not(:defined),z-avatar:not(:defined),z-button:not(:defined),z-icon:not(:defined),z-toggle-theme:not(:defined),z-vscroller:not(:defined),z-spoiler:not(:defined){display: none;}`}
         </style>
       </Head>
       {children}

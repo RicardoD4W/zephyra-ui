@@ -1,0 +1,33 @@
+{
+  "name": "@zephyra-ui/z-spoiler",
+  "version": "1.0.0",
+  "main": "dist/z-spoiler.js",
+  "exports": {
+    "import": "./dist/z-spoiler.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "zephyra-ui",
+    "ui",
+    "zephyra",
+    "z-spoiler",
+    "spoiler",
+    "component"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@zephyra-ui/z-component": "^1.0.0"
+  },
+  "peerDependencies": {
+    "lit": "3.2.1"
+  }
+}
